@@ -314,14 +314,11 @@
         var cmp;
         if (typeof va === "number" && typeof vb === "number") cmp = va - vb;
         else cmp = String(va).localeCompare(String(vb), undefined, { numeric: true, sensitivity: "base" });
-        if (cmp === 0 && key !== "cost") {
-          // secondary: cost free
-          cmp = parseInt(a.getAttribute("data-cost") || "9", 10) - parseInt(b.getAttribute("data-cost") || "9", 10);
-        }
-        if (cmp === 0 && key !== "agent") {
-          cmp = parseInt(b.getAttribute("data-agent") || "0", 10) - parseInt(a.getAttribute("data-agent") || "0", 10);
-        }
-        return cmp * dir;
+        if (cmp !== 0) return cmp * dir;
+        // Tie-breakers always: free cost first, then stronger agent (independent of dir)
+        var costCmp = parseInt(a.getAttribute("data-cost") || "9", 10) - parseInt(b.getAttribute("data-cost") || "9", 10);
+        if (costCmp !== 0) return costCmp;
+        return parseInt(b.getAttribute("data-agent") || "0", 10) - parseInt(a.getAttribute("data-agent") || "0", 10);
       });
       rows.forEach(function (r) { tbody.appendChild(r); });
       headers.forEach(function (h) { h.classList.remove("asc", "desc"); });
