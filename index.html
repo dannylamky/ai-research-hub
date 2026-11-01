@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A.I.R.I.S. Research Hub</title>
   <style>
-    :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; }
-    body { margin:0; padding:24px; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; max-width:920px; }
+    :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; --ok:#3dd68c; --warn:#f0b429; }
+    body { margin:0; padding:24px; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; max-width:960px; }
     h1 { margin:0 0 8px; } .meta { color:var(--muted); margin-bottom:28px; }
     h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:36px; }
-    table { width:100%; border-collapse:collapse; margin:12px 0 24px; }
-    th, td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+    h3 { margin:20px 0 8px; color:var(--muted); font-size:1rem; font-weight:600; }
+    table { width:100%; border-collapse:collapse; margin:12px 0 24px; font-size:0.95rem; }
+    th, td { border:1px solid var(--border); padding:10px 12px; text-align:left; vertical-align:top; }
     th { background:var(--card); }
     a { color:var(--link); } code { background:var(--card); padding:2px 6px; border-radius:4px; }
     ul { padding-left:1.2rem; }
+    .tag { display:inline-block; font-size:0.75rem; padding:2px 8px; border-radius:999px; background:var(--card); border:1px solid var(--border); margin-right:4px; white-space:nowrap; }
+    .tag.agent { border-color:var(--ok); color:var(--ok); }
+    .tag.manual { border-color:var(--warn); color:var(--warn); }
+    .note { color:var(--muted); font-size:0.9rem; margin:-8px 0 16px; }
   </style>
 </head>
 <body>
@@ -35,17 +40,136 @@
   <h2>Ops</h2>
   <ul>
     <li>Daily AI digest: weekdays ~08:00 Asia/Hong_Kong</li>
-    <li>YouTube AI channel watch: weekdays ~09:00 Asia/Hong_Kong</li>
+    <li>YouTube AI channel watch: weekdays 09/12/15/18/21 Asia/Hong_Kong</li>
     <li>Catalog site: <a href="https://dannylamky.github.io/ai-youtube-catalog/">ai-youtube-catalog Pages</a> · repo <a href="https://github.com/dannylamky/ai-youtube-catalog">github.com/dannylamky/ai-youtube-catalog</a></li>
   </ul>
 
   <h2>Hosting</h2>
   <ul>
     <li>This hub: GitHub Pages from <code>main</code> / root on <a href="https://github.com/dannylamky/ai-research-hub">dannylamky/ai-research-hub</a></li>
-    <li>Expected URL: <code>https://dannylamky.github.io/ai-research-hub/</code></li>
-    <li>Auto-research updates + chat notify: wired by A.I.R.I.S. routines after Pages is live</li>
+    <li>Live URL: <a href="https://dannylamky.github.io/ai-research-hub/"><code>https://dannylamky.github.io/ai-research-hub/</code></a></li>
+    <li>Auto-research updates + chat notify: wired by A.I.R.I.S. routines</li>
   </ul>
 
-  <p class="meta">Seeded by A.I.R.I.S. · will be expanded with research notes and digests.</p>
+  <h3>Free static / web hosting (catalog &amp; agent-friendly)</h3>
+  <p class="note"><span class="tag agent">agent-OK</span> = CLI / API / git deploy that AI agents can drive · <span class="tag manual">manual</span> = mainly drag-drop or human UI</p>
+  <table>
+    <thead>
+      <tr><th>Service</th><th>URL</th><th>Description</th><th>Agent</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GitHub Pages</td>
+        <td><a href="https://pages.github.com/">pages.github.com</a></td>
+        <td>Free static hosting from a public repo (<code>*.github.io</code>). This hub + catalog live here.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Netlify</td>
+        <td><a href="https://www.netlify.com/">netlify.com</a> · <a href="https://app.netlify.com/drop">Drop</a></td>
+        <td>Drag-file Drop for instant <code>*.netlify.app</code>; also git + Netlify CLI for CI deploys. Excellent for static SPAs.</td>
+        <td><span class="tag agent">agent-OK</span> <span class="tag manual">Drop=manual</span></td>
+      </tr>
+      <tr>
+        <td>Cloudflare Pages</td>
+        <td><a href="https://pages.cloudflare.com/">pages.cloudflare.com</a></td>
+        <td>Git-connected or Wrangler CLI deploy; global CDN; free tier generous for static sites (<code>*.pages.dev</code>).</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Vercel</td>
+        <td><a href="https://vercel.com/">vercel.com</a></td>
+        <td>Git + Vercel CLI; top-tier static / Next.js hosting; free hobby tier.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Firebase Hosting</td>
+        <td><a href="https://firebase.google.com/docs/hosting">firebase.google.com/docs/hosting</a></td>
+        <td>Google account; <code>firebase deploy</code> CLI; good when you may add Functions / backend later.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Surge.sh</td>
+        <td><a href="https://surge.sh/">surge.sh</a></td>
+        <td>Ultra-light CLI (<code>surge ./dist</code>); single-command static publish; free custom subdomain.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Tiiny.host</td>
+        <td><a href="https://tiiny.host/">tiiny.host</a></td>
+        <td>Upload a zip / HTML for a tiny public URL; great for one-off demos; limited free plan.</td>
+        <td><span class="tag manual">manual</span></td>
+      </tr>
+      <tr>
+        <td>Google Sites</td>
+        <td><a href="https://sites.google.com/">sites.google.com</a></td>
+        <td>Easiest share for docs/intranet pages; not suited to full custom HTML / thumbnail catalogs.</td>
+        <td><span class="tag manual">manual</span></td>
+      </tr>
+      <tr>
+        <td>Render (Static Sites)</td>
+        <td><a href="https://render.com/docs/static-sites">render.com/docs/static-sites</a></td>
+        <td>Free static sites from git; auto TLS; simple env for agents with Render API/CLI.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>GitLab Pages</td>
+        <td><a href="https://docs.gitlab.com/user/project/pages/">docs.gitlab.com/…/pages</a></td>
+        <td>CI-driven static publish from GitLab repos; similar model to GitHub Pages.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Codeberg Pages</td>
+        <td><a href="https://docs.codeberg.org/codeberg-pages/">docs.codeberg.org/codeberg-pages</a></td>
+        <td>Free Pages on Codeberg (Forgejo); good FOSS alternative when GitHub is blocked.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Neocities</td>
+        <td><a href="https://neocities.org/">neocities.org</a></td>
+        <td>Classic personal-site host; API + CLI for uploads; free tier with size limits.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Deno Deploy</td>
+        <td><a href="https://deno.com/deploy">deno.com/deploy</a></td>
+        <td>Edge deploy via <code>deployctl</code> / git; free tier for static + Deno apps.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Azure Static Web Apps</td>
+        <td><a href="https://learn.microsoft.com/azure/static-web-apps/">learn.microsoft.com/…/static-web-apps</a></td>
+        <td>Free tier; GitHub Actions / SWA CLI; optional API functions on Azure.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Cloudflare Workers + Assets</td>
+        <td><a href="https://developers.cloudflare.com/workers/static-assets/">developers.cloudflare.com/…/static-assets</a></td>
+        <td>Wrangler-driven static assets on Workers; pairs with Pages for more control.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Railway (static / Nixpacks)</td>
+        <td><a href="https://railway.app/">railway.app</a></td>
+        <td>Git + Railway CLI; free trial credits — check current free limits before agent loops.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Fly.io</td>
+        <td><a href="https://fly.io/">fly.io</a></td>
+        <td><code>flyctl</code> deploy; free allowance for small apps; overkill for pure static but agent-friendly.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr>
+        <td>Koyeb</td>
+        <td><a href="https://www.koyeb.com/">koyeb.com</a></td>
+        <td>Git / CLI deploy; free instance tier useful for tiny static or edge services.</td>
+        <td><span class="tag agent">agent-OK</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">For A.I.R.I.S. catalog / hub static HTML: prefer <strong>GitHub Pages</strong> (current), then <strong>Netlify</strong> / <strong>Cloudflare Pages</strong> / <strong>Vercel</strong> / <strong>Surge</strong> when you need a second origin or agent CLI deploy outside GitHub.</p>
+
+  <p class="meta">Seeded by A.I.R.I.S. · expanded with free hosting reference · digests &amp; research notes TBD.</p>
 </body>
 </html>
