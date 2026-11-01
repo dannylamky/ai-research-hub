@@ -6,19 +6,22 @@
   <title>A.I.R.I.S. Research Hub</title>
   <style>
     :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; --ok:#3dd68c; --warn:#f0b429; }
-    body { margin:0; padding:24px; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; max-width:960px; }
+    body { margin:0; padding:24px; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.55; max-width:1100px; }
     h1 { margin:0 0 8px; } .meta { color:var(--muted); margin-bottom:28px; }
     h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:36px; }
     h3 { margin:20px 0 8px; color:var(--muted); font-size:1rem; font-weight:600; }
-    table { width:100%; border-collapse:collapse; margin:12px 0 24px; font-size:0.95rem; }
-    th, td { border:1px solid var(--border); padding:10px 12px; text-align:left; vertical-align:top; }
-    th { background:var(--card); }
+    table { width:100%; border-collapse:collapse; margin:12px 0 24px; font-size:0.88rem; }
+    th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:var(--card); position:sticky; top:0; z-index:1; }
     a { color:var(--link); } code { background:var(--card); padding:2px 6px; border-radius:4px; }
     ul { padding-left:1.2rem; }
-    .tag { display:inline-block; font-size:0.75rem; padding:2px 8px; border-radius:999px; background:var(--card); border:1px solid var(--border); margin-right:4px; white-space:nowrap; }
+    .tag { display:inline-block; font-size:0.72rem; padding:2px 7px; border-radius:999px; background:var(--card); border:1px solid var(--border); margin:1px 2px 1px 0; white-space:nowrap; }
     .tag.agent { border-color:var(--ok); color:var(--ok); }
     .tag.manual { border-color:var(--warn); color:var(--warn); }
     .note { color:var(--muted); font-size:0.9rem; margin:-8px 0 16px; }
+    .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .scroll table { min-width:980px; }
+    td.svc { font-weight:600; white-space:nowrap; }
   </style>
 </head>
 <body>
@@ -51,125 +54,196 @@
     <li>Auto-research updates + chat notify: wired by A.I.R.I.S. routines</li>
   </ul>
 
-  <h3>Free static / web hosting (catalog &amp; agent-friendly)</h3>
-  <p class="note"><span class="tag agent">agent-OK</span> = CLI / API / git deploy that AI agents can drive · <span class="tag manual">manual</span> = mainly drag-drop or human UI</p>
+  <h3>Free static / web hosting — storage, cost &amp; limits</h3>
+  <p class="note">
+    <span class="tag agent">agent-OK</span> CLI / API / git ·
+    <span class="tag manual">manual</span> drag-drop / human UI ·
+    Figures from vendor docs ~Nov 2026; plans change often — re-check before shipping.
+  </p>
+  <div class="scroll">
   <table>
     <thead>
-      <tr><th>Service</th><th>URL</th><th>Description</th><th>Agent</th></tr>
+      <tr>
+        <th>Service</th>
+        <th>URL</th>
+        <th>Free storage</th>
+        <th>Bandwidth / traffic</th>
+        <th>Cost</th>
+        <th>Key limits</th>
+        <th>Agent</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
-        <td>GitHub Pages</td>
+        <td class="svc">GitHub Pages</td>
         <td><a href="https://pages.github.com/">pages.github.com</a></td>
-        <td>Free static hosting from a public repo (<code>*.github.io</code>). This hub + catalog live here.</td>
+        <td>Published site ≤1&nbsp;GB (soft)</td>
+        <td>Soft ~100&nbsp;GB/mo</td>
+        <td>$0</td>
+        <td>Public repos on Free; custom domain + HTTPS; not for commercial SaaS/e‑commerce; soft 10 builds/hr (Actions exempt); deploy timeout 10&nbsp;min</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Netlify</td>
+        <td class="svc">Netlify Free</td>
         <td><a href="https://www.netlify.com/">netlify.com</a> · <a href="https://app.netlify.com/drop">Drop</a></td>
-        <td>Drag-file Drop for instant <code>*.netlify.app</code>; also git + Netlify CLI for CI deploys. Excellent for static SPAs.</td>
-        <td><span class="tag agent">agent-OK</span> <span class="tag manual">Drop=manual</span></td>
+        <td>No published site-size GB cap</td>
+        <td>300 credits/mo hard; BW ≈20&nbsp;cr/GB (~15&nbsp;GB if all BW); requests 2&nbsp;cr/10k</td>
+        <td>$0 forever</td>
+        <td>1 concurrent build; 15&nbsp;cr/prod deploy; custom domain + SSL; ≤500 projects; legacy Free still 100&nbsp;GB + 300 build min if pre‑Sep‑2025</td>
+        <td><span class="tag agent">agent-OK</span> <span class="tag manual">Drop</span></td>
       </tr>
       <tr>
-        <td>Cloudflare Pages</td>
+        <td class="svc">Cloudflare Pages</td>
         <td><a href="https://pages.cloudflare.com/">pages.cloudflare.com</a></td>
-        <td>Git-connected or Wrangler CLI deploy; global CDN; free tier generous for static sites (<code>*.pages.dev</code>).</td>
+        <td>No GB cap; ≤20k files/site; ≤25&nbsp;MiB/file</td>
+        <td>Static requests/BW unlimited (marketing + docs)</td>
+        <td>$0</td>
+        <td>500 builds/mo; 1 concurrent; ≤100 projects; ≤100 custom domains/project; Functions share Workers 100k req/day</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Vercel</td>
+        <td class="svc">Vercel Hobby</td>
         <td><a href="https://vercel.com/">vercel.com</a></td>
-        <td>Git + Vercel CLI; top-tier static / Next.js hosting; free hobby tier.</td>
+        <td>Deploy storage 10&nbsp;GB; static upload ≤100&nbsp;MB</td>
+        <td>Fast Data Transfer 100&nbsp;GB/mo; Origin 10&nbsp;GB; 1M CDN req</td>
+        <td>$0</td>
+        <td><strong>Non‑commercial / personal only</strong>; 100 deploys/day; 1 concurrent; 200 projects; 45‑min build; overage pauses ~30 days</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Firebase Hosting</td>
+        <td class="svc">Firebase Hosting Spark</td>
         <td><a href="https://firebase.google.com/docs/hosting">firebase.google.com/docs/hosting</a></td>
-        <td>Google account; <code>firebase deploy</code> CLI; good when you may add Functions / backend later.</td>
+        <td>10&nbsp;GB Hosting storage</td>
+        <td>10&nbsp;GB/mo (also listed as 360&nbsp;MB/day ≈10.8&nbsp;GB)</td>
+        <td>$0; no card</td>
+        <td>Custom domain + SSL; over transfer → site disabled till next month; ≤2&nbsp;GB/file; retained releases count toward storage</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Surge.sh</td>
+        <td class="svc">Surge.sh</td>
         <td><a href="https://surge.sh/">surge.sh</a></td>
-        <td>Ultra-light CLI (<code>surge ./dist</code>); single-command static publish; free custom subdomain.</td>
+        <td>≤450&nbsp;MB &amp; ≤10,100 files/project</td>
+        <td>No BW metering (docs)</td>
+        <td>$0</td>
+        <td>Unlimited projects/domains; custom domain + auto certs; publish rate limits (e.g. 200/day/domain); limits pause publish only</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Tiiny.host</td>
+        <td class="svc">Tiiny.host</td>
         <td><a href="https://tiiny.host/">tiiny.host</a></td>
-        <td>Upload a zip / HTML for a tiny public URL; great for one-off demos; limited free plan.</td>
+        <td>3&nbsp;MB/project (0.5&nbsp;MB PDFs)</td>
+        <td>5&nbsp;GB/mo + 5k visits/mo</td>
+        <td>$0</td>
+        <td>1 active project; 3 uploads/day; subdomain SSL; <strong>no custom domain</strong> on free; login ≥ every 3&nbsp;mo or link may die</td>
         <td><span class="tag manual">manual</span></td>
       </tr>
       <tr>
-        <td>Google Sites</td>
+        <td class="svc">Google Sites</td>
         <td><a href="https://sites.google.com/">sites.google.com</a></td>
-        <td>Easiest share for docs/intranet pages; not suited to full custom HTML / thumbnail catalogs.</td>
+        <td>No separate hosting GB; Drive/site caps (≤10k pages, 15k images, 40M chars)</td>
+        <td>Unclear / not published like CDN hosts</td>
+        <td>$0 w/ Google acct</td>
+        <td>WYSIWYG only; SSL on Google domains; custom domain often needs DNS/Workspace — confirm; poor for raw static git deploy</td>
         <td><span class="tag manual">manual</span></td>
       </tr>
       <tr>
-        <td>Render (Static Sites)</td>
+        <td class="svc">Render Static Sites</td>
         <td><a href="https://render.com/docs/static-sites">render.com/docs/static-sites</a></td>
-        <td>Free static sites from git; auto TLS; simple env for agents with Render API/CLI.</td>
+        <td>No published static size cap</td>
+        <td>Hobby: <strong>5&nbsp;GB</strong> outbound/mo then $0.15/GB (or suspend if no card)</td>
+        <td>$0 static deploy</td>
+        <td>Counts against 500 pipeline min/mo; custom domain (2 incl. then $0.25); static sites don’t sleep (unlike free web services)</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>GitLab Pages</td>
+        <td class="svc">GitLab Pages</td>
         <td><a href="https://docs.gitlab.com/user/project/pages/">docs.gitlab.com/…/pages</a></td>
-        <td>CI-driven static publish from GitLab repos; similar model to GitHub Pages.</td>
+        <td>Max site <strong>1&nbsp;GB</strong> (artifact size)</td>
+        <td>No published monthly BW cap</td>
+        <td>$0 on Free</td>
+        <td>≤150 custom domains; HTTPS; CI minutes apply to builds; Free repo+LFS 10&nbsp;GiB; Pages rate limits</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Codeberg Pages</td>
+        <td class="svc">Codeberg Pages</td>
         <td><a href="https://docs.codeberg.org/codeberg-pages/">docs.codeberg.org/codeberg-pages</a></td>
-        <td>Free Pages on Codeberg (Forgejo); good FOSS alternative when GitHub is blocked.</td>
+        <td>Repo quotas ~750&nbsp;MiB Git + 1.5&nbsp;GiB LFS (soft; private often 100&nbsp;MiB)</td>
+        <td>Best‑effort; no fixed BW number</td>
+        <td>$0 (donation‑funded)</td>
+        <td>Public repos; custom domains; abuse/excessive traffic may be restricted; migrating to git‑pages</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Neocities</td>
+        <td class="svc">Neocities</td>
         <td><a href="https://neocities.org/">neocities.org</a></td>
-        <td>Classic personal-site host; API + CLI for uploads; free tier with size limits.</td>
+        <td>1&nbsp;GB</td>
+        <td>200&nbsp;GB/mo</td>
+        <td>$0</td>
+        <td>Free subdomain + SSL; <strong>custom domain = Supporter $5/mo</strong>; CLI + API; free = one site</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Deno Deploy</td>
+        <td class="svc">Deno Deploy</td>
         <td><a href="https://deno.com/deploy">deno.com/deploy</a></td>
-        <td>Edge deploy via <code>deployctl</code> / git; free tier for static + Deno apps.</td>
+        <td>Revision storage 10&nbsp;GiB; upload ≤1&nbsp;GB</td>
+        <td>20&nbsp;GiB egress/mo; 1M req/mo</td>
+        <td>$0</td>
+        <td>10 apps; 5 custom domains; 10 CPU‑hr; 150&nbsp;GiB‑hr memory; 1 concurrent build; 15 builds/hr; hard caps pause apps</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Azure Static Web Apps</td>
+        <td class="svc">Azure Static Web Apps Free</td>
         <td><a href="https://learn.microsoft.com/azure/static-web-apps/">learn.microsoft.com/…/static-web-apps</a></td>
-        <td>Free tier; GitHub Actions / SWA CLI; optional API functions on Azure.</td>
+        <td>500&nbsp;MB all envs; 250&nbsp;MB/env</td>
+        <td>100&nbsp;GB/mo; <strong>no overage</strong> (stops)</td>
+        <td>$0</td>
+        <td>≤10 apps/sub; ≤15k files; ≤2 custom domains; 3 preview envs; hobby intent; no SLA</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Cloudflare Workers + Assets</td>
+        <td class="svc">CF Workers + Assets</td>
         <td><a href="https://developers.cloudflare.com/workers/static-assets/">developers.cloudflare.com/…/static-assets</a></td>
-        <td>Wrangler-driven static assets on Workers; pairs with Pages for more control.</td>
+        <td>Asset storage $0; ≤20k files/version; ≤25&nbsp;MiB/file</td>
+        <td>Static asset requests free/unlimited</td>
+        <td>$0</td>
+        <td>Worker script: 100k req/day, 10&nbsp;ms CPU; ≤100 Workers; wrangler deploy</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Railway (static / Nixpacks)</td>
+        <td class="svc">Railway Free/Trial</td>
         <td><a href="https://railway.app/">railway.app</a></td>
-        <td>Git + Railway CLI; free trial credits — check current free limits before agent loops.</td>
+        <td>Free: 0.5&nbsp;GB vol, 1&nbsp;GB ephemeral</td>
+        <td>Egress $0.05/GB from credits</td>
+        <td>Trial <strong>$5 once</strong>/30d; then Free <strong>$1/mo</strong> credit (no rollover)</td>
+        <td>Not pure static CDN; Free: 1 replica, 0.5&nbsp;GB RAM; trial network limited if unverified; volumes deleted ~30d after trial expiry</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Fly.io</td>
+        <td class="svc">Fly.io</td>
         <td><a href="https://fly.io/">fly.io</a></td>
-        <td><code>flyctl</code> deploy; free allowance for small apps; overkill for pure static but agent-friendly.</td>
+        <td>Trial: 20&nbsp;GB volumes</td>
+        <td>No recurring free egress</td>
+        <td><strong>No recurring free tier</strong>; trial ≤2 VM‑hrs or 7 days</td>
+        <td>Card ends trial; legacy Hobby only if pre‑Oct‑2024 org; overkill for pure static</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
       <tr>
-        <td>Koyeb</td>
+        <td class="svc">Koyeb</td>
         <td><a href="https://www.koyeb.com/">koyeb.com</a></td>
-        <td>Git / CLI deploy; free instance tier useful for tiny static or edge services.</td>
+        <td>Free instance 2&nbsp;GB SSD</td>
+        <td>100&nbsp;GB outbound free (charging “not yet”; then $0.04/GB planned)</td>
+        <td>$0 for free instance; <strong>card required</strong> ($29 preauth)</td>
+        <td>1 free web svc (0.1 vCPU / 512&nbsp;MB) FRA or WAS; scale‑to‑zero / cold starts; hobby/test intent</td>
         <td><span class="tag agent">agent-OK</span></td>
       </tr>
     </tbody>
   </table>
-  <p class="note">For A.I.R.I.S. catalog / hub static HTML: prefer <strong>GitHub Pages</strong> (current), then <strong>Netlify</strong> / <strong>Cloudflare Pages</strong> / <strong>Vercel</strong> / <strong>Surge</strong> when you need a second origin or agent CLI deploy outside GitHub.</p>
+  </div>
+  <p class="note">
+    For A.I.R.I.S. catalog / hub static HTML: prefer <strong>GitHub Pages</strong> (current), then <strong>Netlify</strong> / <strong>Cloudflare Pages</strong> / <strong>Vercel</strong> / <strong>Surge</strong> for a second origin or agent CLI deploy.
+    Caveats: Netlify moved to credits (Sep 2025); Fly dropped forever‑free; “unlimited” often still has file-count / commercial-use / fair-use caps; soft (GitHub BW) vs hard (Netlify credits, Firebase transfer, Azure BW) pause behavior differs.
+  </p>
 
-  <p class="meta">Seeded by A.I.R.I.S. · expanded with free hosting reference · digests &amp; research notes TBD.</p>
+  <p class="meta">Seeded by A.I.R.I.S. · hosting limits refreshed ~2026-11-01 · digests &amp; research notes TBD.</p>
 </body>
 </html>
