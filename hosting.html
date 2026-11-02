@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hosting · A.I.R.I.S. Research Hub</title>
+  <style>
+    :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; --ok:#3dd68c; --warn:#f0b429; }
+
+    body { margin:0; padding:0; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    .wrap { max-width:1100px; margin:0 auto; padding:24px; }
+    .site-header { border-bottom:1px solid var(--border); background:var(--card); position:sticky; top:0; z-index:10; }
+    .site-header .inner { max-width:1100px; margin:0 auto; padding:12px 24px; display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; }
+    .brand { font-weight:700; font-size:1.05rem; color:var(--text); text-decoration:none; margin-right:8px; }
+    .brand:hover { color:var(--accent); }
+    nav.tabs { display:flex; flex-wrap:wrap; gap:6px; }
+    nav.tabs a { color:var(--muted); text-decoration:none; padding:6px 12px; border-radius:999px; border:1px solid transparent; font-size:0.92rem; }
+    nav.tabs a:hover { color:var(--text); border-color:var(--border); background:var(--bg); }
+    nav.tabs a.active { color:var(--text); background:var(--bg); border-color:var(--accent); }
+    h1 { margin:0 0 8px; } .meta { color:var(--muted); margin-bottom:28px; }
+    h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:28px; }
+    h2:first-of-type { margin-top:8px; }
+
+
+    :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; --ok:#3dd68c; --warn:#f0b429; }
+    
+    h1 { margin:0 0 8px; } .meta { color:var(--muted); margin-bottom:28px; }
+    h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:36px; }
+    h3 { margin:20px 0 8px; color:var(--muted); font-size:1rem; font-weight:600; }
+    table { width:100%; border-collapse:collapse; margin:12px 0 24px; font-size:0.88rem; }
+    th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:var(--card); position:sticky; top:0; z-index:1; }
+    th.sortable { cursor:pointer; user-select:none; white-space:nowrap; }
+    th.sortable:hover { color:var(--accent); }
+    th.sortable .ind { color:var(--muted); font-size:0.75rem; margin-left:4px; }
+    th.sortable.asc .ind::after { content:" ▲"; color:var(--accent); }
+    th.sortable.desc .ind::after { content:" ▼"; color:var(--accent); }
+    a { color:var(--link); } code { background:var(--card); padding:2px 6px; border-radius:4px; }
+    ul { padding-left:1.2rem; }
+    .tag { display:inline-block; font-size:0.72rem; padding:2px 7px; border-radius:999px; background:var(--card); border:1px solid var(--border); margin:1px 2px 1px 0; white-space:nowrap; }
+    .tag.agent { border-color:var(--ok); color:var(--ok); }
+    .tag.manual { border-color:var(--warn); color:var(--warn); }
+    .note { color:var(--muted); font-size:0.9rem; margin:-8px 0 16px; }
+    .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .scroll table { min-width:1040px; }
+    td.svc { font-weight:600; white-space:nowrap; }
+  
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">A.I.R.I.S. Research Hub</a>
+      <nav class="tabs" aria-label="Primary">
+        <a href="index.html">Main</a>
+        <a href="digests.html">Daily digests</a>
+        <a href="hosting.html" class="active">Hosting</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap">
+<h1>Hosting</h1>
+  <ul>
+    <li>This hub: GitHub Pages from <code>main</code> / root on <a href="https://github.com/dannylamky/ai-research-hub">dannylamky/ai-research-hub</a></li>
+    <li>Live URL: <a href="https://dannylamky.github.io/ai-research-hub/"><code>https://dannylamky.github.io/ai-research-hub/</code></a></li>
+    <li>Auto-research updates + chat notify: wired by A.I.R.I.S. routines</li>
+  </ul>
+
+  <h3>Free / low-cost hosting — click headers to sort</h3>
+  <p class="note">
+    Default sort: <strong>Agent OK</strong> first, then <strong>Cost free</strong>.
+    <span class="tag agent">agent-OK</span> CLI / API / git ·
+    <span class="tag manual">manual</span> drag-drop / human UI ·
+    Figures ~Nov 2026; re-check vendors before shipping.
+  </p>
+  <div class="scroll">
+  <table id="hosting-table">
+    <thead>
+      <tr>
+        <th class="sortable" data-col="0" data-type="text">Service<span class="ind"></span></th>
+        <th>URL</th>
+        <th class="sortable" data-col="2" data-type="text">Free storage<span class="ind"></span></th>
+        <th class="sortable" data-col="3" data-type="text">Bandwidth / traffic<span class="ind"></span></th>
+        <th class="sortable" data-col="4" data-type="num" data-key="cost">Cost<span class="ind"></span></th>
+        <th class="sortable" data-col="5" data-type="text">Key limits<span class="ind"></span></th>
+        <th class="sortable" data-col="6" data-type="num" data-key="agent">Agent<span class="ind"></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- data-agent: 2=agent-OK+git, 1=agent-OK, 0=manual; data-cost: 0=free forever, 1=free w/caveats, 2=trial/credits, 3=paid -->
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">GitHub Pages</td>
+        <td><a href="https://pages.github.com/">pages.github.com</a></td>
+        <td>Published site ≤1&nbsp;GB (soft)</td>
+        <td>Soft ~100&nbsp;GB/mo</td>
+        <td data-sort="0">$0</td>
+        <td>Public repos on Free; custom domain + HTTPS; not for commercial SaaS/e‑commerce; soft 10 builds/hr</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Cloudflare Pages</td>
+        <td><a href="https://pages.cloudflare.com/">pages.cloudflare.com</a></td>
+        <td>No GB cap; ≤20k files/site; ≤25&nbsp;MiB/file</td>
+        <td>Static requests/BW unlimited (docs)</td>
+        <td data-sort="0">$0 forever</td>
+        <td>500 builds/mo; 1 concurrent; ≤100 projects; Functions share Workers 100k req/day</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Cloudflare Workers + Assets</td>
+        <td><a href="https://developers.cloudflare.com/workers/static-assets/">developers.cloudflare.com/…/static-assets</a></td>
+        <td>≤20k files/version; ≤25&nbsp;MiB/file; KV 1&nbsp;GB</td>
+        <td>Static asset req free/unlimited; dynamic 100k req/day</td>
+        <td data-sort="0">$0</td>
+        <td>10&nbsp;ms CPU/inv; ≤100 Workers; Pages Functions share daily pool</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="1" data-cost="0">
+        <td class="svc">Cloudflare R2</td>
+        <td><a href="https://developers.cloudflare.com/r2/pricing/">developers.cloudflare.com/r2</a></td>
+        <td>10&nbsp;GB-month/mo Standard</td>
+        <td>Egress free (no egress fees)</td>
+        <td data-sort="0">$0 within free tier</td>
+        <td>1M Class A + 10M Class B ops/mo; Standard only on free; object store not Pages</td>
+        <td data-sort="1"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Netlify Free</td>
+        <td><a href="https://www.netlify.com/">netlify.com</a> · <a href="https://app.netlify.com/drop">Drop</a></td>
+        <td>No published site-size GB cap</td>
+        <td>300 credits/mo; BW ≈20&nbsp;cr/GB (~15&nbsp;GB if all BW)</td>
+        <td data-sort="0">$0 forever</td>
+        <td>1 concurrent build; ≤500 projects; Drop = manual</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span> <span class="tag manual">Drop</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Vercel Hobby</td>
+        <td><a href="https://vercel.com/">vercel.com</a></td>
+        <td>Deploy storage 10&nbsp;GB; upload ≤100&nbsp;MB</td>
+        <td>Fast Data Transfer 100&nbsp;GB/mo; Origin 10&nbsp;GB</td>
+        <td data-sort="0">$0</td>
+        <td><strong>Non‑commercial / personal only</strong>; 100 deploys/day; 1 concurrent</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Firebase Hosting Spark</td>
+        <td><a href="https://firebase.google.com/docs/hosting">firebase.google.com/docs/hosting</a></td>
+        <td>10&nbsp;GB Hosting storage</td>
+        <td>10&nbsp;GB/mo (~360&nbsp;MB/day)</td>
+        <td data-sort="0">$0; no card</td>
+        <td>Over transfer → disabled till next month; ≤2&nbsp;GB/file</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Surge.sh</td>
+        <td><a href="https://surge.sh/">surge.sh</a></td>
+        <td>≤450&nbsp;MB &amp; ≤10,100 files/project</td>
+        <td>No BW metering (docs)</td>
+        <td data-sort="0">$0</td>
+        <td>Unlimited projects/domains; publish rate limits</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Render Static Sites</td>
+        <td><a href="https://render.com/docs/static-sites">render.com/docs/static-sites</a></td>
+        <td>No published static size cap</td>
+        <td>Hobby: <strong>5&nbsp;GB</strong> outbound/mo then $0.15/GB</td>
+        <td data-sort="0">$0 static deploy</td>
+        <td>500 pipeline min/mo; static sites don’t sleep</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">GitLab Pages</td>
+        <td><a href="https://docs.gitlab.com/user/project/pages/">docs.gitlab.com/…/pages</a></td>
+        <td>Max site <strong>1&nbsp;GB</strong></td>
+        <td>No published monthly BW cap</td>
+        <td data-sort="0">$0 on Free</td>
+        <td>CI minutes apply; ≤150 custom domains</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Codeberg Pages</td>
+        <td><a href="https://docs.codeberg.org/codeberg-pages/">docs.codeberg.org/codeberg-pages</a></td>
+        <td>~750&nbsp;MiB Git + 1.5&nbsp;GiB LFS (soft)</td>
+        <td>Best‑effort; no fixed BW</td>
+        <td data-sort="0">$0 (donation‑funded)</td>
+        <td>Public repos; abuse may be restricted</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="1" data-cost="0">
+        <td class="svc">Neocities</td>
+        <td><a href="https://neocities.org/">neocities.org</a></td>
+        <td>1&nbsp;GB</td>
+        <td>200&nbsp;GB/mo</td>
+        <td data-sort="0">$0</td>
+        <td>Custom domain = Supporter $5/mo; free = one site</td>
+        <td data-sort="1"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Deno Deploy</td>
+        <td><a href="https://deno.com/deploy">deno.com/deploy</a></td>
+        <td>Revision storage 10&nbsp;GiB; upload ≤1&nbsp;GB</td>
+        <td>20&nbsp;GiB egress/mo; 1M req/mo</td>
+        <td data-sort="0">$0</td>
+        <td>10 apps; hard caps pause apps</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="0">
+        <td class="svc">Azure Static Web Apps Free</td>
+        <td><a href="https://learn.microsoft.com/azure/static-web-apps/">learn.microsoft.com/…/static-web-apps</a></td>
+        <td>500&nbsp;MB all envs; 250&nbsp;MB/env</td>
+        <td>100&nbsp;GB/mo; no overage (stops)</td>
+        <td data-sort="0">$0</td>
+        <td>≤10 apps/sub; ≤15k files; ≤2 custom domains</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="1" data-cost="0">
+        <td class="svc">Supabase Storage (+ Free project)</td>
+        <td><a href="https://supabase.com/pricing">supabase.com/pricing</a></td>
+        <td>1&nbsp;GB file storage; 500&nbsp;MB DB</td>
+        <td>5&nbsp;GB egress + 5&nbsp;GB cached egress/mo</td>
+        <td data-sort="0">$0 Free plan</td>
+        <td><strong>Not a static-site host</strong>; ≤2 free projects; pause after 1 week idle; upload max 50&nbsp;MB; Edge Fn 500k invoc/mo</td>
+        <td data-sort="1"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="1">
+        <td class="svc">AWS Amplify Hosting</td>
+        <td><a href="https://aws.amazon.com/amplify/pricing/">aws.amazon.com/amplify</a></td>
+        <td>5&nbsp;GB stored on CDN/mo (Free Tier)</td>
+        <td>15&nbsp;GB served/mo</td>
+        <td data-sort="1">$0 while Free Tier; else pay‑as‑you‑go</td>
+        <td>1,000 build min/mo; new accounts (since Jul 2025) often <strong>time‑limited credits</strong> not forever‑free</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="1" data-cost="1">
+        <td class="svc">AWS CloudFront Free (+ S3 credits)</td>
+        <td><a href="https://aws.amazon.com/cloudfront/pricing/">aws.amazon.com/cloudfront</a></td>
+        <td>5&nbsp;GB S3 Standard credits/mo</td>
+        <td>100&nbsp;GB transfer + 1M req/mo; no overages (throttle)</td>
+        <td data-sort="1">$0/mo per Free plan</td>
+        <td>Up to 3 Free plans/account; CDN + basic WAF/DNS/TLS; wire S3 via CLI/API</td>
+        <td data-sort="1"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="2">
+        <td class="svc">Railway Free/Trial</td>
+        <td><a href="https://railway.app/">railway.app</a></td>
+        <td>0.5&nbsp;GB vol, 1&nbsp;GB ephemeral</td>
+        <td>Egress $0.05/GB from credits</td>
+        <td data-sort="2">Trial $5 once/30d; then $1/mo credit</td>
+        <td>Not pure static CDN; 1 replica / 0.5&nbsp;GB RAM on Free</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="3">
+        <td class="svc">Fly.io</td>
+        <td><a href="https://fly.io/">fly.io</a></td>
+        <td>Trial: 20&nbsp;GB volumes</td>
+        <td>No recurring free egress</td>
+        <td data-sort="3"><strong>No recurring free tier</strong></td>
+        <td>Trial ≤2 VM‑hrs or 7 days; legacy Hobby only pre‑Oct‑2024</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="2" data-cost="1">
+        <td class="svc">Koyeb</td>
+        <td><a href="https://www.koyeb.com/">koyeb.com</a></td>
+        <td>Free instance 2&nbsp;GB SSD</td>
+        <td>100&nbsp;GB outbound free (charging TBD)</td>
+        <td data-sort="1">$0 instance; <strong>card required</strong></td>
+        <td>1 free web svc 0.1 vCPU / 512&nbsp;MB; cold starts</td>
+        <td data-sort="2"><span class="tag agent">agent-OK</span></td>
+      </tr>
+      <tr data-agent="0" data-cost="0">
+        <td class="svc">Tiiny.host</td>
+        <td><a href="https://tiiny.host/">tiiny.host</a></td>
+        <td>3&nbsp;MB/project</td>
+        <td>5&nbsp;GB/mo + 5k visits/mo</td>
+        <td data-sort="0">$0</td>
+        <td>1 active project; no custom domain on free; login every 3&nbsp;mo</td>
+        <td data-sort="0"><span class="tag manual">manual</span></td>
+      </tr>
+      <tr data-agent="0" data-cost="0">
+        <td class="svc">Google Sites</td>
+        <td><a href="https://sites.google.com/">sites.google.com</a></td>
+        <td>Drive/site caps (≤10k pages, 15k images)</td>
+        <td>Unclear / not CDN‑style</td>
+        <td data-sort="0">$0 w/ Google acct</td>
+        <td>WYSIWYG only; poor for raw static git deploy</td>
+        <td data-sort="0"><span class="tag manual">manual</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">
+    Prefer <strong>GitHub Pages</strong> (this hub) or <strong>Cloudflare Pages / Workers</strong> / <strong>Netlify</strong> / <strong>Vercel</strong> / <strong>Surge</strong> for agent CLI static deploy.
+    Supabase = Storage + Free project (not Pages equivalent). AWS Amplify / CloudFront Free = free with Free Tier / credit caveats (post‑Jul 2025 redesign).
+  </p>
+
+  
+  <p class="meta">Seeded by A.I.R.I.S. · multi-page hub · digests from 2026-11-02 · hosting limits ~2026-11-01.</p>
+  </div>
+<script>
+  (function () {
+    var table = document.getElementById("hosting-table");
+    if (!table) return;
+    var tbody = table.tBodies[0];
+    var headers = table.querySelectorAll("th.sortable");
+    var sortState = { key: null, dir: 1 };
+
+    function cellVal(row, col, type, key) {
+      if (key === "agent") return parseInt(row.getAttribute("data-agent") || "0", 10);
+      if (key === "cost") return parseInt(row.getAttribute("data-cost") || "9", 10);
+      var cell = row.cells[col];
+      if (!cell) return "";
+      if (type === "num" && cell.hasAttribute("data-sort")) return parseFloat(cell.getAttribute("data-sort"));
+      return (cell.textContent || "").trim().toLowerCase();
+    }
+
+    function sortBy(col, type, key, dir) {
+      var rows = Array.prototype.slice.call(tbody.rows);
+      rows.sort(function (a, b) {
+        var va = cellVal(a, col, type, key);
+        var vb = cellVal(b, col, type, key);
+        var cmp;
+        if (typeof va === "number" && typeof vb === "number") cmp = va - vb;
+        else cmp = String(va).localeCompare(String(vb), undefined, { numeric: true, sensitivity: "base" });
+        if (cmp !== 0) return cmp * dir;
+        // Tie-breakers always: free cost first, then stronger agent (independent of dir)
+        var costCmp = parseInt(a.getAttribute("data-cost") || "9", 10) - parseInt(b.getAttribute("data-cost") || "9", 10);
+        if (costCmp !== 0) return costCmp;
+        return parseInt(b.getAttribute("data-agent") || "0", 10) - parseInt(a.getAttribute("data-agent") || "0", 10);
+      });
+      rows.forEach(function (r) { tbody.appendChild(r); });
+      headers.forEach(function (h) { h.classList.remove("asc", "desc"); });
+      var active = table.querySelector('th.sortable[data-col="' + col + '"]');
+      if (active) active.classList.add(dir > 0 ? "asc" : "desc");
+      sortState = { key: key || col, dir: dir };
+    }
+
+    headers.forEach(function (th) {
+      th.addEventListener("click", function () {
+        var col = parseInt(th.getAttribute("data-col"), 10);
+        var type = th.getAttribute("data-type") || "text";
+        var key = th.getAttribute("data-key") || null;
+        var same = sortState.key === (key || col);
+        var dir = same ? -sortState.dir : 1;
+        // For agent: higher agent score first → descending numeric by default
+        if (!same && key === "agent") dir = -1;
+        // For cost: free first → ascending
+        if (!same && key === "cost") dir = 1;
+        sortBy(col, type, key, dir);
+      });
+    });
+
+    // Default: agent OK first (desc agent), then cost free (asc cost)
+    sortBy(6, "num", "agent", -1);
+  })();
+  </script>
+</body>
+</html>
