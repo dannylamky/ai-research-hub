@@ -6,7 +6,6 @@
   <title>Daily digests · A.I.R.I.S. Research Hub</title>
   <style>
     :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; --ok:#3dd68c; --warn:#f0b429; }
-
     body { margin:0; padding:0; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
     .wrap { max-width:1100px; margin:0 auto; padding:24px; }
     .site-header { border-bottom:1px solid var(--border); background:var(--card); position:sticky; top:0; z-index:10; }
@@ -17,34 +16,24 @@
     nav.tabs a { color:var(--muted); text-decoration:none; padding:6px 12px; border-radius:999px; border:1px solid transparent; font-size:0.92rem; }
     nav.tabs a:hover { color:var(--text); border-color:var(--border); background:var(--bg); }
     nav.tabs a.active { color:var(--text); background:var(--bg); border-color:var(--accent); }
-    h1 { margin:0 0 8px; } .meta { color:var(--muted); margin-bottom:28px; }
-    h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:28px; }
-    h2:first-of-type { margin-top:8px; }
-
-
-    :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; --ok:#3dd68c; --warn:#f0b429; }
-    
-    h1 { margin:0 0 8px; } .meta { color:var(--muted); margin-bottom:28px; }
-    h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:36px; }
-    h3 { margin:20px 0 8px; color:var(--muted); font-size:1rem; font-weight:600; }
-    table { width:100%; border-collapse:collapse; margin:12px 0 24px; font-size:0.88rem; }
+    h1 { margin:0 0 8px; }
+    .meta { color:var(--muted); margin-bottom:16px; }
+    h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:32px; }
+    h3 { margin:22px 0 8px; color:var(--text); font-size:1.05rem; font-weight:600; }
+    h4 { margin:14px 0 6px; color:var(--muted); font-size:0.95rem; }
+    table { width:100%; border-collapse:collapse; margin:12px 0 20px; font-size:0.88rem; }
     th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
-    th { background:var(--card); position:sticky; top:0; z-index:1; }
-    th.sortable { cursor:pointer; user-select:none; white-space:nowrap; }
-    th.sortable:hover { color:var(--accent); }
-    th.sortable .ind { color:var(--muted); font-size:0.75rem; margin-left:4px; }
-    th.sortable.asc .ind::after { content:" ▲"; color:var(--accent); }
-    th.sortable.desc .ind::after { content:" ▼"; color:var(--accent); }
-    a { color:var(--link); } code { background:var(--card); padding:2px 6px; border-radius:4px; }
-    ul { padding-left:1.2rem; }
-    .tag { display:inline-block; font-size:0.72rem; padding:2px 7px; border-radius:999px; background:var(--card); border:1px solid var(--border); margin:1px 2px 1px 0; white-space:nowrap; }
-    .tag.agent { border-color:var(--ok); color:var(--ok); }
-    .tag.manual { border-color:var(--warn); color:var(--warn); }
-    .note { color:var(--muted); font-size:0.9rem; margin:-8px 0 16px; }
+    th { background:var(--card); }
+    a { color:var(--link); }
+    code { background:var(--card); padding:2px 6px; border-radius:4px; font-size:0.85em; }
+    ul { padding-left:1.2rem; margin:6px 0 14px; }
+    li { margin:3px 0; }
+    .note { color:var(--muted); font-size:0.9rem; margin:-4px 0 16px; }
     .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
-    .scroll table { min-width:1040px; }
-    td.svc { font-weight:600; white-space:nowrap; }
-  
+    .tag { display:inline-block; font-size:0.72rem; padding:2px 7px; border-radius:999px; background:var(--card); border:1px solid var(--border); margin-right:4px; }
+    .tag.ok { border-color:var(--ok); color:var(--ok); }
+    .tag.warn { border-color:var(--warn); color:var(--warn); }
+    .refs { font-size:0.86rem; }
   </style>
 </head>
 <body>
@@ -60,81 +49,171 @@
     </div>
   </header>
   <div class="wrap">
-<h1>Daily digests</h1>
-  <p class="note">Weekdays ~08:00 Asia/Hong_Kong · high-signal only · newest first.</p>
-  <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-02T16:47:00+08:00">2026-11-02 16:47 Asia/Hong_Kong</time></p>
+    <h1>Daily digests</h1>
+    <p class="note">Weekdays ~08:00 Asia/Hong_Kong · on-demand deepened · high-signal only · newest first · 每主題 ≥3 連結。</p>
+    <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-02T16:54:00+08:00">2026-11-02 16:54 Asia/Hong_Kong</time></p>
 
-  <h3>2026-11-02 · 平日 AI 摘要</h3>
-  <p class="meta">首次例行跑；覆蓋約過去 48 小時 + 優先觀察項近期公開狀態。· 本篇更新：2026-11-02 08:09 Asia/Hong_Kong</p>
+    <h2>2026-11-02 · 加深版 AI 摘要</h2>
+    <p class="meta">On-demand deepen（合併今早例行跑）· CTO／senior-ML 讀法 · 證據優先。</p>
 
-  <h3 style="color:var(--text)">優先觀察清單</h3>
-  <div class="scroll">
-  <table>
-    <thead><tr><th>#</th><th>項目</th><th>狀態</th><th>要點</th></tr></thead>
-    <tbody>
-      <tr>
-        <td>1</td><td>Grok Bot</td><td>窗口內安靜</td>
-        <td>最新公開 changelog 仍係 <strong>v0.78.1（2026-10-27）</strong>：購物卡、Shop Pay、訂閱模板。呢個窗口冇新版號。<a href="https://x.ai/changelog/bot">x.ai/changelog/bot</a></td>
-      </tr>
-      <tr>
-        <td>2</td><td>Meta Muse</td><td>無實質更新</td>
-        <td>Muse Image 已上線；Muse Video 仍係 preview（以 Meta MSL 介紹文為準）。近 48h 冇新產品帖。<a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">Meta blog</a></td>
-      </tr>
-      <tr>
-        <td>3</td><td>M365 Copilot / Cowork</td><td>有料</td>
-        <td><strong>Cowork（Oct）</strong>：Projects；model picker 加入 <strong>GPT 6.1 Sol</strong> 同 <strong>Grok 4.7</strong>；Accounting / Finance / Capital Markets plugins；擴 connectors + 非 Microsoft 事件觸發。<a href="https://learn.microsoft.com/en-us/copilot/cowork/whats-new">Cowork what’s new</a>。<strong>M365 Copilot release notes（至 Oct 27）</strong>：Learning Agent；admin 可建自訂 <strong>MCP connectors</strong>；<strong>Work IQ</strong> usage-based billing。<a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Release notes</a></td>
-      </tr>
-      <tr>
-        <td>4</td><td>HeyGen HyperFrames</td><td>有料</td>
-        <td><strong>2026-11-01</strong> 活躍 commits：CLI snapshot retry（Chrome 繪製中斷，#6941）；<code>HYPERFRAMES_CACHE_DIR</code> 統一 cache（#6716）；Studio 單鍵快捷鍵 remap（#6957）；audio/transcribe docs（#6960）。<a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a></td>
-      </tr>
-      <tr>
-        <td>5</td><td>Strata（上游 Niko1221）</td><td>有料</td>
-        <td><strong>2026-10-31</strong>：multi-GPU 選擇訊息 — NVIDIA ≤8GB 旁卡預設 Off；AMD/Intel discrete 列出規則同測試。<a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a>（Danny fork：mach10x/strata）</td>
-      </tr>
-    </tbody>
-  </table>
+    <h3>優先觀察清單</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>項目</th><th>狀態</th><th>要點</th><th>參考（≥3）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Grok Bot</td>
+          <td><span class="tag warn">窗口安靜</span></td>
+          <td>最新公開仍係 <strong>v0.78.1（2026-10-27）</strong>：購物卡、Shop Pay、訂閱模板。加深窗口未見新版號。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://x.ai/changelog/bot">x.ai/changelog/bot</a></li>
+              <li><a href="https://x.ai/news/introducing-grok-bot">Introducing Grok Bot</a></li>
+              <li><a href="https://x.ai/news/grok-bot-more-plans">More plans</a></li>
+              <li><a href="https://x.ai/news/grok-bot-for-enterprise">Enterprise</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Meta Muse</td>
+          <td><span class="tag warn">無實質更新</span></td>
+          <td>Muse Image GA（agentic + Content Seal）；Muse Video 仍 preview／closed beta（~10s + native audio，未公開 GA）。API 報道價 $0.01/image。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">ai.meta.com blog</a></li>
+              <li><a href="https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/">about.fb.com</a></li>
+              <li><a href="https://developer.meta.com/ai/resources/blog/build-with-muse-Image/">Model API blog</a></li>
+              <li><a href="https://www.testingcatalog.com/exclusive-early-outputs-of-muse-video-model-from-meta/">TestingCatalog Video</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>M365 Copilot / Cowork</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>Cowork Oct</strong>：Projects；<strong>GPT 6.1 Sol</strong> + <strong>Grok 4.7</strong>；Accounting／Finance／Capital Markets plugins；擴 connectors + 非 MS 事件觸發。<strong>Release notes→Oct 27</strong>：Learning Agent；自訂 MCP connectors；Work IQ usage billing。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://learn.microsoft.com/en-us/copilot/cowork/whats-new">Cowork what’s new</a></li>
+              <li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">M365 Copilot release notes</a></li>
+              <li><a href="https://www.microsoft.com/en-us/copilot/blog/2026/06/16/copilot-cowork-is-now-generally-available/">Cowork GA blog</a></li>
+              <li><a href="https://www.microsoft.com/en-us/copilot/blog/2026/05/05/copilot-cowork-from-conversation-to-action-across-skills-integrations-and-devices/">Conversation→action</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HeyGen HyperFrames</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>2026-11-02</strong>：<code>v0.9.0</code>/<code>v0.9.1</code>；WebGL ended-scene context release（#6984）；Studio keybinding ask（#6979）；heavy-clip lighter copy（#6982）。HTML→deterministic MP4；agent skills。非 hyperframe.ai。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a></li>
+              <li><a href="https://github.com/heygen-com/hyperframes/blob/main/docs/introduction.mdx">introduction.mdx</a></li>
+              <li><a href="https://github.com/heygen-com/hyperframes/blob/main/docs/guides/skills.mdx">skills.mdx</a></li>
+              <li><a href="https://github.com/heygen-com/hyperframes/commit/26d6e3eef17d3f9b3d2764c7504a38e1bec0af97">commit #6984</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Strata</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上游 <strong>2026-10-31</strong>：multi-GPU／≤8GB NVIDIA 旁卡預設 Off。Qwen3.8-Flash-Next MoE offload + localhost OpenAI/Anthropic API。跟 <code>mach10x/strata</code> fork；非 strata.ai。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a></li>
+              <li><a href="https://github.com/mach10x/strata">mach10x/strata</a></li>
+              <li><a href="https://github.com/Niko1221/Strata/blob/main/docs/MODELS.md">MODELS.md</a></li>
+              <li><a href="https://research.strata2signal.com/flash-next-why-the-first-word-comes-sooner/">strata→signal bench</a></li>
+              <li><a href="https://www.developersdigest.tech/blog/qwen-3-8-flash-next-strata-run-locally-2026">Developers Digest</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ArtCraft</td>
+          <td><span class="tag warn">跟蹤中</span></td>
+          <td>Crafting Apps（Rust OSS）+ Studio（2D/3D compose→gen models）。最新 tagged <strong>v0.41.0（2026-09-26）</strong>。API host：api.storyteller.ai。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://getartcraft.com/">getartcraft.com</a></li>
+              <li><a href="https://github.com/storytold/artcraft">storytold/artcraft</a></li>
+              <li><a href="https://github.com/storytold/artcraft/releases">Releases v0.41.0</a></li>
+              <li><a href="https://github.com/storytold/artcraft-services">artcraft-services</a></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>產業／論文周邊</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>共用 robots.txt AI training opt-out</td>
+          <td>OpenAI／Google／Microsoft／Anthropic 表態承認共用 training preference signal（IETF 個人 draft）。Anthropic 已上；OpenAI 數月內；G／MS ~2027。</td>
+          <td>單一 token 對多 crawler 做訓練 opt-out；自願、前瞻。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out">The Verge</a></li>
+              <li><a href="https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/">IETF draft</a></li>
+              <li><a href="https://www.searchenginejournal.com/google-microsoft-openai-shared-ai-training-opt-out/595387/">SEJ</a></li>
+              <li><a href="https://developers.google.com/search/blog/2026/10/ai-training-control">Google Search Central</a></li>
+            </ul>
+          </td>
+          <td>Meta 未綁定；已抓數據唔回溯；唔等於授權／收費</td>
+        </tr>
+        <tr>
+          <td>ChatGPT + Codex 共用用量（12 月）</td>
+          <td>Plus／Pro／Business：ChatGPT 同 Codex 共用 token 池；Instant Chat 唔計；Settings→Usage 合併餘額。</td>
+          <td>Agent／coding 同 chat 搶同一配額 — 節奏／成本預測改變。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits">OpenAI Help</a></li>
+              <li><a href="https://community.openai.com/t/usage-allowance-will-be-shared-across-chatgpt-and-codex/1411558">Community</a></li>
+              <li><a href="https://www.unite.ai/openai-sets-shared-chatgpt-and-codex-usage-allowance-for-december/">Unite.AI</a></li>
+            </ul>
+          </td>
+          <td>Help 文未公開具體 token 數字</td>
+        </tr>
+        <tr>
+          <td>Apple 智能 × 千問（中國大陸）</td>
+          <td>Apple + 阿里：部分體驗接入千問。<strong>11/4</strong> 開發者 Beta；<strong>12 月 iOS 27.3</strong> 正式。需千問或 Sign in with Apple。唔包 WWDC 2026 下一代 Siri AI。</td>
+          <td>大型西方 OEM 喺中國以本地基礎模型做系統 AI 後端之一。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/">Apple 中國新聞稿</a></li>
+              <li><a href="https://9to5mac.com/2026/10/30/apple-confirms-ios-27-3-beta-is-coming-next-week-with-apple-intelligence-in-china/">9to5Mac</a></li>
+              <li><a href="https://english.news.cn/20261101/773fa2ac33a34a5ca3484d7e5920d094/c.html">Xinhua</a></li>
+              <li><a href="https://technode.com/2026/11/02/apple-confirms-qwen-integration-for-china-ai-rollout-with-beta-testing-starting-november-4/">TechNode</a></li>
+            </ul>
+          </td>
+          <td>地區／語言門檻；設備白名單；下一代 Siri 排除</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>讀法／限制</h3>
+    <ul>
+      <li>HyperFrames／Strata／ArtCraft 屬工程／產品活躍度，唔好當大型市場 GA changelog。</li>
+      <li>Copilot「Grok 4.7 in Cowork」係 Microsoft Learn 聲稱；實際租戶 rollout 可能滯後。</li>
+      <li>X 二次轉述（未有一級來源）今次未入正文。</li>
+      <li>硬規則：每個保留主題 ≥3 條完整 https 連結；已抽樣 WebFetch／curl 核對。</li>
+    </ul>
+
+    <details>
+      <summary class="meta">歷史：今早例行跑短註（已併入上方加深版）</summary>
+      <p class="note">2026-11-02 08:09 Asia/Hong_Kong · 首次例行跑；ArtCraft 未獨立成段；各主題連結未達 ≥3。本加深版已取代為主條目。</p>
+    </details>
+
+    <p class="meta">Seeded by A.I.R.I.S. · multi-page hub · deepened 2026-11-02 16:54 Asia/Hong_Kong.</p>
   </div>
-
-  <h3 style="color:var(--text)">產業 / 論文周邊（高訊號）</h3>
-  <div class="scroll">
-  <table>
-    <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>證據</th><th>限制 / 弱聲稱</th></tr></thead>
-    <tbody>
-      <tr>
-        <td>共用 robots.txt AI opt-out token</td>
-        <td>OpenAI、Google、Microsoft、Anthropic 將承認 IETF 風格 policy token；Anthropic 已上；OpenAI 數月內；G/MS 約明年。MS 分開 training vs grounding。Meta 口頭支持但未承諾執行</td>
-        <td>網站可用單一 token 對多個 crawler 做訓練 opt-out；自願、前瞻、唔等於授權/收費</td>
-        <td><a href="https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out">The Verge 2026-10-30</a></td>
-        <td>Meta 未綁定；已抓數據唔回溯</td>
-      </tr>
-      <tr>
-        <td>OpenAI ChatGPT + Codex 共用用量（12 月）</td>
-        <td>Plus / Pro / Business：ChatGPT 同 Codex 共用一個 token 池；Instant Chat 唔計；Settings → Usage 顯示合併餘額</td>
-        <td>Agent/coding 同 chat 搶同一配額 — 成本同節奏預測改變</td>
-        <td><a href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits">OpenAI Help</a>（近更新）</td>
-        <td>Help 文冇公開具體 token 數字</td>
-      </tr>
-      <tr>
-        <td>Apple 智能 × 千問（中國大陸）</td>
-        <td>Apple + 阿里：部分體驗接入千問（Siri / 寫作工具 / 視覺智能）。<strong>11 月 4 日</strong>起 iOS 開發者 Beta 測試；<strong>12 月 iOS 27.3</strong> 正式。需登入千問或 Sign in with Apple。<strong>唔包</strong> WWDC 2026 下一代 Siri AI</td>
-        <td>首個大型西方 OEM 喺中國以本地基礎模型做系統 AI 後端之一</td>
-        <td><a href="https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/">Apple 中國新聞稿 2026-10-31</a></td>
-        <td>地區/語言門檻；設備白名單；下一代 Siri 功能明確排除</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-
-  <ul>
-    <li>HyperFrames / Strata 屬工程活躍度，非市場發布；適合跟 commit 同 API 表面，唔好當 GA changelog。</li>
-    <li>Copilot「Grok 4.7 in Cowork」係 Microsoft Learn 文檔聲稱；實際租戶 rollout 可能滯後。</li>
-    <li>X 二次轉述（例如「GPT-6.1 Terra / Gemini 4 Carbon」）訊號嘈雜，今次未納入正文直至有一級來源。</li>
-  </ul>
-
-  
-  <p class="meta">Seeded by A.I.R.I.S. · multi-page hub · digests from 2026-11-02 · hosting limits ~2026-11-01.</p>
-  </div>
-
 </body>
 </html>
