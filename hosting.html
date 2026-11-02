@@ -10,7 +10,7 @@
     body { margin:0; padding:0; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
     .wrap { max-width:1100px; margin:0 auto; padding:24px; }
     .site-header { border-bottom:1px solid var(--border); background:var(--card); position:sticky; top:0; z-index:10; }
-    .site-header .inner { max-width:1100px; margin:0 auto; padding:12px 24px; display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; }
+    .site-header .inner { max-width:1200px; margin:0 auto; padding:12px 24px; display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; }
     .brand { font-weight:700; font-size:1.05rem; color:var(--text); text-decoration:none; margin-right:8px; }
     .brand:hover { color:var(--accent); }
     nav.tabs { display:flex; flex-wrap:wrap; gap:6px; }
@@ -41,9 +41,20 @@
     .tag.agent { border-color:var(--ok); color:var(--ok); }
     .tag.manual { border-color:var(--warn); color:var(--warn); }
     .note { color:var(--muted); font-size:0.9rem; margin:-8px 0 16px; }
-    .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
-    .scroll table { min-width:1040px; }
-    td.svc { font-weight:600; white-space:nowrap; }
+    .scroll { overflow-x:visible; }
+    #hosting-table { width:100%; table-layout:fixed; font-size:0.78rem; }
+    #hosting-table th, #hosting-table td { padding:6px 7px; word-break:break-word; overflow-wrap:anywhere; white-space:normal; hyphens:auto; }
+    #hosting-table th.sortable { white-space:normal; }
+    #hosting-table col.svc, #hosting-table td.svc { font-weight:600; }
+    #hosting-table th:nth-child(1), #hosting-table td:nth-child(1) { width:11%; }
+    #hosting-table th:nth-child(2), #hosting-table td:nth-child(2) { width:14%; }
+    #hosting-table th:nth-child(3), #hosting-table td:nth-child(3) { width:13%; }
+    #hosting-table th:nth-child(4), #hosting-table td:nth-child(4) { width:13%; }
+    #hosting-table th:nth-child(5), #hosting-table td:nth-child(5) { width:12%; }
+    #hosting-table th:nth-child(6), #hosting-table td:nth-child(6) { width:27%; }
+    #hosting-table th:nth-child(7), #hosting-table td:nth-child(7) { width:10%; }
+    td.svc { font-weight:600; white-space:normal; }
+    .wrap { max-width:1200px; }
   
   </style>
 </head>
