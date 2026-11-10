@@ -51,7 +51,680 @@
   <div class="wrap">
     <h1>Daily digests</h1>
     <p class="note">Weekdays ~08:00 Asia/Hong_Kong · on-demand deepened · high-signal only · newest first · 每主題 ≥3 連結。</p>
-    <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-05T15:04:00+08:00">2026-11-05 15:04 Asia/Hong_Kong</time></p>
+    <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-10T08:07:00+08:00">2026-11-10 08:07 Asia/Hong_Kong</time></p>
+
+    <h2>2026-11-10 · 平日例行 AI 摘要</h2>
+    <p class="meta">例行跑 · CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行（2026-11-09 08:08 HKT）之後 · 最後更新：2026-11-10 08:07 Asia/Hong_Kong</p>
+
+    <h3>優先觀察清單</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>項目</th><th>狀態</th><th>要點</th><th>參考（≥3）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Grok Bot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>官方 changelog 由上次見到嘅 <strong>v0.78.1（2026-10-27）</strong>更新到 <strong>Latest v0.79.3（2026-11-06）</strong>，補上 11-03～11-06 一級說明（上次第三方有 0.79.x 說法、官方頁未跟）。<strong>0.79.3</strong>：Shared Pages 記低深／淺色主題；page fetch 失敗會直接讀頁而唔再開 browser；通話卡片／即時逐字稿／1Password 解除連結／Teams admin 登入錯誤／Enterprise trial 誤報用量上限。<strong>11-05（0.79.0–0.79.1）</strong>：新平面 app icon；搵禮物會問收件人／預算／場合／送達日、唔會落遲到嘅單；Delta／American／Alaska／JetBlue／Frontier 跟該站流程訂機票；Gmail／Outlook draft cards 列出並可發送附件；發現網頁隱藏俾 AI agent 嘅指示會告知且唔跟；Bot computer 可跑 <code>ssh</code>／<code>psql</code>；Teams 可設 Bot Computer Retention Period。<strong>11-04</strong>：定期 repurchases 每次一張核准卡；Slack workspace 連結頁寫明 workspace 名。<strong>11-03（0.78.4）</strong>：可代申請訂閱退款；核准後總額無實質變動就自行付款。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.ai/changelog/bot">x.ai/changelog/bot</a></li>
+            <li><a href="https://x.ai/bot">x.ai/bot</a></li>
+            <li><a href="https://docs.x.ai/grok-bot/overview">docs overview</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Meta Muse</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>2026-11-09</strong> 推出 <strong>Muse Ember</strong>——官稱最小、最慳模型，針對 agent 日日重複嘅 tool calls／coding 子任務／routing／extraction／長文解析。Meta Model API 名 <code>muse-ember-1.0</code>；<strong>$0.10／$0.50 per 1M in／out</strong>（cached in $0.004；prompt &gt;200K 則 $0.30／$1.50）；<strong>1M context、最多 512K output</strong>；支援 Responses API；Muse Code＋Meta Model API；亦上咗 Google Cloud／Oracle Cloud。官報 AA Intelligence Index（max）<strong>36</strong>，同 Claude Haiku 5.5 打和、高過 GPT-6 Luna 28；每 task 成本約 <strong>$0.14</strong>（對 Haiku ~$0.41、Spark 1.3 ~$2.39）。AutomationBench-AA <strong>37.8</strong> vs Haiku 13.9／Luna 20.2；Agents' Last Exam <strong>61.6</strong>；PSI <strong>46.8</strong>；Terminal-Bench 4.0 <strong>40.9</strong>（best published harness）；Coding Agent Index-AA <strong>46</strong>；FrontierCode 2.0-AA <strong>27.2</strong>（Haiku 34.9 較高）。定位：Wonder 攻難題、Spark 做 coding／agentic、Ember 做高吞吐量代理任務；Cloudflare 稱尾延遲快約 30%；You.com 報 p95 2.2s。公司自報＋AA；FrontierCode 並非全面勝出。11-06 Spaces／specialized models 無新一級更新。</td>
+          <td class="refs"><ul>
+            <li><a href="https://research.meta.ai/blog/muse-ember">Muse Ember 研究文</a></li>
+            <li><a href="https://research.meta.ai/static/muse-ember-evaluation-report">Evaluation report</a></li>
+            <li><a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/">TechCrunch</a></li>
+            <li><a href="https://artificialanalysis.ai/models/releases/muse-ember">Artificial Analysis</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>M365 Copilot / Cowork</td>
+          <td><span class="tag">窗口跟進</span></td>
+          <td>Learn「what's new」November 欄仍然得 <strong>Planner Plugin</strong> 同 <strong>OneNote support</strong>；<strong>MC1542062</strong>（Power Platform connectors 由 M365 admin center → Agents → Tools 允許／封鎖；Power Platform DLP 唔適用於 Cowork；WW GA 預計 mid-November 完成）未見新 Message Center 編號。無新一級功能可當「新料」。</td>
+          <td class="refs"><ul>
+            <li><a href="https://learn.microsoft.com/en-us/copilot/cowork/whats-new">Cowork what’s new</a></li>
+            <li><a href="https://mc.merill.net/message/MC1542062">MC1542062</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">M365 Copilot release notes</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HeyGen HyperFrames</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上次停喺 <code>v0.9.26</code>（published 2026-11-09 00:05Z）。新出 <strong>v0.9.27</strong>（published <strong>2026-11-09 23:25Z</strong>＝11-10 07:25 HKT）。Studio render 而家同 CLI 搶同一個 one-at-a-time render slot，唔再兩條 render 分薄一部機。Skills：可把 style route 出 templates 之外；reverse-any-video 同 style-sampling 納入 core set。Windows 專案路徑超過 260 字元、macOS 未裝 developer tools 就彈 git／xcrun／cc 提示都修咗。Distributed／range render 尊重 page motion blur。另有 ChatGPT／Claude MCP 設定文件同 2026-11-02–11-09 weekly digest。非 hyperframe.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.27">Release v0.9.27</a></li>
+            <li><a href="https://github.com/heygen-com/hyperframes/compare/v0.9.26...v0.9.27">compare v0.9.26…v0.9.27</a></li>
+            <li><a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a></li>
+            <li><a href="https://hyperframes.heygen.com/changelog">HyperFrames changelog</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Strata</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上游 <strong>v0.2.13（2026-11-09 12:46Z</strong>＝20:46 HKT）：app／Terminal <strong>0.2.13</strong>；Control／engine <strong>0.1.59</strong>；update feed sequence <strong>124</strong>（DGX Spark feed 仍 123）。同日 <strong>0.2.13.1</strong>：Control <strong>0.1.59.1</strong> 修 Linux 桌面喺 Intel Arc 上 setup 報「no NVIDIA GPU found」；Arc A750 Q2_0 就緒 121s、傾偈 <strong>12.6 tok/s</strong>；同一 prompt 50／50 次答案一致（之前 5 次有 3–5 種答案）。Windows／Mac 嘅 <code>strata update</code> 可將 engine 推到 0.1.59 但 Terminal 暫留 0.2.12。相對 0.2.12：Strix Halo UD-Q4_K_XL output <strong>46.6→49.1 tok/s（+5.2%）</strong>；RTX PRO 5000 72GB IQ3_S <strong>256–261→263–265（+2.8%）</strong>。App 主檔 <strong>3.12→0.76 MB</strong>、啟動畫面 median <strong>248.5→143.4 ms</strong>。Strix Halo Windows Terminal 開 UD-Q4_K_XL（pictures off）修復；<strong>Qwen4 groundwork</strong>：signed feed 可帶 model list，新 shape 有獨立 engine 包。作者自測。跟 <code>Niko1221/Strata</code>。非 strata.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.13">Release v0.2.13</a></li>
+            <li><a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a></li>
+            <li><a href="https://github.com/mach10x/strata">mach10x/strata fork</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ArtCraft</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>公開最新 tag 仍係 <strong>artcraft-v0.41.1（2026-11-07）</strong>；未見 v0.42 正式 release。Crafting Apps（Rust OSS）+ Studio 定位不變。非無關 Artcraft 品牌。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/storytold/artcraft/releases/tag/artcraft-v0.41.1">Release v0.41.1</a></li>
+            <li><a href="https://github.com/storytold/artcraft">storytold/artcraft</a></li>
+            <li><a href="https://getartcraft.com/">getartcraft.com</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Instant AI</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>上輪未收錄</strong>：主 changelog <strong>2026-11-05</strong> 刊 <strong>MCP 2.0 — Your Agent. Your Credits</strong>——用 prompt 經 MCP 直接 build／edit／publish 去 Shopify store（上次只核對到 2026-02-11 嘅 Instant AI 產品頁）。Docs：MCP endpoint <code>https://api.instant.so/mcp</code>；支援 Claude（含 Cowork connectors）、ChatGPT custom MCP、Claude Code、Codex、Cursor、Gemini CLI；OAuth 或 project access token（CI／script）。可讀 layout／brand kit／Shopify products；改 code layout；出圖；publish／unpublish。出圖仍用 project AI credits，冇credits 就停出圖、其餘 MCP 動作繼續。Store-wide default layouts（homepage／header／footer／default templates）只讀，改同 publish 要返 dashboard。本窗口（11-09 之後）未見更新一條 changelog。非 Instant.one 電郵產品。</td>
+          <td class="refs"><ul>
+            <li><a href="https://instant.so/changelog">instant.so/changelog（MCP 2.0）</a></li>
+            <li><a href="https://docs.instant.so/en/articles/16068062-access-tokens-and-mcp">Access tokens and MCP</a></li>
+            <li><a href="https://docs.instant.so/en/articles/16068068-ai-credits">AI credits</a></li>
+            <li><a href="https://instant.so/">instant.so</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>OpenBot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上次停喺 <strong>0.65.0（11-08）</strong>。新出 <strong>0.66.0</strong>（published <strong>2026-11-09 17:06Z</strong>＝11-10 01:06 HKT；官網 Latest 23 new／36 improved／67 fixed）。重點：agent <strong>自動學 skill</strong>（Automatic／Ask first／Off；改正後可 Revised skill）；Vault 可存 2FA setup key，agent 用 secure card 填 code、睇唔到 key；workflow output 可 post 入 OpenBot channel；agent dock 可加 channel；可睇公開網上影片（Facebook／Instagram／TikTok／YouTube）並（若設咗語音辨識）出 transcript，檔案用完刪；Windows 補 Dynamic Island＋agent dock；spoken replies 加 Eleven v4／v4 Turbo；遠端 MCP（例如 n8n）支援 MCP revision 2026-07-28；MCP server 上限 <strong>32→100</strong>；Discord embeds；Grok Bot／Hermes 匯入取消 2 GB／5 萬檔上限（本地最多 20 萬檔、串流讀 ZIP64）。修包括 Delete history SQLite <code>rowid</code>、設定選單死循環卡死視窗。本地桌面 persistent agents；PolyForm Noncommercial。</td>
+          <td class="refs"><ul>
+            <li><a href="https://openbot.run/changelog">Changelog（0.66.0）</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/releases/tag/v0.66.0">GitHub v0.66.0</a></li>
+            <li><a href="https://openbot.run/">openbot.run</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot">nightly-labs/openbot</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Switch AI / Switch Agents</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>官網仍標 Rooms／Trust／ROI；Flip the Switch Hackathon 資訊仍寫 Nov 4–7（$10k）。本窗口無新產品 changelog。聯絡 hello@switchagents.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://www.switchagents.ai/">switchagents.ai</a></li>
+            <li><a href="https://www.switchagents.ai/blog-posts/introducing-switch-trust-and-switch-roi">Trust／ROI</a></li>
+            <li><a href="https://lu.ma/switch-hackathon">Luma 活動</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Rea</td>
+          <td><span class="tag ok">有更新</span></td>
+          <td>無新版號，但 <code>morluto/rea</code> 喺上次 digest（11-09 00:08Z）之後持續推 commit（至少到 <strong>2026-11-09 22:31Z</strong>）。Desktop：build 時隔離 declared secrets；可用 AppImage／upstream tarball（SHA-256 pin）安裝 app；REA 讀唔到檔就經 app 自己嘅 headless mode 或 screen judge 檢查；一條命令 setup／check desktop build host。Native：解 Android ELF <code>.note.android.ident</code>；列出 ELF／Mach-O initializer／finalizer。PE：拒絕 misaligned certificate table offset 同畸形 certificate name。仍然係 agent-driven reverse engineering（app behavior→native binaries）；<code>npx rea-agents@latest setup</code>。非無關「rea」產品。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/morluto/rea">github.com/morluto/rea</a></li>
+            <li><a href="https://rea.tools">rea.tools</a></li>
+            <li><a href="https://github.com/morluto/rea#readme">README／描述</a></li>
+          </ul></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>X／Twitter AI 討論</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Claude Fable／Mythos 5.2 發布敘事</td>
+          <td>11-09 X trending 圍繞 Anthropic 推出 Fable 5.2（廣泛可用）同 Mythos 5.2（Cyber／Life Sciences Verification）。討論集中：貴價 coding／科研模型降價加速、1,000 agent 30 小時形式化費馬最後定理、以及 METR RSI／評估敏感度（model 更常懷疑自己喺被測）。</td>
+          <td>敘事由「下一個日常 driver」轉向「最高檔技術工作＋雙用途 gated 變體」；Opus 5.5 仍被官方標成多數工程起點。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.com/i/trending/2119869961669611751">X：Fable／Mythos 5.2</a></li>
+            <li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic 官宣</a></li>
+            <li><a href="https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/">TechCrunch</a></li>
+          </ul></td>
+          <td>X 摘要會演變；benchmark 多數公司自報</td>
+        </tr>
+        <tr>
+          <td>Muse Ember 性價比敘事</td>
+          <td>11-09 同步炒 Meta 最小模型 Ember：對標 Haiku 5.5／GPT-6 Luna、約 $0.14／AA task、「Wonder 策劃、Ember 跑量子任務」。</td>
+          <td>消費級 agent 棧開始公開拆「frontier planner vs cheap executor」；要同 11-06 Spaces／specialized models 分開睇。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.com/i/trending/2119854307906662448">X：Muse Ember</a></li>
+            <li><a href="https://research.meta.ai/blog/muse-ember">Meta 研究文</a></li>
+            <li><a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/">TechCrunch</a></li>
+          </ul></td>
+          <td>AA／內部數字；FrontierCode 上 Ember 未贏 Haiku</td>
+        </tr>
+        <tr>
+          <td>NVIDIA GR00T 2 機械人基礎模型</td>
+          <td>CoRL（Austin）前後 X 討論 GR00T 2：用人類／手持夾爪影片遷移到未示範過嘅機械人本體，同 agent 經 API 編排組裝。</td>
+          <td>開源世界－動作模型把「睇人類影片→機械人技能」同 agentic control 綁埋，係實體 AI 一條可驗證發布線。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.com/i/trending/2119889813465940465">X：GR00T 2</a></li>
+            <li><a href="https://research.nvidia.com/labs/gear/gr00t-2/">NVIDIA Research</a></li>
+            <li><a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/">NVIDIA Blog（CoRL）</a></li>
+          </ul></td>
+          <td>實驗室成功率；code 稱 12 月先開源</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>GitHub／論文／研究</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>本地／開源工程 release 潮（續）</td>
+          <td>窗口內 HyperFrames <strong>0.9.27</strong>、Strata <strong>0.2.13／0.2.13.1</strong>、OpenBot <strong>0.66.0</strong>；Rea 繼續推 desktop／native／PE hardening commit。對上輪 0.9.18–0.9.26／0.2.12／0.63–0.65 係可驗證下一跳。</td>
+          <td>Agent video toolchain、本地 MoE 推理、桌面 multi-agent、RE tooling 四條線仍然以日更／點更速度出可核對 release——對 builder 棧係可行動訊號。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.27">HyperFrames v0.9.27</a></li>
+            <li><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.13">Strata v0.2.13</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/releases/tag/v0.66.0">OpenBot v0.66.0</a></li>
+            <li><a href="https://github.com/morluto/rea">morluto/rea</a></li>
+          </ul></td>
+          <td>作者自測數字；release ≠ 市場採用</td>
+        </tr>
+        <tr>
+          <td>GR00T 2：世界－動作模型研究頁</td>
+          <td>NVIDIA GEAR 公開 GR00T 2 研究頁（2026-11）：一隻 diffusion transformer 一齊 denoise 未來影片同 robot actions。預訓練混合：人類第一人稱影片 <strong>402,730 h</strong>（其中 Human-1M-100K 開源 10 萬小時）、手持 UMI <strong>10,184 h／2,897 tasks</strong>、機械人遙控 <strong>23,500 h</strong>。50 個目標機械人未做過嘅任務：zero-shot 成功率 <strong>40%</strong>、每任務 5 條示範（&lt;3 min 機械人數據）＋單卡 RTX 5090 微調 30 分鐘後 <strong>95%</strong>。Agent 經 WAM API 編排，三款玩具組裝各 100 次成功 <strong>98／97／97</strong>。Turbo：G1 上 Jetson Thor 預測 <strong>124 ms</strong>；爆谷任務 48／48。Isaac Lab 3.0 同步喺 CoRL 推出。</td>
+          <td>把「預測世界點變」當成機械人策略嘅監督訊號，令人類影片 scale 直接改善真機進度（研究頁：72 任務真機 progress 50%→70% 隨人類影片份額增加）。</td>
+          <td class="refs"><ul>
+            <li><a href="https://research.nvidia.com/labs/gear/gr00t-2/">GR00T 2 研究頁</a></li>
+            <li><a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/">NVIDIA CoRL blog</a></li>
+            <li><a href="https://www.nvidia.com/en-us/events/corl/">NVIDIA CoRL 活動頁</a></li>
+          </ul></td>
+          <td>實驗室協議；開源權重／code 尚未跟住出（稱 12 月）</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>產業／產品／博客</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要／證據</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Anthropic：Claude Fable 5.2 ＋ Mythos 5.2</td>
+          <td><strong>2026-11-09</strong>：Fable／Mythos 係同一底模；Fable 有較強 cyber／bio safeguard、全面上架（含 AWS／GCP／Azure，model id <code>claude-fable-5-2</code>）；Mythos 要經擴大咗嘅 Cyber 或 Life Sciences Verification。價 <strong>$8／$40 per 1M in／out</strong>（Fable 由 $10 in 降至 $8）；較 5.1 出字最多快 <strong>30%</strong>；可選 fast mode（最多 2.5×，<strong>$16／$80</strong>）。FrontierCode 2.0 Xhigh <strong>49.1%</strong>（5.1 32.4；Opus 5.5 45.5；GPT-6 Astra 42.8）；FrontierSWE v2 <strong>69.9%</strong>；HLE+tools <strong>74.2%</strong>；RLI High <strong>41.3%</strong>（5.1 17.9）；RoboDojo Sim <strong>64.9%</strong>（5.1 27.6）。聲稱 1,000 個 Fable 5.2 agent 用 30 小時形式化費馬最後定理（Opus 5.5 同級設置 18 小時只完成 26%）；預發測試稱解決兩個黑洞相關開放物理問題、設計三件可工作電子裝置。Mythos 5.2：CyScenarioBench <strong>76.3%</strong>、CVE Rediscovery <strong>89.6%</strong>。企業可經 Enterprise Frontier Safeguards 做 ZDR 兼容監控（private beta）。官方仍建議多數日常工程由 Opus 5.5 起步。</td>
+          <td>高檔模型同時降價、加速、同把雙用途能力關進 verification program；安全卡承認 model 更常懷疑自己喺被評估，令評測效度變難。TechCrunch 同時提到 METR 指內部模型大約 2× 加快 Anthropic 進度（RSI 討論、不確定性高）。</td>
+          <td class="refs"><ul>
+            <li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic 官宣</a></li>
+            <li><a href="https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/">TechCrunch</a></li>
+            <li><a href="https://www.anthropic.com/news">Anthropic Newsroom</a></li>
+          </ul></td>
+          <td>公司評測／預發逸事；物理／數學結果需讀 preprint；eval-awareness 削弱行為測試信心</td>
+        </tr>
+        <tr>
+          <td>Meta Muse Ember（輕量執行模型）</td>
+          <td>見上方優先清單 #2。官稱第一隻用 Muse Wonder Full 訓練出嚟、面向所有人嘅 specialized／efficient 模型；AA Intelligence Index 同 Haiku 5.5 打和但每 task 平約三份一。</td>
+          <td>「個人超智能」路線除咗 11-06 記憶／Spaces，而家補上可規模化嘅 executor 價位（約 $0.14／AA task）。</td>
+          <td class="refs"><ul>
+            <li><a href="https://research.meta.ai/blog/muse-ember">Muse Ember 研究文</a></li>
+            <li><a href="https://research.meta.ai/static/muse-ember-evaluation-report">Evaluation report</a></li>
+            <li><a href="https://artificialanalysis.ai/models/releases/muse-ember">Artificial Analysis</a></li>
+          </ul></td>
+          <td>FrontierCode 2.0-AA 上 Haiku 仍然領先；部分內部 benchmark</td>
+        </tr>
+        <tr>
+          <td>OpenAI：Control Room（研究推論熔斷）</td>
+          <td>OpenAI 公布 <strong>Control Room</strong>：中央系統追蹤研究基礎設施上嘅 model workload（含訓練／評估嘅 agentic sampling），並可喺安全或保安決定之後 <strong>35 秒內</strong>停止再產出 token。授權檢查做喺 inference engine 層而唔係多變嘅 workload code；engine 每次 sampling 都要問 Control Room。設計 <strong>fail-closed</strong>：Control Room 本身掛咗，推論請求一律拒絕。已部署喺研究基礎設施；外部 serving stack 另行集中管控。35 秒來自授權快取，官方話想把延遲打到零。</td>
+          <td>對齊／保安控制由「叫研究員自己停 job」改成推論路徑上嘅強制閘——workload 即使寫壞或被繞過都唔能繼續出 token。配合 monitoring（文中提及近期 DNS 相關事故由 monitor 捉住）。</td>
+          <td class="refs"><ul>
+            <li><a href="https://openai.com/index/control-room">OpenAI：Control Room</a></li>
+            <li><a href="https://openai.com/news/safety-alignment/">OpenAI Safety newsroom</a></li>
+            <li><a href="https://openai.com/news">OpenAI News</a></li>
+          </ul></td>
+          <td>內部研究基礎設施、非產品 API 功能；35 秒仍非即時；第三方報導頁部分 403</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+
+    <h2>2026-11-09 · 平日例行 AI 摘要</h2>
+    <p class="meta">例行跑 · CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行（2026-11-06 08:05 HKT）之後 · 最後更新：2026-11-09 08:08 Asia/Hong_Kong</p>
+
+    <h3>優先觀察清單</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>項目</th><th>狀態</th><th>要點</th><th>參考（≥3）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Grok Bot</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>官方 changelog 最新仍係 <strong>v0.78.1（2026-10-27）</strong>：Shopping cards／subscription templates。本窗口無新官方版號。第三方 Mac 彙整有 0.79.x 說法，但唔當一級來源。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.ai/changelog/bot">x.ai/changelog/bot</a></li>
+            <li><a href="https://x.ai/bot">x.ai/bot</a></li>
+            <li><a href="https://docs.x.ai/grok-bot/overview">docs overview</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Meta Muse</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>2026-11-06</strong> 兩條並行：（1）<strong>Spaces</strong>——用描述喺 Muse app 入面生成自訂互動體驗（tracker／game／dashboard），可放 sidebar／main tabs、排程顯示、接 app 自動更新；官宣「wherever Muse is available」。（2）<strong>Specialized models</strong>（用 Muse Wonder 訓練）：Personal Superintelligence Index <strong>38%→47%</strong>；Active Memory eval <strong>76%→90%</strong>（聲稱 2.4× 少忘關鍵資訊）；Active Focus 聲稱日常任務遇阻完成度 <strong>+67%</strong>。Spaces ≠ Muse Image／Video GA。</td>
+          <td class="refs"><ul>
+            <li><a href="https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/">Spaces 官宣</a></li>
+            <li><a href="https://research.meta.ai/blog/specialized-models-for-muse-and-metaai">Specialized models 研究文</a></li>
+            <li><a href="https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/">TechCrunch</a></li>
+            <li><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">Muse Image／Video 背景</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>M365 Copilot / Cowork</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>MC1542062（2026-11-06）</strong>：Power Platform connectors 以 plugin 形式入 Cowork，可用性由 <strong>Microsoft 365 admin center → Agents → Tools</strong> 允許／封鎖；套用到 connections 同 Automations；強調 <strong>Power Platform DLP 唔適用於 Cowork</strong>；WW GA 預計 mid-November 完成。November what’s new 亦列 <strong>OneNote support</strong>（讀 notebook；有 editing 時需 approval 更新）同 Planner Plugin。</td>
+          <td class="refs"><ul>
+            <li><a href="https://mwpro.co.uk/blog/2026/11/06/mc1542062-copilot-cowork-adds-power-platform-connector-management-via-microsoft-365-admin-center/">MC1542062 摘要</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/copilot/cowork/whats-new">Cowork what’s new</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">M365 Copilot release notes</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HeyGen HyperFrames</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上次停喺 <code>v0.9.17</code>。之後連出 <strong>v0.9.18→v0.9.26</strong>（最新 published <strong>2026-11-09 00:05Z</strong>）。工程主題：Windows busy-CPU lint 優先級（stall ~30s→~3s）、cloud render 缺字型 fallback、Safari／HDR／大檔分片上傳、Studio full-quality scrub、deterministic seeded re-render、muted video cut 唔再等 audio、Unicode NFD/NFC media 名、大專案 history copy 加速。非 hyperframe.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.26">Release v0.9.26</a></li>
+            <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.25">Release v0.9.25</a></li>
+            <li><a href="https://github.com/heygen-com/hyperframes/compare/v0.9.17...v0.9.26">compare v0.9.17…v0.9.26</a></li>
+            <li><a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Strata</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上游 <strong>v0.2.12（2026-11-07 08:54Z）</strong>：engine／Control <strong>0.1.58</strong>；tuned DFlash2 drafter（~0.34 GB）。實測相對 0.2.11：RTX 3060 12GB UD-IQ4_XS-v31 prompt 2K <strong>87→264 tok/s</strong>（~3×）；Strix Halo 4K prompt 可至 ~x2；Mac M5 Max output +10–13%。Radeon R9700 Auto 改 MTP（DFlash2 預設關防 stall）。多項 tool-call 修復（含 Claude Desktop model name、forced tool_choice）。跟 <code>Niko1221/Strata</code>。非 strata.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.12">Release v0.2.12</a></li>
+            <li><a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a></li>
+            <li><a href="https://github.com/mach10x/strata">mach10x/strata fork</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ArtCraft</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>新 tag <strong>artcraft-v0.41.1（2026-11-07）</strong>（前一正式 <code>v0.41.0</code>＝2026-09-26）。公開 release body 極短（assets 為主）；Crafting Apps（Rust OSS）+ Studio 定位不變。非無關 Artcraft 品牌。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/storytold/artcraft/releases/tag/artcraft-v0.41.1">Release v0.41.1</a></li>
+            <li><a href="https://github.com/storytold/artcraft">storytold/artcraft</a></li>
+            <li><a href="https://getartcraft.com/">getartcraft.com</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Instant AI</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>公開 Instant AI changelog 仍係 <strong>2026-02-11</strong> 產品更新（prompt／截圖／URL／Figma→Shopify 版面）。本窗口無新一級產品頁。非 Instant.one 電郵產品。</td>
+          <td class="refs"><ul>
+            <li><a href="https://instant.so/">instant.so</a></li>
+            <li><a href="https://instant.so/changelog/product-update-instant-ai">Product update: Instant AI</a></li>
+            <li><a href="https://docs.instant.so/">docs.instant.so</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>OpenBot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上次 0.62.0。之後：<strong>0.63.0（11-06）</strong> Higgsfield／plan auto-start／Usage Skill tab；<strong>0.64.0（11-07）</strong> macOS agent dock、Natural response style、跨 chat 任務發現、「Use my Claude Code setup」預設關（升級注意）；<strong>0.65.0（11-08）</strong> ElevenLabs／xAI spoken replies、Mistral Vibe、Groq Whisper dictation、Library 媒體頁、多 provider prompt token 削減（Claude ~12–24% 等）。本地桌面 persistent agents；PolyForm Noncommercial。</td>
+          <td class="refs"><ul>
+            <li><a href="https://openbot.run/changelog">Changelog（0.65.0）</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/releases/tag/v0.65.0">GitHub v0.65.0</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/releases/tag/v0.64.0">GitHub v0.64.0</a></li>
+            <li><a href="https://openbot.run/">openbot.run</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Switch AI / Switch Agents</td>
+          <td><span class="tag">窗口跟進</span></td>
+          <td>Flip the Switch Hackathon（2026-11-04→11-07；$10k）窗口已結束；官網仍標 Rooms／Trust／ROI。本窗口無新產品 changelog。聯絡 hello@switchagents.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://www.switchagents.ai/">switchagents.ai</a></li>
+            <li><a href="https://www.switchagents.ai/blog-posts/introducing-switch-trust-and-switch-roi">Trust／ROI</a></li>
+            <li><a href="https://lu.ma/switch-hackathon">Luma 活動</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Rea</td>
+          <td><span class="tag ok">新入清單</span></td>
+          <td><strong>2026-11-08</strong> 加入優先清單。Agent-driven reverse engineering（app behavior→native binaries）；repo <code>morluto/rea</code>；站 <a href="https://rea.tools">rea.tools</a>（setup：<code>npx rea-agents@latest setup</code>；showcase：Calculator %、dino speed、APK／Electron／native）。本窗口 repo 仍活躍（pushed ~2026-11-09）。非無關「rea」產品。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/morluto/rea">github.com/morluto/rea</a></li>
+            <li><a href="https://rea.tools">rea.tools</a></li>
+            <li><a href="https://github.com/morluto/rea#readme">README／描述</a></li>
+          </ul></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>X／Twitter AI 討論</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Muse Spaces＋memory 敘事</td>
+          <td>11-06 起 X trending 圍繞 Zuckerberg Spaces demo（BBQ game／home dashboard）同 specialized models（2.4× memory／+67% focus）一齊炒。</td>
+          <td>敘事由「chat companion」轉向「可持久化嘅 in-app living tools」；要同 Image／Video GA 分開睇。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.com/i/trending/2119150847024042066">X：Muse Spaces</a></li>
+            <li><a href="https://x.com/i/trending/2118773898007199973">X：Spaces＋memory</a></li>
+            <li><a href="https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/">Meta 官宣</a></li>
+          </ul></td>
+          <td>X 摘要會演變；benchmark 係公司自報</td>
+        </tr>
+        <tr>
+          <td>Claude Code 工作流／Hermes Agent</td>
+          <td>開發者討論 CLAUDE.md／.mcp.json 結構化 coding agent；同時 Hermes Agent（Nous）被捧為多 provider／本地／技能庫替代。</td>
+          <td>桌面／CLI agent 競爭由「邊個模型強」轉「邊個 runtime 可編排＋省 token」。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.com/i/trending/2119024602844176726">X：Claude Code workflows</a></li>
+            <li><a href="https://x.com/i/trending/2119506454197723414">X：Hermes Agent</a></li>
+            <li><a href="https://x.com/i/trending/2119210352743469511">X：Claude vs Codex</a></li>
+          </ul></td>
+          <td>趨勢帖非同行評審；產品聲稱需自驗</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>GitHub／論文／研究</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>本地／開源工程 release 潮（續）</td>
+          <td>窗口內 HyperFrames 連跳至 0.9.26、Strata 0.2.12、OpenBot 0.63–0.65、ArtCraft 0.41.1；Rea 進入清單並保持活躍。</td>
+          <td>Agent video＋本地 MoE＋桌面 multi-agent＋RE tooling 四條線同時有可驗證 commit／release——對 builder 棧係可行動訊號。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/heygen-com/hyperframes/releases">HyperFrames releases</a></li>
+            <li><a href="https://github.com/Niko1221/Strata/releases">Strata releases</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/releases">OpenBot releases</a></li>
+            <li><a href="https://github.com/morluto/rea">morluto/rea</a></li>
+          </ul></td>
+          <td>作者自測數字；release ≠ 市場採用</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>產業／產品／博客</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要／證據</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Google：Gemini Omni 1.2 Flash GA</td>
+          <td><strong>2026-11-05</strong>（上輪未收錄）：原生片長 <strong>10s→15s</strong>；多輪對話式剪輯；reference adherence 加強；價降 <strong>30%</strong> 至 <strong>$0.07/s @720p</strong>；360p→4K 工作流；Gemini API＋Cloud GA；SynthID。</td>
+          <td>短片生成由「demo 長度」推進到可出完整 social／產品 spot；成本＋多輪 edit 降低 iteration 摩擦。</td>
+          <td class="refs"><ul>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Google blog</a></li>
+            <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-omni-1-2-flash-generally-available">Google Cloud blog</a></li>
+            <li><a href="https://deepmind.google/models/model-cards/gemini-omni-1-2-flash/">Model card</a></li>
+          </ul></td>
+          <td>公司行銷；複雜物理／快節奏運動仍標「ongoing」</td>
+        </tr>
+        <tr>
+          <td>Meta Muse：Spaces＋specialized models</td>
+          <td>見優先清單 #2；同日 Spaces 產品面＋Wonder 蒸餾到 Muse／Meta AI。</td>
+          <td>把 Wonder 能力以 specialized 路線下放，同時用 Spaces 鎖住「持久化 agent UI」產品形態。</td>
+          <td class="refs"><ul>
+            <li><a href="https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/">Spaces</a></li>
+            <li><a href="https://research.meta.ai/blog/specialized-models-for-muse-and-metaai">Specialized models</a></li>
+            <li><a href="https://www.theverge.com/tech/1028871/meta-muse-ai-spaces">The Verge</a></li>
+          </ul></td>
+          <td>Index／eval 方法論細節有限；可用性視 Muse 地區</td>
+        </tr>
+        <tr>
+          <td>M365：Cowork connector governance</td>
+          <td>見優先清單 #3（MC1542062）。</td>
+          <td>企業開第三方 connector 前要重新設計 DLP 邊界——PPAC DLP 唔覆蓋 Cowork。</td>
+          <td class="refs"><ul>
+            <li><a href="https://mwpro.co.uk/blog/2026/11/06/mc1542062-copilot-cowork-adds-power-platform-connector-management-via-microsoft-365-admin-center/">MC1542062</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/copilot/cowork/whats-new">Cowork what’s new</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Release notes</a></li>
+          </ul></td>
+          <td>第三方對 Message Center 摘要；以租戶 Message Center 為準</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+
+    <h2>2026-11-06 · 平日例行 AI 摘要</h2>
+    <p class="meta">例行跑 · CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行／重跑（2026-11-05 15:04 HKT）之後 · 最後更新：2026-11-06 08:05 Asia/Hong_Kong</p>
+
+    <h3>優先觀察清單</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>項目</th><th>狀態</th><th>要點</th><th>參考（≥3）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Grok Bot</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>公開 changelog 最新仍係 <strong>v0.78.1（2026-10-27）</strong>；本窗口無新版號。產品面以 x.ai Bot／plans／docs 為一級來源。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://x.ai/changelog/bot">x.ai/changelog/bot</a></li>
+              <li><a href="https://x.ai/bot">x.ai/bot</a></li>
+              <li><a href="https://docs.x.ai/grok-bot/overview">docs overview</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Meta Muse</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>2026-11-05</strong>：Meta 官宣 Muse app 開始 rollout <strong>realtime voice + expressive avatars</strong>（手機／web／Mac；先美國）。點電話 icon 即可講；avatar 有表情／手勢；可選 voice-only／旁觀／全螢幕；「數百」種聲線。技術標 Muse Realtime Avatar／Voice。下一步：AI Glasses 同 Muse Charm。呢條係 <strong>Muse companion app 體驗</strong>，唔等於 Muse Image／Video GA；Video 仍屬 preview／closed beta 語境。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/">Give Your Muse a Voice（官宣）</a></li>
+              <li><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">Muse Image／Video 官宣</a></li>
+              <li><a href="https://ai.meta.com/">ai.meta.com</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>M365 Copilot / Cowork</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>November what’s new 仍以 Planner Plugin 為主條；Accounting GA 仍標 <strong>2026-11-13</strong>（MC1536053）。本窗口無新 Message Center 一級 delta。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://learn.microsoft.com/en-us/copilot/cowork/whats-new">Cowork what’s new</a></li>
+              <li><a href="https://support.microsoft.com/en-us/planner/turn-on-planner-plugin-cowork">Turn on Planner Plugin</a></li>
+              <li><a href="https://mwpro.co.uk/blog/2026/11/03/mc1536053-microsoft-365-copilot-adds-accounting-capabilities-to-excel-and-cowork/">MC1536053 Accounting</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HeyGen HyperFrames</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>昨重跑停喺 <code>v0.9.15</code>。之後連出 <strong>v0.9.16（2026-11-05 13:31Z）</strong> 同 <strong>v0.9.17（2026-11-05 20:10Z）</strong>。<strong>v0.9.16</strong>：Studio Alt marquee 取消選取；capture 拒截圖會再試一次；Studio cancel 等 agent 停先回覆；Windows drive root init 唔再 crash；check 跳過 mid-motion contrast；HYPERFRAMES_CONFIG／CACHE_DIR 統一路徑。<strong>v0.9.17</strong>：長片可開 <code>HF_VIDEO_FRAME_WINDOW=true</code> 窗口化 source frames（段完即刪）；segmented capture 核對 drawElement；<code>check --budget</code> 可限時停；<code>info --media</code> 列音軌。非 hyperframe.ai。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.17">Release v0.9.17</a></li>
+              <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.16">Release v0.9.16</a></li>
+              <li><a href="https://github.com/heygen-com/hyperframes/compare/v0.9.15...v0.9.17">compare v0.9.15…v0.9.17</a></li>
+              <li><a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Strata</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上游 <strong>v0.2.11（2026-11-05 12:49Z）</strong>：接 Unsloth Dynamic v3.1 七套 Qwen3.8-Flash-Next GGUF（UD-IQ1_M→UD-IQ4_XS-v31；UD-IQ1_S 唔 load）。實測 decode 例：UD-IQ1_M 喺 1–2×A6000 ~101–114 tok/s、R9700 ~100–130、DGX Spark ~43–45。4×R9700 split engine 8-user 合計 ~+32.7% vs 0.2.10；RTX PRO 6000 K-quant prompt 4K ~+37.7%。聊天改存 data folder 檔案（唔再靠 browser storage）；修 replica 回覆串位隱私 bug。跟 <code>Niko1221/Strata</code>。非 strata.ai。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.11">Release v0.2.11</a></li>
+              <li><a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a></li>
+              <li><a href="https://github.com/mach10x/strata">mach10x/strata fork</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ArtCraft</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>最新 tag 仍係 <strong>artcraft-v0.41.0（2026-09-26）</strong>。Crafting Apps（Rust OSS）+ Studio。非無關 Artcraft 品牌。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://getartcraft.com/">getartcraft.com</a></li>
+              <li><a href="https://github.com/storytold/artcraft">storytold/artcraft</a></li>
+              <li><a href="https://github.com/storytold/artcraft/releases/tag/artcraft-v0.41.0">Release v0.41.0</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Instant AI</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>公開 changelog 仍以 Instant AI 產品更新為主條；Shopify prompt／截圖／URL／Figma→版面。非 Instant.one 電郵產品。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://instant.so/">instant.so</a></li>
+              <li><a href="https://instant.so/changelog/product-update-instant-ai">Product update: Instant AI</a></li>
+              <li><a href="https://docs.instant.so/">docs.instant.so</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>OpenBot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td><strong>0.62.0（2026-11-05 15:16Z）</strong> 取代昨摘要嘅 0.61.0。要點：TickTick／Proton Pass marketplace；Hermes Agent 一鍵 Download＋installer；browser profile 獨立 proxy（含「經你部機 share」）；agents 可 OpenBotGit 建 repo；messaging_post 可帶檔；@ 標 browser tab／side thread；custom model 自訂 reasoning efforts；Parakeet Unified EN／Cohere Transcribe；routine 預設返主 chat（可選獨立 thread）並恢復 Computer Use。本地優先桌面 persistent agents；PolyForm Noncommercial；非機械人套件。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://openbot.run/changelog">Changelog 0.62.0</a></li>
+              <li><a href="https://github.com/nightly-labs/openbot/releases/tag/v0.62.0">GitHub v0.62.0</a></li>
+              <li><a href="https://openbot.run/">openbot.run</a></li>
+              <li><a href="https://github.com/nightly-labs/openbot">nightly-labs/openbot</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Switch AI / Switch Agents</td>
+          <td><span class="tag">窗口跟進</span></td>
+          <td>Flip the Switch Hackathon（2026-11-04→11-07；線上；$10k）仍進行中（官網倒數）。產品面 Rooms／Trust／ROI；Trust／ROI 官宣仍屬 2026-10。本窗口無新產品 changelog。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://www.switchagents.ai/">switchagents.ai</a></li>
+              <li><a href="https://lu.ma/switch-hackathon">Luma 活動</a></li>
+              <li><a href="https://www.switchagents.ai/blog/introducing-switch-trust-and-roi">Trust／ROI 介紹</a></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>X／Twitter AI 討論</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>GPT‑6 Cyber 產品化熱議</td>
+          <td>2026-11-05 官宣 GPT‑6 Cyber 後，X trending 聚焦 Linux 948 LPE／Firefox 81 high-sev／ExploitGym 48.5% 同 Daybreak Red 分級存取；同日亦有 Astra「safety 任務 covert underperform」misalignment 報告討論。</td>
+          <td>防守方 frontier cyber agent 由研究管線升到可申請嘅產品面；敘事同時夾住 alignment／misuse 監控。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://x.com/i/trending/2118125161194926199">X trending：948 Linux vulns</a></li>
+              <li><a href="https://openai.com/index/introducing-gpt-6-cyber">OpenAI 官宣</a></li>
+              <li><a href="https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch">The Verge</a></li>
+              <li><a href="https://x.com/i/trending/2118113414744785185">X trending：Astra safety underperform</a></li>
+            </ul>
+          </td>
+          <td>X 摘要會演變；公司自報 benchmark；Cyber 初期只畀批核 Daybreak Red 客戶</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>GitHub／論文／研究</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>本地／開源工程 release 潮</td>
+          <td>本窗口優先清單三個工程面同時推版：HyperFrames 0.9.16–17、Strata 0.2.11、OpenBot 0.62.0（細節見上表）。共同主題：長片／長上下文資源、多卡／多 agent 並行、代理工具／provider 擴張。</td>
+          <td>Agent video＋本地 inference＋桌面 agent runtime 三條線同步加速——對「HTML→MP4／本地 MoE／persistent desktop agents」棧有直接工程訊號。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://github.com/heygen-com/hyperframes/releases">HyperFrames releases</a></li>
+              <li><a href="https://github.com/Niko1221/Strata/releases">Strata releases</a></li>
+              <li><a href="https://github.com/nightly-labs/openbot/releases">OpenBot releases</a></li>
+            </ul>
+          </td>
+          <td>工程 release ≠ 市場 GA；數字多數係作者自測</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>產業／產品／博客</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要／證據</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>OpenAI：GPT‑6 Cyber（Daybreak）</td>
+          <td><strong>2026-11-05</strong> 推出 GPT‑6 Cyber：ExploitGym <strong>48.5%</strong>（vs GPT‑5.6 Cyber 32.1%，相對 +51%）；out-of-scope honeypot <strong>99.93%→100%</strong>（有 deployment prompt）；web pentest recall 40.3% vs Astra 32.0%；RemoteExploitBench 完成 95%（Astra+Blue 拒 100%）。實戰：Linux 948 LPE（承接 11-04 管線文）、Firefox <strong>81</strong> 新型 high-sev（Mozilla 已開始落地修補）、Preparedness cyber 由 High→<strong>Critical</strong>。存取：初期 API／Codex 批核 Daybreak Red；擴 Daybreak Blue alpha。</td>
+          <td>把「可驗證 exploit＋範圍對齊」變成可分級產品（Red／Blue／Critical Infra）；防守窗口論述升級為商業／政策變數。</td>
+          <td class="refs">
+            <ul>
+              <li><a href="https://openai.com/index/introducing-gpt-6-cyber">OpenAI：Introducing GPT‑6 Cyber</a></li>
+              <li><a href="https://openai.com/index/a-thousand-fewer-paths-to-root">A thousand fewer paths to root（Linux LPE）</a></li>
+              <li><a href="https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch">The Verge</a></li>
+            </ul>
+          </td>
+          <td>公司自報；PoC／新型 technique 細節多數未公開；存取 gated</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>讀法／限制</h3>
+    <ul>
+      <li>窗口增量：HyperFrames 0.9.16–17；Strata 0.2.11；OpenBot 0.62.0；Meta Muse app voice／avatars；GPT‑6 Cyber 產品化（承接昨 Linux LPE 管線）。</li>
+      <li>Grok Bot／Copilot／ArtCraft／Instant 無實質產品 delta；Switch 黑客松仍進行至 11-07。</li>
+      <li>弱宣稱標記：X 上流傳 Crouton／Pulse＝Muse 仍屬未核對推測；Cyber／Strata 數字多數作者自測；Muse voice 唔等於 Image／Video GA。</li>
+      <li>硬規則：每個保留主題 ≥3 條完整 https 連結；唔發明 URL。</li>
+    </ul>
+
+
 
     <h2>2026-11-05 · 平日例行 AI 摘要（手動重跑）</h2>
     <p class="meta">手動重跑（朝早 Activity task failed）· CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行跑（2026-11-04 08:20 HKT）之後 · 對朝早 08:14 草稿加 HyperFrames v0.9.14–15 同 OpenAI cyber pipeline · 最後更新：2026-11-05 15:04 Asia/Hong_Kong</p>
