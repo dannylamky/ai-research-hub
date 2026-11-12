@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Skills · A.I.R.I.S. Research Hub</title>
+  <style>
+    :root { --bg:#0f1115; --card:#1a1f29; --text:#e8eaed; --muted:#9aa0a6; --accent:#5b8cff; --link:#8ab4f8; --border:#2a3140; --ok:#3dd68c; --warn:#f0b429; }
+    * { box-sizing: border-box; }
+    body { margin:0; padding:0; font-family:"Noto Sans TC","PingFang HK","Microsoft JhengHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    .wrap { max-width:1100px; margin:0 auto; padding:24px; }
+    .site-header { border-bottom:1px solid var(--border); background:var(--card); position:sticky; top:0; z-index:10; }
+    .site-header .inner { max-width:1100px; margin:0 auto; padding:12px 24px; display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; }
+    .brand { font-weight:700; font-size:1.05rem; color:var(--text); text-decoration:none; margin-right:8px; }
+    .brand:hover { color:var(--accent); }
+    nav.tabs { display:flex; flex-wrap:wrap; gap:6px; }
+    nav.tabs a { color:var(--muted); text-decoration:none; padding:6px 12px; border-radius:999px; border:1px solid transparent; font-size:0.92rem; }
+    nav.tabs a:hover { color:var(--text); border-color:var(--border); background:var(--bg); }
+    nav.tabs a.active { color:var(--text); background:var(--bg); border-color:var(--accent); }
+    h1 { margin:0 0 8px; }
+    .meta { color:var(--muted); margin-bottom:28px; }
+    h2 { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-top:28px; }
+    h3 { margin:0; font-size:1.25rem; }
+    h4 { margin:18px 0 8px; color:var(--text); font-size:1.02rem; }
+    table { width:100%; border-collapse:collapse; margin:12px 0 24px; font-size:0.88rem; }
+    th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:var(--card); }
+    a { color:var(--link); }
+    code { background:var(--card); padding:2px 6px; border-radius:4px; font-size:0.88em; }
+    pre { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 14px; overflow-x:auto; font-size:0.86rem; line-height:1.45; }
+    pre code { background:transparent; padding:0; }
+    ul { padding-left:1.2rem; }
+    .skill { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px 22px 22px; margin:20px 0 28px; }
+    .skill-head { display:flex; flex-wrap:wrap; align-items:center; gap:12px 16px; margin-bottom:14px; }
+    .skill-head .logos { display:flex; align-items:center; gap:10px; }
+    .skill-head .mark { width:36px; height:36px; display:block; background:#20252b; border:1px solid var(--border); border-radius:7px; padding:2px; }
+    .skill-head .wordmark { height:28px; display:block; width:auto; max-width:240px; }
+    .skill-head .name-block { min-width:0; flex:1; }
+    .skill-head .sub { color:var(--muted); font-size:0.9rem; margin:2px 0 0; }
+    .tag { display:inline-block; font-size:0.72rem; padding:2px 8px; border-radius:999px; background:var(--bg); border:1px solid var(--border); color:var(--muted); margin-right:4px; }
+    .tag.ok { border-color:var(--ok); color:var(--ok); }
+    figure { margin:0 0 16px; }
+    figure img { width:100%; height:auto; border-radius:8px; border:1px solid var(--border); display:block; background:#0b0d11; }
+    figure.light img { background:#fff; }
+    figcaption { color:var(--muted); font-size:0.82rem; margin-top:6px; }
+    .media-row { display:grid; grid-template-columns:1.4fr 1fr; gap:14px; margin:0 0 8px; }
+    @media (max-width: 800px) { .media-row { grid-template-columns:1fr; } }
+    .refs { font-size:0.9rem; }
+    .refs li { margin:4px 0; }
+    .thumbs { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin:8px 0 4px; }
+    .thumbs a { color:var(--text); text-decoration:none; display:block; }
+    .thumbs a:hover img { border-color:var(--accent); }
+    .thumbs img { width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:8px; border:1px solid var(--border); display:block; }
+    .thumbs p { margin:6px 0 0; font-size:0.82rem; color:var(--muted); }
+    .note { color:var(--muted); font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">A.I.R.I.S. Research Hub</a>
+      <nav class="tabs" aria-label="Primary">
+        <a href="index.html">Main</a>
+        <a href="digests.html">Daily digests</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="skills.html" class="active">AI Skills</a>
+        <a href="hosting.html">Hosting</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap">
+  <h1>AI Skills</h1>
+  <p class="meta">獨立於產品監察名單的 AI 技能優先清單：功能、用法、參考連結，以及每日研究更新。· 最近研究 2026-11-12 13:17 Asia/Hong_Kong</p>
+
+  <h2>Skills priority list (ordered)</h2>
+  <table>
+    <thead><tr><th>#</th><th>Skill</th><th>Canonical track</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><a href="#rea">REA</a></td><td>Agent-driven reverse engineering · <a href="https://github.com/morluto/rea">morluto/rea</a> · <a href="https://rea.tools">rea.tools</a> · npm <code>rea-agents</code> 6.8.0 · NOT unrelated “rea” products</td></tr>
+      <tr><td>2</td><td><a href="#hyperframes">HeyGen HyperFrames</a></td><td>HTML→MP4 agent framework · <a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a> · <a href="https://hyperframes.heygen.com/">docs</a> · <a href="https://hyperframes.heygen.com/changelog">changelog</a> · v0.9.37 · NOT hyperframe.ai</td></tr>
+    </tbody>
+  </table>
+  <p class="note">清單可以再加項目。本頁目前只收錄已交嘅兩項。</p>
+
+  <article class="skill" id="rea">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="mark" src="assets/skills/rea-logo.svg" alt="REA 官方標誌">
+      </div>
+      <div class="name-block">
+        <h3>1. REA — Reverse Engineer Anything</h3>
+        <p class="sub">畀 coding agent 檢查程式點樣運作，由應用行為去到原生二進位。</p>
+      </div>
+      <div>
+        <span class="tag ok">npm rea-agents 6.8.0</span>
+        <span class="tag">MIT</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/skills/rea-hopper-analysis.jpg" alt="REA 喺 Hopper 入面啟動分析橋，檢查原生二進位（官方 GitHub 說明圖）">
+        <figcaption>官方功能畫面：REA 喺 Hopper 入面分析原生二進位。來源：morluto/rea <code>docs/assets/rea-hopper-analysis.png</code></figcaption>
+      </figure>
+      <figure class="light">
+        <img src="assets/skills/rea-social-card.png" alt="REA 官方說明圖：Your agent → REA + analysis tools → Code &amp; evidence">
+        <figcaption>官方流程卡（rea.tools）：agent 透過 REA 同分析工具取得程式碼同證據。</figcaption>
+      </figure>
+    </div>
+
+    <h4>功能</h4>
+    <ul>
+      <li>一組 MCP，畀 agent 逆向分析原生執行檔／函式庫、JavaScript 同 Electron 應用、.NET assemblies，以及網站同執行期行為。</li>
+      <li>分析喺本機執行；回傳結果會帶證據，同埋每項結論的限制。</li>
+      <li>原生分析可用已安裝的 Hopper、Ghidra、IDA 或 Kuna；安裝過程可在你批准後選裝 Hopper。靜態 JavaScript 分析唔需要原生分析引擎。</li>
+      <li>同一套工作流程亦可用命令列。官網示範包括由錄製的 web app session 建立 RL 訓練環境。</li>
+      <li>需要 Node.js 22.x（≥22.23.4）、24.x（≥24.22.1）或 26.12.1+，以及 npm。</li>
+    </ul>
+
+    <h4>用法</h4>
+    <p>已有 Node.js 同 npm 時，喺終端機執行（或將以下指示交俾你嘅 coding agent）：</p>
+    <pre><code>npx rea-agents@latest setup</code></pre>
+    <ul>
+      <li>選擇 client（官方列出包括 Claude Code、Codex、Cursor、Gemini CLI、Grok Build 及其他）、預覽計劃、批准後重啟 agent。Setup 會登記 REA 的 MCP server 同對應工作流程，並備份現有設定。</li>
+      <li>之後可以直接問 agent，例如檢查某個 app 的一項功能、出示證據，再喺你自己的專案實作類似能力。</li>
+      <li>命令列示例（分析已解出的 JavaScript／Electron 目錄或 ASAR）：<br><code>npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json</code></li>
+      <li>長期使用可 <code>npm install --global rea-agents</code>，之後用 <code>rea update</code> 更新。</li>
+      <li>只應由官方來源取得：<a href="https://github.com/morluto/rea">morluto/rea</a>、<a href="https://rea.tools/">rea.tools</a>、或 npm 套件 <code>rea-agents</code>。分析第三方軟體時仍須遵守授權同適用法律。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>GitHub：<a href="https://github.com/morluto/rea">https://github.com/morluto/rea</a></li>
+      <li>官網：<a href="https://rea.tools/">https://rea.tools/</a> · 指南 <a href="https://rea.tools/guides/">/guides</a> · 案例 <a href="https://rea.tools/showcase/">/showcase</a></li>
+      <li>文件站：<a href="https://morluto.github.io/rea/">https://morluto.github.io/rea/</a> · 安裝 <a href="https://morluto.github.io/rea/get-started/">get-started</a></li>
+      <li>npm：<a href="https://www.npmjs.com/package/rea-agents">rea-agents</a></li>
+    </ul>
+    <div class="thumbs">
+      <a href="https://www.youtube.com/watch?v=KErIZpOPCCQ">
+        <img src="assets/skills/rea-intro-thumb.jpg" alt="REA 介紹影片縮圖">
+        <p>介紹影片 · YouTube KErIZpOPCCQ</p>
+      </a>
+    </div>
+
+    <h4>最新研究（2026-11-12）</h4>
+    <ul>
+      <li>今日從 npm registry 核實 <code>rea-agents</code> 最新版為 <strong>6.8.0</strong>。官網案例文案仍提到「Inspected with REA 4.1.0」，那是該 Calculator 示範當時用的版本，唔等於而家套件版號。</li>
+      <li>官方警告：名稱相近的 repo 或複製嘅 README 唔等於官方下載來源。</li>
+    </ul>
+  </article>
+
+  <article class="skill" id="hyperframes">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="wordmark" src="assets/skills/hyperframes-logo-dark.svg" alt="HyperFrames 官方字標">
+      </div>
+      <div class="name-block">
+        <h3>2. HeyGen HyperFrames</h3>
+        <p class="sub">用 HTML 寫影片，再渲染成 MP4。為 AI agent 而設。</p>
+      </div>
+      <div>
+        <span class="tag ok">v0.9.37</span>
+        <span class="tag">Apache-2.0</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/skills/hyperframes-studio.jpg" alt="HyperFrames 官方宣傳圖：Make videos with your AI agent，並顯示 Studio 工作場景">
+        <figcaption>官方 Open Graph 圖像（hyperframes.heygen.com）：產品定位同 Studio 工作場景。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/skills/hyperframes-blockframe.png" alt="HyperFrames BlockFrame 設計模板畫面，展示用框架製作的影片風格">
+        <figcaption>官方功能示例：BlockFrame 設計模板。來源：static.heygen.ai/hyperframes-oss/docs/images/design-templates/</figcaption>
+      </figure>
+    </div>
+
+    <h4>功能</h4>
+    <ul>
+      <li>開源框架：用 HTML／程式碼同 AI agent 製作影片，再渲染為 MP4（亦可在 Studio 入面預覽同剪輯）。</li>
+      <li>提供 CLI、Studio（桌面／瀏覽器編輯器，見 <a href="https://hyperframes.studio">hyperframes.studio</a>）、以及畀 agent 用的 skills，例如媒體生成／處理（<code>/media-use</code>）、把現成影片重建成可編輯專案（<code>/reverse-any-video</code>，Pro）、同風格模板（<code>/style-sampling</code>，Pro）。</li>
+      <li>典型產出包括產品發布片、程式 diff 講解、數據動畫、字幕社交短片，以及文件／網頁解說片。</li>
+      <li>需要 Node.js 22+ 同 FFmpeg。雲端渲染同部分 skills 視乎 HyperFrames 計劃。</li>
+      <li>這是 HeyGen 的 HyperFrames（<code>heygen-com/hyperframes</code>），不是 hyperframe.ai。</li>
+    </ul>
+
+    <h4>用法</h4>
+    <pre><code>npx hyperframes init my-video
+cd my-video
+npx hyperframes preview      # 瀏覽器即時預覽
+npx hyperframes render       # 渲染成 MP4</code></pre>
+    <ul>
+      <li>Agent 亦可按官方 docs 安裝對應 skills，用自然語言開專案、取素材、對片同出片。</li>
+      <li>發行說明同每週摘要見官方 changelog；升級時以該頁同 GitHub Releases 為準。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>GitHub：<a href="https://github.com/heygen-com/hyperframes">https://github.com/heygen-com/hyperframes</a></li>
+      <li>文件同產品站：<a href="https://hyperframes.heygen.com/">https://hyperframes.heygen.com/</a></li>
+      <li>Changelog：<a href="https://hyperframes.heygen.com/changelog">https://hyperframes.heygen.com/changelog</a> · 每週更新 <a href="https://hyperframes.heygen.com/weekly-updates">weekly-updates</a></li>
+      <li>Studio 應用：<a href="https://hyperframes.studio">https://hyperframes.studio</a></li>
+      <li>npm：<a href="https://www.npmjs.com/package/hyperframes">hyperframes</a></li>
+    </ul>
+    <div class="thumbs">
+      <a href="https://www.youtube.com/watch?v=GsaP8A-wp-Y">
+        <img src="assets/skills/hyperframes-intro-thumb.jpg" alt="HyperFrames 參考影片 GsaP8A-wp-Y 縮圖">
+        <p>參考影片 · YouTube GsaP8A-wp-Y</p>
+      </a>
+      <a href="https://www.youtube.com/watch?v=iqHxmw8Boto">
+        <img src="assets/skills/hyperframes-demo-thumb.jpg" alt="HyperFrames 參考影片 iqHxmw8Boto 縮圖">
+        <p>參考影片 · YouTube iqHxmw8Boto</p>
+      </a>
+    </div>
+
+    <h4>最新研究（2026-11-12）</h4>
+    <ul>
+      <li>官方 changelog 同 npm 均確認最新版為 <strong>v0.9.37</strong>（發布 2026-11-12）。</li>
+      <li>0.9.37 重點是安全修正：<code>hyperframes templates pull</code> 若檔案包含符號連結、硬連結或裝置項目會拒絕解壓；分享快照喺讀唔到 <code>.hyperframesignore</code> 時會擲回 <code>invalid_source_ignore</code>（0.9.35 曾經略過而可能把應忽略檔案打進包內）。</li>
+      <li>同日稍早的 0.9.36 讓低預覽品質時 motion blur 樣本減少（預覽 16／8 份，正式渲染仍 32 份），預覽更順。</li>
+    </ul>
+  </article>
+
+  <h2>Daily research log</h2>
+  <table>
+    <thead><tr><th>日期（Asia/Hong_Kong）</th><th>更新</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>2026-11-12 13:17</td>
+        <td>建立本頁。清單第 1 項 REA（<code>rea-agents</code> 6.8.0）、第 2 項 HeyGen HyperFrames（v0.9.37）。官方標誌同功能圖像已入頁。未推上 GitHub Pages。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="meta">Seeded by A.I.R.I.S. · AI Skills 頁獨立於 Main 的 10 項產品監察名單 · 圖像取自各技能官方來源，非裝飾填充。</p>
+  </div>
+</body>
+</html>
