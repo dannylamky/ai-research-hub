@@ -52,7 +52,211 @@
   <div class="wrap">
     <h1>Daily digests</h1>
     <p class="note">Weekdays ~08:00 Asia/Hong_Kong · on-demand deepened · high-signal only · newest first · 每主題 ≥3 連結。</p>
-    <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-12T08:23:00+08:00">2026-11-12 08:23 Asia/Hong_Kong</time></p>
+    <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-13T08:18:00+08:00">2026-11-13 08:18 Asia/Hong_Kong</time></p>
+
+    <h2>2026-11-13 · 平日例行 AI 摘要</h2>
+    <p class="meta">例行跑 · CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行（2026-11-12 08:23 HKT）之後 · 最後更新：2026-11-13 08:18 Asia/Hong_Kong</p>
+
+    <h3>優先觀察清單</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>項目</th><th>狀態</th><th>要點</th><th>參考（≥3）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Grok Bot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>官方 changelog 仍然停喺 <strong>Latest v1.0.1（2026-11-11）</strong>，未有新版號。但官方 <a href="https://x.com/bot/status/2120946968403095906">@bot</a> 於 <strong>2026-11-12 18:28:57Z（11-13 02:28 HKT）</strong>宣布：「Grok Bot on Mac can now use Messages, Mail, Notes, Reminders, Calendar, Location, and Contacts。」擷取時該帖約 <strong>23.7 萬次曝光、5,075 likes</strong>（數字會變）。9to5Mac 同步報道（11-12 10:40 PT＝11-13 02:40 HKT）。呢輪係 macOS 本機 Apple 應用整合，唔等於雲端 Bot 電腦已經內建同一組 API；官方 <code>changelog</code> 同 computer-and-apps 文檔擷取時尚未寫入呢組能力，要以公告為準、文档滯後視為限制。</td>
+          <td class="refs"><ul>
+            <li><a href="https://x.com/bot/status/2120946968403095906">@bot 官方帖（11-12 18:28Z）</a></li>
+            <li><a href="https://9to5mac.com/2026/11/12/grok-bot-for-mac-adds-integration-with-apple-mail-messages-notes-and-more/">9to5Mac（11-12）</a></li>
+            <li><a href="https://x.ai/changelog/bot">x.ai/changelog/bot（仍為 v1.0.1）</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Meta Muse</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>本窗口無新官方模型卡或產品一級發布。先前已報嘅 Apple Watch／Wear OS 同 specialized models 仍然係最近官方動態。</td>
+          <td class="refs"><ul>
+            <li><a href="https://research.meta.ai/blog/specialized-models-for-muse-and-metaai">Meta：Specialized models（11-06）</a></li>
+            <li><a href="https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/">TechCrunch：Watch／Wear OS（11-10）</a></li>
+            <li><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">官方介紹：Muse Image／Video</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>M365 Copilot / Cowork</td>
+          <td><span class="tag">日程到點</span></td>
+          <td>Learn「what's new」November 欄仍然只有 <strong>Planner Plugin</strong> 同 <strong>OneNote support</strong>，無新一級功能條目。MC1536053 寫 <strong>Accounting</strong> 能力（Excel＋Cowork：對帳、起草分錄、差異分析等；ERP 過帳要人批准）於 <strong>2026-11-13 開始全球 GA 推出</strong>，預計完成至 11 月下旬；GA 之後唔再要求 Frontier。本跑時間係 11-13 早上 HKT（美西仍係 11-12 傍晚），呢個係開始日而唔係已核實全線上線，Learn 頁亦未列入，唔好當成已經 universal GA。</td>
+          <td class="refs"><ul>
+            <li><a href="https://mc.merill.net/message/MC1536053">MC1536053（Accounting GA 日程）</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/copilot/cowork/whats-new">Cowork what’s new</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">M365 Copilot release notes</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HeyGen HyperFrames</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上次停喺 <strong>v0.9.36</strong>。本窗口連續四個穩定版去到 <strong>v0.9.40</strong>（published 2026-11-12 22:19Z＝11-13 06:19 HKT）。主線繼續偏安全同渲染效率：<strong>v0.9.37</strong>（10:30 HKT）<code>templates pull</code> 拒絕含 symlink／hard link／device 嘅 archive（否則 preview／render／publish 可能摸到機上其他檔）；讀唔到 <code>.hyperframesignore</code> 時 <code>snapshotProject</code>／<code>snapshotFiles</code> 再拋 <code>invalid_source_ignore</code>（0.9.35 曾經跳過會把不該打包嘅檔打進去）。<strong>v0.9.38</strong>（16:55 HKT）Studio Volume 改成整段 clip（含 fade）；cloud drive 專案 publish 唔再帶 Library 檔；render server 只載入專案內資產；HeyGen generate 預設圖模型改 <code>nano-banana-2.1</code>。<strong>v0.9.39</strong>（21:55 HKT）Studio 在元素下方顯示移動／縮放／旋轉讀數；新增輕量 <code>@hyperframes/studio/keys</code>。<strong>v0.9.40</strong> 本地 render 按畫面尺寸抽取影片（1080p 片用 4K 素材唔再把磁碟塞滿）；一幀像素唔再依賴先前已畫幀；render 工作按行程可用 CPU 計；Docker Node <strong>22.23.5</strong>（2026-11 安全更新）。非 hyperframe.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.40">Release v0.9.40</a></li>
+            <li><a href="https://github.com/heygen-com/hyperframes/compare/v0.9.36...v0.9.40">compare v0.9.36…v0.9.40</a></li>
+            <li><a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Strata</td>
+          <td><span class="tag">窗口跟進</span></td>
+          <td>公開最新 tag 仍係 <strong>v0.2.13</strong>（另有先前已報嘅 0.2.13.1），未見 v0.2.14。窗口內有一條未出包 commit（committed 2026-11-12 06:18Z＝14:18 HKT）：<code>serve_stop_bound()</code> 由只限 HIP 擴到每個後端（包括 CUDA），令 session 保留嘅對話同 client 已收到嘅 token 對齊，避免 continuation 跌返舊 checkpoint；作者在 4×R9700 量過：無此界 16 次續寫有 4 次回退，有則 0／16。可用 <code>STRATA_SERVE_STOP_BOUND=0</code> 關閉。跟 <a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a>。非 strata.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/Niko1221/Strata/commit/13eedf552417a6a791a7d13c6597e24300ee3a09">serve_stop_bound 全後端 commit</a></li>
+            <li><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.13">Release v0.2.13</a></li>
+            <li><a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ArtCraft</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>公開最新 tag 仍係 <strong>artcraft-v0.41.1（2026-11-07）</strong>；未見 v0.42 正式 release。Crafting Apps（Rust OSS）+ Studio 定位不變。非無關 Artcraft 品牌。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/storytold/artcraft/releases/tag/artcraft-v0.41.1">Release v0.41.1</a></li>
+            <li><a href="https://github.com/storytold/artcraft">storytold/artcraft</a></li>
+            <li><a href="https://getartcraft.com/">getartcraft.com</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Instant AI</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>主 changelog 最新一條仍然係 <strong>2026-11-05 MCP 2.0</strong>；本窗口無新產品更新。非 Instant.one 電郵產品。</td>
+          <td class="refs"><ul>
+            <li><a href="https://instant.so/changelog">instant.so/changelog</a></li>
+            <li><a href="https://docs.instant.so/en/articles/16068062-access-tokens-and-mcp">Access tokens and MCP</a></li>
+            <li><a href="https://instant.so/">instant.so</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>OpenBot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上次停喺 <strong>0.68.0</strong>。新出 <strong>0.69.0</strong>（published 2026-11-12 15:02Z＝23:02 HKT；官網 New 22／Improved 37／Fixed 89，並標「升級後要處理」）。重點：<strong>隱藏 agent 會繼續工作</strong>（收訊息、跑 routine、做 channel 工；升級會一次性關掉先前已隱藏 agent 嘅 routine，要你自行再開）；<strong>Teach a task</strong> 可錄瀏覽器步驟再交俾 agent 存成 skill（唔錄你打嘅字）；provider 可開 <strong>Pool accounts</strong>（用到接近額度先換下一個，預設關）；Library 加資料夾並上到 web client；可釘訊息（每 chat 最多 50）；可按 agent／角色限制每個 MCP；可用公開 GitHub 連結加 skill（官方明確話未審查）；Grok agent 可在 chat 內生成圖像／影片；伺服器之間可直接複製 agent（唔複製 API key／登入／歷史）。預設改為向正在工作嘅 agent <strong>steer</strong> 而唔係排隊。好多功能要 joined server 同步升到此版；web 匯出可分塊超過 100 MB，對方伺服器都要新版。本地桌面 persistent agents；PolyForm Noncommercial。</td>
+          <td class="refs"><ul>
+            <li><a href="https://openbot.run/changelog">Changelog（0.69.0）</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/releases/tag/v0.69.0">GitHub v0.69.0</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/compare/v0.68.0...v0.69.0">compare v0.68.0…v0.69.0</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Switch AI / Switch Agents</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>Switch Trust 公開 changelog 最新仍係 <strong>v1.0.3（2026-11-05）</strong>；Rooms／ROI 本窗口無新產品一級更新。聯絡 hello@switchagents.ai。</td>
+          <td class="refs"><ul>
+            <li><a href="https://www.switchagents.ai/">switchagents.ai</a></li>
+            <li><a href="https://docs.switchagents.ai/switch-trust/resources/changelog">Switch Trust changelog</a></li>
+            <li><a href="https://www.switchagents.ai/blog-posts/introducing-switch-trust-and-switch-roi">Trust／ROI</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Rea</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>正式打 <strong>rea-agents 6.9.0</strong> 包（published 2026-11-12 08:59Z＝16:59 HKT；release notes 標 2026-11-11）。對比上次窗口只報到 6.8.0 同未出包 commit，呢次係版本跳。官方 highlights：可由錄到嘅應用狀態建立同測試 desktop tasks（包括下載嘅 Linux apps、可重用 build computers、一次 capture 多個 task）；離線檢查更多交付物（獨立 application bundle、嵌入式 firmware、NTFS 取證、API contract、V8 code-cache）；native／runtime 調查以保留嘅 Evidence 為準，有分頁結果、明確覆蓋同可恢復資源上限。亦包括 SHA-256 pinned AppImage、本地 ReFS／NTFS runtime、Playwright v10 trace Evidence 等。仍然係 agent-driven reverse engineering；<code>npx rea-agents@latest setup</code>。非無關「rea」產品。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/morluto/rea/releases/tag/rea-agents-6.9.0">Release rea-agents 6.9.0</a></li>
+            <li><a href="https://github.com/morluto/rea/compare/rea-agents-6.8.0...rea-agents-6.9.0">compare 6.8.0…6.9.0</a></li>
+            <li><a href="https://rea.tools">rea.tools</a></li>
+          </ul></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>X／Twitter AI 討論</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Gemini 4 Hydrogen 登場</td>
+          <td>Google 於 <strong>2026-11-12</strong> 推出 Gemini 4 系列嘅快速執行模型 Hydrogen（9to5Google 標 10:01 PT＝11-13 02:01 HKT）。官方定位：Carbon／Argon 負責長程深推理，Hydrogen 負責日常 coding 同 agent 工作流；模型卡寫明 Hydrogen <strong>adapted from Gemini 4 Carbon</strong>。X 討論集中喺「4 系而家有快模型、取代 Flash 品牌、Search／Gemini app 大規模舖開」。</td>
+          <td>把 frontier 系列嘅執行層商品化到 Search 同免費／自動選模路徑，同時用 Orchestrator 做多模型分工；會重新劃分「用邊隻模型做日常 agent」嘅預設。</td>
+          <td class="refs"><ul>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Google 官方博客</a></li>
+            <li><a href="https://deepmind.google/models/model-cards/gemini-4-hydrogen/">DeepMind 模型卡</a></li>
+            <li><a href="https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/">9to5Google（11-12）</a></li>
+          </ul></td>
+          <td>多數基準同速度數字係官方自報；完整 Safety &amp; Security Report 標「coming soon」</td>
+        </tr>
+        <tr>
+          <td>NVIDIA：Jensen Huang 即時辭任</td>
+          <td>NVIDIA 新聞稿（日期 2026-11-12）同 Form 8-K：董事會於 <strong>2026-11-11</strong> 接受 Jensen Huang 辭去 President、CEO 及董事，即時生效；CFO <strong>Colette Kress</strong> 任臨時 CEO（同時留任 CFO）；<strong>Harvey C. Jones</strong> 成為董事會史上首位 Chair。公司會內外搜尋常任 CEO，並稱業務、客戶承諾同產品路線圖預期不受中斷。第三季財報（FY2027）仍按原定 <strong>11-17 13:20 PT</strong> 公布、14:00 PT 業績會。官方聲明<strong>無寫辭職原因</strong>。X 上隨即把辭職同先前個人／國家安全指控報道綁在一齊，敘事波動好大。</td>
+          <td>全球最關鍵 AI 加速器供應商喺業績會前出現創辦人級領導交接；臨時 CEO 兼 CFO、首次設立 Chair，反映董事會要同時管治理同日常營運連續性。</td>
+          <td class="refs"><ul>
+            <li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">NVIDIA 官方新聞稿（11-12）</a></li>
+            <li><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm">SEC Form 8-K</a></li>
+            <li><a href="https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html">CNBC live updates（11-12）</a></li>
+          </ul></td>
+          <td>官方文件無述原因；傳媒關於私生活或間諜／出口管制嘅說法屬報道或指控，未寫入 8-K，唔應當成已裁定事實</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>GitHub／論文／研究</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>本地工具鏈持續日更：HyperFrames／OpenBot／Rea</td>
+          <td>窗口內 HyperFrames <strong>0.9.36→0.9.40</strong>（模板 archive 拒絕連結、ignore 檔讀失敗即停、按顯示尺寸抽片、幀獨立）；OpenBot <strong>0.68.0→0.69.0</strong>（隱藏 agent 持續開工、Teach a task、帳號池、GitHub skill 匯入）；Rea 由 6.8.0 跳到 <strong>rea-agents 6.9.0</strong>（錄製桌面任務、更多離線交付物／firmware／NTFS Evidence）。Strata 未出新 tag，但把 serve stop-bound 擴到 CUDA。</td>
+          <td>Agent video toolchain 同桌面 multi-agent 仍然以可核對 release 推進；HyperFrames 繼續收緊「agent 可觸及邊啲檔」、OpenBot 把「隱藏＝停工」改成「隱藏仍可跑」，升級有明確 breaking 行為。</td>
+          <td class="refs"><ul>
+            <li><a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.40">HyperFrames v0.9.40</a></li>
+            <li><a href="https://github.com/nightly-labs/openbot/releases/tag/v0.69.0">OpenBot v0.69.0</a></li>
+            <li><a href="https://github.com/morluto/rea/releases/tag/rea-agents-6.9.0">Rea 6.9.0</a></li>
+          </ul></td>
+          <td>作者自測數字；release ≠ 市場採用；OpenBot 隱藏-agent routine 會被一次性關掉</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>產業／產品／博客</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要／證據</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Google：Gemini 4 Hydrogen（快執行層）同 Orchestrator</td>
+          <td>官方博客：Hydrogen 在 Artificial Analysis Intelligence Index 預設 high thinking 得 <strong>51 vs Argon 50</strong>，xhigh 到 <strong>54</strong>；定價整個 1M context 一律 <strong>$1.50／$7.50</strong> per million input／output tokens。對比 3.8 Flash：官方稱 high 預設完成任務快 <strong>2.5 倍</strong>，Terminal-Bench 4.1 <strong>57% vs 18.2%</strong>，fabricated claims 減少超過 5 倍。Antigravity 新增 <strong>Orchestrator</strong>，同一 session 動態切 Carbon／Hydrogen；官方稱 Terminal-Bench 4.0 接近 Carbon 成功率，平均少用 <strong>24%</strong> quota、快 <strong>19%</strong>。四檔 thinking：low／medium／high（預設）／xhigh。即日舖 Gemini API、AI Studio、Gemini app、Google Search（全球）、付費 Pro／Ultra 嘅 Antigravity；免費用戶經自動選模用到。模型卡補充：預設同步輸出上限 <strong>64K</strong>，1M 輸出要經 background long decode；知識截止 <strong>2026-03</strong>。對外部對照（模型卡，2026-11）：Terminal-Bench 4.1 上 Hydrogen <strong>57.0%</strong> 低於 Claude Sonnet 5.5 嘅 <strong>63.9%</strong>；SWE-sweep 則 Hydrogen <strong>13.5%</strong> 高過 Sonnet 5.5 3.1% 同 GPT-6.1 Terra 5.8%。安全：完整報告尚未出；對 3.8 Flash，無合理拒絕（unjustified refusals）升 <strong>+5.57pp</strong>；CBRN／cyber CCL 未達但觸及 alert threshold。</td>
+          <td>呢個唔係新一代 frontier，而係把 Carbon 系能力抽成高吞吐執行模型並鋪進 Search。多模型編排（Orchestrator）同平坦長窗價格，對 agent 成本結構有直接含義；但「快過 Flash、接近 Argon」唔等於全面壓過同級對手，要以模型卡表為準。</td>
+          <td class="refs"><ul>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Google 官方博客</a></li>
+            <li><a href="https://deepmind.google/models/model-cards/gemini-4-hydrogen/">DeepMind 模型卡（含對照表）</a></li>
+            <li><a href="https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/">Antigravity：Hydrogen／Orchestrator</a></li>
+          </ul></td>
+          <td>基準同 2.5×／24%／19% 均為官方自報；Safety Report 未出；知識截止 2026-03</td>
+        </tr>
+        <tr>
+          <td>NVIDIA 創辦人 CEO 即時交接</td>
+          <td>同上：黃仁勳辭去總統／CEO／董事，Kress 臨時 CEO 兼 CFO，Jones 任首位 Chair；內外搜尋繼任人；11-17 業績會照開。新聞稿同 8-K 都無寫原因。路透／CNBC／AP 等跟進市場同董事會變動；部分報道把辭職置於先前個人同出口管制相關指控之後——呢啲內容唔在公司申報之內。</td>
+          <td>對算力供給、出口政策預期同 11-17 業績指引嘅解讀風險上升；營運連續性官方強調「不受中斷」，但常任 CEO 人選同治理安排仍係未解變數。</td>
+          <td class="refs"><ul>
+            <li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">NVIDIA 官方新聞稿</a></li>
+            <li><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm">SEC Form 8-K</a></li>
+            <li><a href="https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f">AP News</a></li>
+          </ul></td>
+          <td>原因未入官方文件；股價同指控細節以各自來源為準，本摘要不採信未核實指控為事實</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
 
     <h2>2026-11-12 · 平日例行 AI 摘要</h2>
     <p class="meta">例行跑 · CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行（2026-11-11 08:18 HKT）之後 · 最後更新：2026-11-12 08:23 Asia/Hong_Kong</p>

@@ -70,17 +70,21 @@
   </header>
   <div class="wrap">
   <h1>AI Skills</h1>
-  <p class="meta">獨立於產品監察名單的 AI 技能優先清單：功能、用法、參考連結，以及每日研究更新。· 最近研究 2026-11-12 13:17 Asia/Hong_Kong</p>
+  <p class="meta">獨立於產品監察名單的 AI 技能優先清單：功能、用法、參考連結，以及每日研究更新。· 最近研究 2026-11-13 20:34 Asia/Hong_Kong</p>
 
   <h2>Skills priority list (ordered)</h2>
   <table>
     <thead><tr><th>#</th><th>Skill</th><th>Canonical track</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td><a href="#rea">REA</a></td><td>Agent-driven reverse engineering · <a href="https://github.com/morluto/rea">morluto/rea</a> · <a href="https://rea.tools">rea.tools</a> · npm <code>rea-agents</code> 6.8.0 · NOT unrelated “rea” products</td></tr>
-      <tr><td>2</td><td><a href="#hyperframes">HeyGen HyperFrames</a></td><td>HTML→MP4 agent framework · <a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a> · <a href="https://hyperframes.heygen.com/">docs</a> · <a href="https://hyperframes.heygen.com/changelog">changelog</a> · v0.9.37 · NOT hyperframe.ai</td></tr>
+      <tr><td>1</td><td><a href="#rea">REA</a></td><td>Agent-driven reverse engineering · <a href="https://github.com/morluto/rea">morluto/rea</a> · <a href="https://rea.tools">rea.tools</a> · npm <code>rea-agents</code> 6.9.0 · NOT unrelated “rea” products</td></tr>
+      <tr><td>2</td><td><a href="#hyperframes">HeyGen HyperFrames</a></td><td>HTML→MP4 agent framework · <a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a> · <a href="https://hyperframes.heygen.com/">docs</a> · <a href="https://hyperframes.heygen.com/changelog">changelog</a> · v0.9.40 · NOT hyperframe.ai</td></tr>
+      <tr><td>3</td><td><a href="#agent2api">Agent2API</a></td><td>Local AI routing gateway with Agent client takeover · <a href="https://github.com/aimod-cc/Agent2API">aimod-cc/Agent2API</a> · <a href="https://github.com/aimod-cc/Agent2API/blob/main/docs/install.zh-Hant.md">安裝文件</a> · Docker <code>aimodcc/agent2api</code> · 最新穩定版 v3.4.2 · 不是 aimod.cc，亦非已失效嘅舊倉 <code>agent2api/agent2api</code></td></tr>
+      <tr><td>4</td><td><a href="#optimizerduck">optimizerDuck</a></td><td>Free, open-source Windows optimization tool · <a href="https://github.com/itsfatduck/optimizerDuck">itsfatduck/optimizerDuck</a> · <a href="https://optimizerduck.vercel.app/">optimizerduck.vercel.app</a> · <a href="https://optimizerduck.vercel.app/docs/guides/getting-started">docs</a> · v2.29.0 · NOT <a href="https://github.com/hellzerg/optimizer">hellzerg/optimizer</a></td></tr>
+      <tr><td>5</td><td><a href="#gpuwerk">GPUwerk</a></td><td>Dedicated DGX Spark / GPU rental cloud · <a href="https://gpuwerk.com/">gpuwerk.com</a> · from $0.79/h billed per minute · <a href="https://gpuwerk.com/pricing/">pricing page</a> · NOT unrelated “GPU Work” / GPUWorks or other GPU marketplaces</td></tr>
+      <tr><td>6</td><td><a href="#interactive-ppt">Microsoft PowerPoint 互動式投影片</a></td><td>Official Copilot interactive slides in PowerPoint · Microsoft Support <a href="https://support.microsoft.com/zh-hk/powerpoint/copilot/create-interactive-slides-with-copilot-in-powerpoint">zh-HK</a>／<a href="https://support.microsoft.com/en-us/powerpoint/copilot/create-interactive-slides-with-copilot-in-powerpoint">en-US</a> · teaching refs <a href="https://4all.dev/zh-Hant/ebooks/copilot-pptx">4all.dev ebook</a> + <a href="https://www.youtube.com/watch?v=ZR2Bt9d-5tI">YouTube ZR2Bt9d-5tI</a> · NOT Gamma、Beautiful.ai、Plus AI、generic VBA／HTML add-ins、html-ppt／HTML Deck，亦非已列第 2 項的 HeyGen HyperFrames</td></tr>
     </tbody>
   </table>
-  <p class="note">清單可以再加項目。本頁目前只收錄已交嘅兩項。</p>
+  <p class="note">清單可以再加項目。本頁目前只收錄已交嘅六項。</p>
 
   <article class="skill" id="rea">
     <div class="skill-head">
@@ -92,7 +96,7 @@
         <p class="sub">畀 coding agent 檢查程式點樣運作，由應用行為去到原生二進位。</p>
       </div>
       <div>
-        <span class="tag ok">npm rea-agents 6.8.0</span>
+        <span class="tag ok">npm rea-agents 6.9.0</span>
         <span class="tag">MIT</span>
       </div>
     </div>
@@ -114,6 +118,8 @@
       <li>分析喺本機執行；回傳結果會帶證據，同埋每項結論的限制。</li>
       <li>原生分析可用已安裝的 Hopper、Ghidra、IDA 或 Kuna；安裝過程可在你批准後選裝 Hopper。靜態 JavaScript 分析唔需要原生分析引擎。</li>
       <li>同一套工作流程亦可用命令列。官網示範包括由錄製的 web app session 建立 RL 訓練環境。</li>
+      <li>6.9.0 起，官方 README 亦說明可為 Linux 桌面應用建立環境：agent 以截圖、滑鼠同鍵盤操作；由本機 build computer 安裝應用、寫任務、匯出環境，再喺一部新電腦檢查。建置端需要 Linux（amd64 或 arm64）、Docker，以及指南指定的 agentenv 版本。</li>
+      <li>離線檢查範圍擴大。官方 6.9.0 說明包括獨立應用套件、嵌入式韌體、NTFS 擷取、API 合約同 V8 code-cache 容器等。分析仍在本機執行，並以保留的 Evidence 為據。</li>
       <li>需要 Node.js 22.x（≥22.23.4）、24.x（≥24.22.1）或 26.12.1+，以及 npm。</li>
     </ul>
 
@@ -142,10 +148,14 @@
       </a>
     </div>
 
-    <h4>最新研究（2026-11-12）</h4>
+    <h4>最新研究（2026-11-13）</h4>
     <ul>
-      <li>今日從 npm registry 核實 <code>rea-agents</code> 最新版為 <strong>6.8.0</strong>。官網案例文案仍提到「Inspected with REA 4.1.0」，那是該 Calculator 示範當時用的版本，唔等於而家套件版號。</li>
-      <li>官方警告：名稱相近的 repo 或複製嘅 README 唔等於官方下載來源。</li>
+      <li>今日從 npm registry 同 GitHub Releases 核實 <code>rea-agents</code> 最新版為 <strong>6.9.0</strong>（GitHub 發布 2026-11-12 16:59 Asia/Hong_Kong；npm <code>latest</code> 發布 2026-11-12 17:53 Asia/Hong_Kong）。官方比較範圍：<a href="https://github.com/morluto/rea/compare/rea-agents-6.8.0...rea-agents-6.9.0">rea-agents-6.8.0...rea-agents-6.9.0</a>。發行說明標題日期為 2026-11-11。</li>
+      <li>官方 Highlights：可從錄製的應用狀態建立同測試桌面任務（包括下載的 Linux 應用、可重用的 build computer，以及一次擷取多個任務）；離線檢查更多發行物，例如獨立應用套件、嵌入式韌體、NTFS 擷取、API 合約同 V8 code-cache 容器；原生同執行期調查改以保留的 Evidence 為本，並提供分頁結果、明確覆蓋範圍同可恢復的資源限制。</li>
+      <li>官方 README 新增「Desktop app environments」一節，內容同上。分析目標表相對 6.8.0 新增 Windows shortcuts、Binary hardening，以及 Deno compile binaries。</li>
+      <li>Node.js 需求不變：22.x（≥22.23.4）、24.x（≥24.22.1）或 26.12.1+，以及 npm。官網安裝指令仍為 <code>npx rea-agents@latest setup</code>。</li>
+      <li>官方 README 新增可選環境變數 <code>REA_MCP_OUTPUT_SCHEMA_PROFILE</code>（<code>compact</code> 或 <code>off</code>），用於限制或關閉 advertised output schemas；預設仍廣告完整 output schemas，伺服器端驗證同完整結構化結果不變。</li>
+      <li>官方警告不變：名稱相近的 repo 或複製嘅 README 唔等於官方下載來源。</li>
     </ul>
   </article>
 
@@ -159,7 +169,7 @@
         <p class="sub">用 HTML 寫影片，再渲染成 MP4。為 AI agent 而設。</p>
       </div>
       <div>
-        <span class="tag ok">v0.9.37</span>
+        <span class="tag ok">v0.9.40</span>
         <span class="tag">Apache-2.0</span>
       </div>
     </div>
@@ -213,11 +223,363 @@ npx hyperframes render       # 渲染成 MP4</code></pre>
       </a>
     </div>
 
-    <h4>最新研究（2026-11-12）</h4>
+    <h4>最新研究（2026-11-13）</h4>
     <ul>
-      <li>官方 changelog 同 npm 均確認最新版為 <strong>v0.9.37</strong>（發布 2026-11-12）。</li>
-      <li>0.9.37 重點是安全修正：<code>hyperframes templates pull</code> 若檔案包含符號連結、硬連結或裝置項目會拒絕解壓；分享快照喺讀唔到 <code>.hyperframesignore</code> 時會擲回 <code>invalid_source_ignore</code>（0.9.35 曾經略過而可能把應忽略檔案打進包內）。</li>
-      <li>同日稍早的 0.9.36 讓低預覽品質時 motion blur 樣本減少（預覽 16／8 份，正式渲染仍 32 份），預覽更順。</li>
+      <li>官方 changelog、GitHub Releases 同 npm <code>latest</code> 均確認最新版為 <strong>v0.9.40</strong>。官方 changelog 寫 Released - 2026-11-12；GitHub 發布 2026-11-13 06:19 Asia/Hong_Kong，npm 發布 2026-11-13 06:39 Asia/Hong_Kong。相對本頁上一次記錄的 v0.9.37，中間仲有 0.9.38 同 0.9.39，三個版本官方均標為 2026-11-12 發布。</li>
+      <li>0.9.40 重點：本機渲染會按畫面顯示大小擷取影片，長時間把 4K 素材匯出成 1080p 時不再佔滿磁碟；單一 frame 的像素不再依賴之前畫過的 frames；渲染工作量按行程可用的 CPU 數量調整；<code>check</code> 能正確處理標頭誤報 byte rate 的 WAV。CLI 新增 <code>hyperframes registry search</code> 會執行 catalog。Docker 映像改用 Node 22.23.5（官方稱為 2026 年 11 月安全更新）。</li>
+      <li>0.9.39：Studio 把移動、縮放同旋轉讀數顯示在元件下方的 chip；桌面同其他 host 可由較輕量的 <code>@hyperframes/studio/keys</code> 路徑匯入按鍵解析同預設值。</li>
+      <li>0.9.38：Studio 的 Volume 控制會改動整個 clip（包括 fades）；Mac 上暫停畫面與播放時顏色一致；編輯歷史記錄每項改動觸及的 layer；Publish 對雲端硬碟專案會排除 Library 檔；渲染伺服器只從專案內部載入素材。CLI 的 HeyGen generate 預設圖像模型改為 nano-banana-2.1。</li>
+    </ul>
+  </article>
+
+  <article class="skill" id="agent2api">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="mark" src="assets/skills/agent2api-logo.png" alt="Agent2API 官方應用圖示">
+      </div>
+      <div class="name-block">
+        <h3>3. Agent2API</h3>
+        <p class="sub">本機 AI 路由閘道，接管 Agent 客戶端連線：復用已登入嘅客戶端，以一個 base URL 統一 OpenAI／Anthropic／生圖介面。</p>
+      </div>
+      <div>
+        <span class="tag ok">v3.4.2</span>
+        <span class="tag">AGPL-3.0</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure class="light">
+        <img src="assets/skills/agent2api-accounts.jpg" alt="Agent2API 帳號管理頁：多供應商佇列、餘額、狀態同代理設定（官方 GitHub 說明圖）">
+        <figcaption>官方功能畫面：帳號管理（全域佇列、有效期與餘額）。來源：aimod-cc/Agent2API <code>assets/screenshots/accounts.png</code></figcaption>
+      </figure>
+      <figure class="light">
+        <img src="assets/skills/agent2api-report-overview.jpg" alt="Agent2API 報表概覽：Token 用量環圈、帳號同供應商排名，以及 365 天活躍熱力圖（官方 GitHub 說明圖）">
+        <figcaption>官方功能畫面：請求報表概覽（用量、排名與 365 天熱力圖）。來源：aimod-cc/Agent2API <code>assets/screenshots/report-overview.png</code></figcaption>
+      </figure>
+    </div>
+
+    <h4>功能</h4>
+    <ul>
+      <li>本機 AI 路由閘道，並可接管本機 Agent 客戶端嘅連線設定：匯入既有設定、預覽寫入，再切換到閘道或自訂服務。</li>
+      <li>對外提供統一模型介面：OpenAI Chat／Responses／Images 同 Anthropic Messages，以及統一模型清單。官方 README 列出小浣熊（Raccoon）、Loomy、Antigravity、ModelScope、WorkBuddy、豆包工作 可提供生圖；其中小浣熊、Loomy、Antigravity、ModelScope 與 WorkBuddy 亦支援參考圖編輯。</li>
+      <li>路由層集中處理模型對應、帳號優先順序、負載平衡、工作階段黏性同失敗切換。</li>
+      <li>額外供應商實作以獨立插件安裝同更新，唔隨主程式打包；自訂供應商無需插件。插件契約同實作喺 <a href="https://github.com/ProvidersPlugin/Agent2Providers">ProvidersPlugin/Agent2Providers</a>。</li>
+      <li>閘道金鑰可分權；面板登入可開人機驗證。伺服器／Docker 形態未建立金鑰前預設拒絕轉發 <code>/v1/*</code>（fail-closed）。帳號同更新任務可選出口代理。</li>
+      <li>請求報表包括請求量、成功率、Token 消耗、快取命中率同 365 天熱力圖。背景維護包括模型清單更新、憑證維護，以及按各供應商時窗執行嘅每日簽到（官方例子：Qoder 10:01、ZCode 19:01）同只處理未簽帳號嘅補簽。</li>
+      <li>三種形態：Windows／macOS／Linux 桌面端、無介面 Windows／Linux 伺服器，以及 Docker（amd64／arm64）。執行時無需 Node。介面支援六種語言。</li>
+      <li>這是 <code>aimod-cc/Agent2API</code>。官方沒有獨立產品站（GitHub 首頁指向本倉）；唔好同 <a href="https://aimod.cc/">aimod.cc</a> 線上工具站混淆，亦唔好從已失效嘅舊地址 <code>agent2api/agent2api</code> 安裝。</li>
+    </ul>
+
+    <h4>用法</h4>
+    <p>三種形態按環境揀一個；完整安裝、升級、解除安裝同排錯見官方安裝文件。Docker 示例（<code>latest</code> 跟隨最新穩定版）：</p>
+    <pre><code>docker run -d --name agent2api --restart unless-stopped \
+  -p 3065:3065 -v ./data:/data \
+  aimodcc/agent2api:latest</code></pre>
+    <p>Linux 伺服器端（先從 GitHub Releases 下載對應壓縮包）：</p>
+    <pre><code>tar -xzf agent2api-server-linux-amd64.tar.gz &amp;&amp; cd agent2api-server-linux-amd64 &amp;&amp; sudo bash install.sh</code></pre>
+    <p>閘道起來後嘅連線性自測：</p>
+    <pre><code>curl http://127.0.0.1:3065/health
+curl http://127.0.0.1:3065/v1/models</code></pre>
+    <ul>
+      <li>裝完後開啟面板 <code>http://127.0.0.1:3065/</code>（伺服器／Docker 請換成主機 IP），註冊管理員，再喺「閘道 Key」頁建立金鑰。客戶端 <code>base_url</code> 設為 <code>http://127.0.0.1:3065/v1</code>，<code>api_key</code> 用呢把金鑰。</li>
+      <li>桌面端從 Releases 下載 <code>Agent2API_&lt;版本&gt;_x64-setup.exe</code>、<code>_universal.dmg</code>、<code>_amd64.deb</code> 或 <code>_amd64.AppImage</code>。閘道跑喺應用程式行程內（連接埠 3065），關閉視窗預設最小化到系統匣。加帳號後，可喺「Agent」頁套用連線設定，或手動把客戶端指向上述 <code>base_url</code>。</li>
+      <li>Docker 標籤：<code>latest</code> 跟最新穩定版，<code>beta</code> 跟最新預發布（官方說明：beta 唔會改動 <code>latest</code>）。同一映像亦喺 GitHub Container Registry：<code>ghcr.io/aimod-cc/agent2api</code>，標籤規則相同。</li>
+      <li>只應由官方來源取得：<a href="https://github.com/aimod-cc/Agent2API">aimod-cc/Agent2API</a>、Docker Hub <a href="https://hub.docker.com/r/aimodcc/agent2api"><code>aimodcc/agent2api</code></a>，或 GHCR。套用上游客戶端登入態時，仍須遵守各服務條款同適用法律。官方使用聲明：帳號憑證喺本機資料庫加密，但匯出、備份同密鑰檔仍可能含敏感資料，唔好公開分享；專案依「現狀」提供，無擔保。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>GitHub：<a href="https://github.com/aimod-cc/Agent2API">https://github.com/aimod-cc/Agent2API</a></li>
+      <li>繁中說明同安裝：<a href="https://github.com/aimod-cc/Agent2API/blob/main/docs/README.zh-Hant.md">docs/README.zh-Hant.md</a> · <a href="https://github.com/aimod-cc/Agent2API/blob/main/docs/install.zh-Hant.md">docs/install.zh-Hant.md</a></li>
+      <li>English README 同安裝：<a href="https://github.com/aimod-cc/Agent2API/blob/main/README.md">README.md</a> · <a href="https://github.com/aimod-cc/Agent2API/blob/main/docs/install.en.md">docs/install.en.md</a></li>
+      <li>Releases：<a href="https://github.com/aimod-cc/Agent2API/releases">https://github.com/aimod-cc/Agent2API/releases</a> · 最新穩定版轉向 <a href="https://github.com/aimod-cc/Agent2API/releases/latest">/releases/latest</a></li>
+      <li>Docker Hub：<a href="https://hub.docker.com/r/aimodcc/agent2api">aimodcc/agent2api</a> · GHCR：<a href="https://github.com/aimod-cc/Agent2API/pkgs/container/agent2api"><code>ghcr.io/aimod-cc/agent2api</code></a></li>
+      <li>插件倉庫：<a href="https://github.com/ProvidersPlugin/Agent2Providers">ProvidersPlugin/Agent2Providers</a></li>
+    </ul>
+    <div class="thumbs">
+      <a href="https://www.youtube.com/watch?v=MMMa0R5j_2k">
+        <img src="assets/skills/agent2api-intro-thumb.jpg" alt="Agent2API 參考影片 MMMa0R5j_2k 縮圖">
+        <p>參考影片 · YouTube MMMa0R5j_2k</p>
+      </a>
+    </div>
+
+    <h4>最新研究（2026-11-13）</h4>
+    <ul>
+      <li>今日再次從 GitHub Releases API、<code>/releases/latest</code>、主分支 <code>package.json</code> 同 Docker Hub 核實，最新穩定版仍為 <strong>v3.4.2</strong>（發布 2026-11-05 15:53 Asia/Hong_Kong）。主分支 <code>package.json</code> 仍為 3.4.2，且 <code>private: true</code>；npm 同 PyPI 上沒有官方 <code>agent2api</code> 套件。Docker Hub 嘅 <code>aimodcc/agent2api:latest</code> 與 3.4.2 標籤一致（映像更新 2026-11-05）。</li>
+      <li>最新預發布仍為 <strong>v3.5.0-beta.1</strong>（發布 2026-11-10 01:54 Asia/Hong_Kong），對應 Docker <code>beta</code> 標籤。未見更新的穩定或預發布版本。官方安裝文件寫明 beta 唔會移動 <code>latest</code>。本頁優先清單仍以穩定版 v3.4.2 為準。</li>
+      <li>v3.4.2 相對 3.4.1 嘅重點不變：自訂路由組（可將不同供應商、模型組合成一個對外模型 ID）、壓縮路由（可為 ZCode 上下文壓縮指定模型）、客戶端識別，以及標準 Windows 服務與 systemd 部署嘅面板一鍵更新。</li>
+    </ul>
+  </article>
+
+  <article class="skill" id="optimizerduck">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="mark" src="assets/skills/optimizerduck-logo.png" alt="optimizerDuck 官方鴨子標誌">
+      </div>
+      <div class="name-block">
+        <h3>4. optimizerDuck</h3>
+        <p class="sub">免費開源嘅 Windows 最佳化工具，聚焦效能、私隱同簡潔。</p>
+      </div>
+      <div>
+        <span class="tag ok">v2.29.0</span>
+        <span class="tag">GPL-3.0</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/skills/optimizerduck-app.jpg" alt="optimizerDuck 深色模式 Optimize 頁：分類調整、風險評級同獨立開關（官方 GitHub 說明圖）">
+        <figcaption>官方功能畫面：Optimize 頁（深色模式），每項調整有說明同風險評級。來源：itsfatduck/optimizerDuck <code>.github/assets/app.png</code>（視窗標題顯示 v2.17.3，係說明圖當時嘅版本，唔等於而家發行版）。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/skills/optimizerduck-og.jpg" alt="optimizerDuck 官方宣傳圖：Clean, tweak, and optimize your Windows PC，並顯示可攜、可還原同 Windows 10／11 支援">
+        <figcaption>官方 Open Graph 圖像（<a href="https://optimizerduck.vercel.app/og.png">optimizerduck.vercel.app/og.png</a>）：產品定位。圖上嘅星數、下載數同語言數量係製作該圖當時嘅文案，唔當作今日數字。</figcaption>
+      </figure>
+    </div>
+
+    <h4>功能</h4>
+    <ul>
+      <li>喺同一個介面優化 Windows、移除不必要元件、自訂系統設定，同管理常見 Windows 功能，無需直接改登錄檔、群組原則或 PowerShell。</li>
+      <li>系統最佳化：官方英文 README 今日寫明 42 項調整、分 7 類（效能、私隱、GPU、電源、冗餘軟體與服務、使用體驗、AI），每項有說明同風險評級（Safe／Moderate／Risky）。官方例子包括按記憶體調整 Service Host、停用遙測同廣告 ID、AMD／NVIDIA／Intel GPU 登錄調整、自訂高效能電源計畫、微調 200 多項服務啟動類型，以及喺 Windows 11 停用 Recall 同 Click To Do。</li>
+      <li>自訂設定：官方英文 README 今日寫明 44 項、分 4 類（桌面、偏好設定、遊戲、系統），以開關、下拉同數字輸入呈現。</li>
+      <li>內建工具：系統儀表板、啟動管理、排程工作、磁碟清理，以及冗餘軟體卸載（列出可移除嘅 AppX 並附風險標籤）。</li>
+      <li>安全設計（官方 Safety 一節）：唔會預設套用任何項目；每次變更會寫還原檔到本機（官方路徑 <code>%LocalAppData%\optimizerDuck\Revert\</code>）；可一鍵還原單項或全部；首次最佳化前提議建立 Windows 還原點。</li>
+      <li>可攜單檔 <code>.exe</code>，無需安裝。支援 Windows 10／11（x64 同 ARM64），需要系統管理員權限。官方技術說明為 WPF + .NET 10。官方 README 語言表目前列出 18 種語言（包括正體中文）。官方私隱政策：核心功能喺本機執行，正常操作唔收集、追蹤或傳送個人資料。</li>
+      <li>這是 <a href="https://github.com/itsfatduck/optimizerDuck">itsfatduck/optimizerDuck</a>（官網 <a href="https://optimizerduck.vercel.app/">optimizerduck.vercel.app</a>），不是另一款同樣開源、常被簡稱為 Optimizer 嘅 <a href="https://github.com/hellzerg/optimizer">hellzerg/optimizer</a>，亦唔係各類商業「PC optimizer」清理軟件。</li>
+    </ul>
+
+    <h4>用法</h4>
+    <p>官方 Quick Start：從 GitHub Releases 下載，直接執行 <code>.exe</code>（無需安裝），揀要套用嘅項目，再按需要重啟。目前最新穩定版 v2.29.0 嘅發行檔名：</p>
+    <pre><code>optimizerDuck-Windows-x64-2.29.0.exe
+optimizerDuck-Windows-arm64-2.29.0.exe</code></pre>
+    <ul>
+      <li>下載頁：<a href="https://github.com/itsfatduck/optimizerDuck/releases/latest">https://github.com/itsfatduck/optimizerDuck/releases/latest</a>（今日核實此網址轉到 v2.29.0）。請揀同你電腦架構相符嘅檔案：大多數 PC 用 x64，Snapdragon 等用 ARM64。</li>
+      <li>官方提醒：進行系統更改前，請先建立 Windows <strong>系統還原點</strong>，並備份重要資料。套用後部分變更要重啟先完全生效。使用呢類會改系統設定同登錄檔嘅工具時，須自行判斷風險，並遵守適用法律。</li>
+      <li>官方 FAQ：如要自行由原始碼建置，可 clone 倉庫後執行 <code>dotnet build</code>。發行版由 GitHub Actions 從公開原始碼自動建置；二進位檔未做代碼簽章，Windows SmartScreen 可能對從網路下載嘅未簽章執行檔顯示警告，官方說明呢個係預期行為，並建議不放心可自行編譯或用獨立沙箱核對。</li>
+      <li>官方使用聲明同免責：專案依「現況」提供、無擔保；作者不對系統不穩定或資料遺失等負責。完整條款見倉庫嘅 TERMS、DISCLAIMER 同 PRIVACY。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>GitHub：<a href="https://github.com/itsfatduck/optimizerDuck">https://github.com/itsfatduck/optimizerDuck</a></li>
+      <li>官網：<a href="https://optimizerduck.vercel.app/">https://optimizerduck.vercel.app/</a></li>
+      <li>文件：<a href="https://optimizerduck.vercel.app/docs/guides/getting-started">Getting Started</a> · <a href="https://optimizerduck.vercel.app/docs/guides/how-it-works">How It Works</a> · <a href="https://optimizerduck.vercel.app/docs/faq/general">FAQ</a> · <a href="https://optimizerduck.vercel.app/docs/faq/troubleshooting">Troubleshooting</a></li>
+      <li>繁中 README：<a href="https://github.com/itsfatduck/optimizerDuck/blob/master/.github/readmes/README.zh-TW.md">.github/readmes/README.zh-TW.md</a></li>
+      <li>Releases：<a href="https://github.com/itsfatduck/optimizerDuck/releases">https://github.com/itsfatduck/optimizerDuck/releases</a></li>
+      <li>授權、條款：<a href="https://github.com/itsfatduck/optimizerDuck/blob/master/LICENSE">LICENSE</a>（GNU GPL v3）· <a href="https://github.com/itsfatduck/optimizerDuck/blob/master/TERMS.md">TERMS</a> · <a href="https://github.com/itsfatduck/optimizerDuck/blob/master/DISCLAIMER.md">DISCLAIMER</a> · <a href="https://github.com/itsfatduck/optimizerDuck/blob/master/PRIVACY.md">PRIVACY</a></li>
+    </ul>
+
+    <h4>最新研究（2026-11-13）</h4>
+    <ul>
+      <li>今日再次從 GitHub Releases API 同 <code>/releases/latest</code> 核實，最新穩定版仍為 <strong>v2.29.0</strong>（發布 2026-10-07 22:36 Asia/Hong_Kong）。主分支 <code>optimizerDuck.csproj</code> 嘅 <code>Version</code>／<code>FileVersion</code> 仍係 2.29.0。npm 同 PyPI 沒有官方套件。</li>
+      <li>v2.29.0 相對 2.28.1 嘅重點不變：每個發行同時提供 x64 同原生 ARM64 兩個執行檔；儀表板改讀實際 <code>EditionID</code> 並顯示完整 Windows 版本名稱（例如 <code>CoreCountrySpecific (Home)</code>）；新增波斯語（fa-IR）介面。</li>
+      <li><code>master</code> 今日比 v2.29.0 標籤仍然超前 18 個提交（文件、修復同效能改動；最近一次推送 2026-11-10 22:10 Asia/Hong_Kong），但沒有更新嘅發行標籤，本頁以 v2.29.0 為準。</li>
+      <li>官方英文 README 今日仍寫 42 項調整、分 7 類，同 44 項自訂設定、分 4 類；語言表仍列出 18 種語言（包括正體中文）。授權說明不變：LICENSE 本文同官網／TERMS 均寫 <strong>GNU GPL v3</strong>；GitHub API 將倉庫 license 欄標為 Other／NOASSERTION，本頁依 LICENSE 本文同官方說明標記為 GPL-3.0。</li>
+    </ul>
+  </article>
+
+  <article class="skill" id="gpuwerk">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="mark" src="assets/skills/gpuwerk-logo.svg" alt="GPUwerk 官方標誌">
+      </div>
+      <div class="name-block">
+        <h3>5. GPUwerk</h3>
+        <p class="sub">專用 DGX Spark／GPU 租用雲：預付、按分鐘計費，無需銷售電話。</p>
+      </div>
+      <div>
+        <span class="tag ok">from $0.79/h</span>
+        <span class="tag">prepaid</span>
+        <span class="tag">commercial cloud</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/skills/gpuwerk-og-home.png" alt="GPUwerk 官方宣傳圖：Rent NVIDIA DGX Spark in the EU；Dedicated Grace Blackwell，128 GB unified memory，from $0.79/hour">
+        <figcaption>官方 Open Graph 圖像（<a href="https://gpuwerk.com/assets/og/home.png?v=2">gpuwerk.com/assets/og/home.png</a>）：產品定位。圖上「from $0.79/hour」係該官方圖像當時嘅文案；現行價格以今日核實、標示 Updated 12 November 2026 嘅<a href="https://gpuwerk.com/pricing/">定價頁</a>為準。</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/skills/gpuwerk-og-pricing.png" alt="GPUwerk 官方定價宣傳圖：DGX Spark rental pricing and billing；按分鐘單一費率、無流量費">
+        <figcaption>官方定價頁 Open Graph 圖像（<a href="https://gpuwerk.com/assets/og/pricing.png?v=2">gpuwerk.com/assets/og/pricing.png</a>）：按分鐘單一費率、無 egress 費。完整價目以<a href="https://gpuwerk.com/pricing/">定價頁</a>（Updated 12 November 2026）為準。</figcaption>
+      </figure>
+    </div>
+
+    <h4>功能</h4>
+    <ul>
+      <li>GPUwerk（寫成一個詞，官網 <a href="https://gpuwerk.com/">gpuwerk.com</a>）係捷克的專用 NVIDIA DGX Spark／GPU 租用雲：以預付信用額按分鐘出租整部機器，自助登記，無需銷售電話。營運者為 PRINT IT! SE，創辦人 Samuel Seidel。這不是名稱相近的「GPU Work」、GPUWorks 或其他 GPU 市集。</li>
+      <li>一部 Spark 租用包含整部專用機器、同一時間只服務一名租用者：NVIDIA GB10、ARM64（aarch64）、20 核 Arm CPU、128 GB 統一記憶體。官網首頁今日仍寫 1 PFLOP FP4 AI 運算（sparse），以及 273 GB/s 頻寬。儲存為 1 TB NVMe，與系統及模型快取共用，沒有固定可用容量，亦不做備份。</li>
+      <li>映像：DGX OS 7 或 Ubuntu 24.04 LTS，兩者都附 CUDA 13.0 toolkit。在 GPUwerk 自有 Spark 上另有模型預設（以 vLLM 或 llama.cpp 提供模型服務，例如 Qwen3 Coder 30B），以及 JupyterLab、VS Code 或 ComfyUI。不能自訂基底映像；可用 apt 或 pip 安裝，在有 Docker 的機器上可跑自己的 arm64 容器。容器內為 root，但不是主機 root。Docker 與 systemd 只在部分機器提供，不能自行揀選，用 <code>docker info</code> 判斷。</li>
+      <li>不能使用：核心模組、改驅動、privileged mode、TUN 裝置（核心 VPN 或 Tailscale），以及只支援 x86 的映像。</li>
+      <li>計費：美元、未含適用稅項；按分鐘從預付信用額扣除，時薪即為全部價格，沒有入站或出站流量費。（Spark 的 200 Gb/s ConnectX-7 是節點之間的互連，不是互聯網上行。）首次儲值付 $20，帳戶得到 $30 信用額；最低儲值 $20。條款寫明：結束帳戶後 12 個月內可申請退還未用預付款，退回原卡、不收費；若該筆儲值被退款，其贈送額會一併收回。</li>
+      <li>今日核實（定價頁標示 Updated 12 November 2026）：1× DGX Spark 專用機 $0.79／小時（全日 $18.96、一週 $132.72、若整段 730 小時都在運行則一個月 $576.70）。2× 連線叢集 $1.79／小時：256 GB 是兩部機的合計，不是單一記憶體池；略高於 2×$0.79，因為兩部機以 200 Gb/s ConnectX-7 纜線成對出租，需要支援分散式執行的 runtime。DGX Spark 1×（Partner）機型相同、同樣 $0.79／小時，由已審核的獨立合作夥伴在其場所託管；控制台會顯示國家，以及是否位於 EEA。GPUwerk 以鎖定作業系統遙距操作，並在租用之間抹除資料，但合作夥伴有實體接觸權。沒有 SLA。若租用期間機器被撤回，或離線超過 15 分鐘，計費停止並退還該段租用的全部費用；工作區在可連線時保留 24 小時供你複製資料，其後抹除。</li>
+      <li>按月預訂（一部 Spark，不論運行或停止都按月收費）：1 個月 $519.03（相對 730 小時按小時計平 10%）；3 個月 $490.20（15%）；6 個月 $461.36（20%）；12 個月 $432.53（25%）；24 個月 $374.86（35%）。定價頁註明：一個月使用少於約 657 小時，按小時計較便宜。</li>
+      <li>官方地點表日期為 2026-11-10（哪部機空閒會按分鐘改變；控制台 Location 選單為當時清單）。捷克（EEA）：GPUwerk 自有機在 Hradec Králové，另有合作夥伴 Spark。斯洛伐克、瑞典、荷蘭、羅馬尼亞（EEA）：合作夥伴 Spark。美國、香港（EEA 以外）：合作夥伴 Spark。RTX 5090 為 GPUwerk 自有，位於捷克。預設部署留在 EEA，除非你另選地點。</li>
+      <li>亦按先到先得出租 x86 GPU 層級，以及 8 卡伺服器（費率為單卡的 8 倍，同樣按分鐘計）。官方定價頁今日費率如下；容量與輪候見 <a href="https://status.gpuwerk.com">status.gpuwerk.com</a>（今日該頁可開啟）。輪候免費、先到先得。</li>
+    </ul>
+    <p class="note">x86／8 卡官方時薪（來源：<a href="https://gpuwerk.com/pricing/">gpuwerk.com/pricing/</a>，Updated 12 November 2026；美元、未含適用稅項。現行數字以該頁與控制台為準。）</p>
+    <table>
+      <thead><tr><th>層級</th><th>記憶體</th><th>時薪</th></tr></thead>
+      <tbody>
+        <tr><td>RTX 5090</td><td>32 GB GDDR7</td><td>$0.89／小時</td></tr>
+        <tr><td>L4</td><td>24 GB GDDR6</td><td>$0.49／小時</td></tr>
+        <tr><td>RTX 6000 Ada</td><td>48 GB GDDR6 ECC</td><td>$0.75／小時</td></tr>
+        <tr><td>L40S</td><td>48 GB GDDR6</td><td>$0.99／小時</td></tr>
+        <tr><td>RTX PRO 6000 Blackwell</td><td>96 GB GDDR7 ECC</td><td>$1.89／小時</td></tr>
+        <tr><td>H100 SXM</td><td>80 GB HBM3</td><td>$2.69／小時</td></tr>
+        <tr><td>H200</td><td>141 GB HBM3e</td><td>$3.49／小時</td></tr>
+        <tr><td>B200</td><td>180 GB HBM3e</td><td>$5.49／小時</td></tr>
+        <tr><td>B300</td><td>288 GB HBM3e</td><td>$6.49／小時</td></tr>
+        <tr><td>8× H100 伺服器</td><td>8 × 80 GB HBM3</td><td>$21.52／小時</td></tr>
+        <tr><td>8× H200 伺服器</td><td>8 × 141 GB HBM3e</td><td>$27.92／小時</td></tr>
+        <tr><td>8× B200 伺服器</td><td>8 × 180 GB HBM3e</td><td>$43.92／小時</td></tr>
+        <tr><td>8× B300 伺服器</td><td>8 × 288 GB HBM3e</td><td>$51.92／小時</td></tr>
+      </tbody>
+    </table>
+    <p class="note">官方另有 <a href="https://gpuwerk.com/store/">GB10 商店</a>、購入後由 GPUwerk 託管（<a href="https://gpuwerk.com/services/">服務頁</a>今日寫每月 €29，未含 VAT）、現場報價，以及 <a href="https://gpuwerk.com/rent-out-your-spark/">出租自有 Spark</a>／顧問服務。本卡聚焦租用雲與定價。</p>
+
+    <h4>用法</h4>
+    <p>官方流程在控制台完成，不是命令列部署。文件入口見 <a href="https://gpuwerk.com/docs/">docs</a>；新手可由 <a href="https://gpuwerk.com/docs/first-evaluation/">首次評估</a> 或 <a href="https://gpuwerk.com/dgx-spark/how-to-rent/">如何按分鐘租用</a> 開始。控制台亦有 <a href="https://console.gpuwerk.com/guide">setup guide</a>。</p>
+    <ul>
+      <li>在 <a href="https://console.gpuwerk.com">console.gpuwerk.com</a> 登入，以信用卡加入預付信用額（首次儲值付 $20，得到 $30；最低 $20）。預付款不會預留機器。</li>
+      <li>選擇硬體與映像，按當時容量部署。無需 SSH 金鑰即可使用控制台的瀏覽器終端機；若要用 SSH，自行加入金鑰，詳見 <a href="https://gpuwerk.com/docs/ssh-keys/">SSH keys</a> 與 <a href="https://gpuwerk.com/docs/browser-terminal/">瀏覽器終端機</a>。</li>
+      <li>在控制台按 Stop：Spark 繼續為你保留，按運行費率的 75% 計費（相對 $0.79 即 $0.59／小時），工作區不刪除。從系統內部關機（官方例子：<code>poweroff</code>、<code>shutdown</code>）會停止實例且其後不再收費；約 30 分鐘未再啟動，機器會被釋放。Terminate 立即結束計費並刪除工作區（控制台會要求輸入實例名稱確認）。</li>
+      <li>信用額或每月預算用盡：實例會被停止、機器釋放；工作區最多保留 48 小時，除非有人先租走該機。沒有備份：GPUwerk 不保留 <code>/workspace</code> 的副本，硬碟故障即會遺失，須自行備份。匯出方法見 <a href="https://gpuwerk.com/docs/get-your-files-out/">Get your files out</a>。</li>
+      <li>機器是 ARM64，x86 專用映像不能運行。不能自訂基底映像，亦不能改驅動或載入核心模組。環境細節見 <a href="https://gpuwerk.com/docs/tenant-environment/">tenant environment</a>（該頁更新於 2026-11-12）。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>官網：<a href="https://gpuwerk.com/">https://gpuwerk.com/</a> · 關於 <a href="https://gpuwerk.com/about/">/about</a></li>
+      <li>定價：<a href="https://gpuwerk.com/pricing/">https://gpuwerk.com/pricing/</a> · 按月預訂 <a href="https://gpuwerk.com/pricing/reserved/">/pricing/reserved/</a> · GPU 目錄 <a href="https://gpuwerk.com/gpus/">/gpus/</a> · 信用額 <a href="https://gpuwerk.com/credits/">/credits/</a></li>
+      <li>文件：<a href="https://gpuwerk.com/docs/">https://gpuwerk.com/docs/</a> · 首次評估 <a href="https://gpuwerk.com/docs/first-evaluation/">first-evaluation</a> · 租用說明 <a href="https://gpuwerk.com/dgx-spark/how-to-rent/">how-to-rent</a> · 租戶環境 <a href="https://gpuwerk.com/docs/tenant-environment/">tenant-environment</a> · 瀏覽器終端機 <a href="https://gpuwerk.com/docs/browser-terminal/">browser-terminal</a> · SSH keys <a href="https://gpuwerk.com/docs/ssh-keys/">ssh-keys</a> · 匯出檔案 <a href="https://gpuwerk.com/docs/get-your-files-out/">get-your-files-out</a> · 編程 agent <a href="https://gpuwerk.com/docs/coding-agents/">coding-agents</a> · Open WebUI <a href="https://gpuwerk.com/docs/open-webui/">open-webui</a> · 基準測試 <a href="https://gpuwerk.com/docs/benchmarks/">benchmarks</a> · API <a href="https://gpuwerk.com/docs/api-reference/">api-reference</a></li>
+      <li>控制台：<a href="https://console.gpuwerk.com">https://console.gpuwerk.com</a> · setup guide <a href="https://console.gpuwerk.com/guide">/guide</a> · 服務狀態 <a href="https://status.gpuwerk.com">status.gpuwerk.com</a></li>
+      <li>商店、出租與顧問：<a href="https://gpuwerk.com/store/">store</a> · <a href="https://gpuwerk.com/rent-out-your-spark/">rent-out-your-spark</a> · <a href="https://gpuwerk.com/services/">services</a> · 博客 <a href="https://gpuwerk.com/blog/">blog</a></li>
+      <li>法律：<a href="https://gpuwerk.com/legal/terms/">Terms</a> · <a href="https://gpuwerk.com/legal/privacy/">Privacy</a> · <a href="https://gpuwerk.com/legal/dpa/">DPA</a> · 公司資料 <a href="https://gpuwerk.com/legal/imprint/">Imprint</a> · 機器摘要 <a href="https://gpuwerk.com/llms.txt">llms.txt</a></li>
+    </ul>
+
+    <h4>最新研究（2026-11-13 晚上）</h4>
+    <ul>
+      <li>首次收錄本清單第 5 項。今日重新抓取官方首頁、定價頁、保留價頁、文件與租戶環境頁核實。定價頁印記為 <strong>Updated 12 November 2026</strong>；地點表日期為 2026-11-10。金額為美元、未含適用稅項。</li>
+      <li>核實費率：1× DGX Spark（自有或 Partner）$0.79／小時，按分鐘計；2× 連線叢集 $1.79／小時。全日 $18.96、一週 $132.72、730 小時不停機一個月 $576.70。控制台停止後保留機器按 75% 計（$0.59／小時）。首次儲值付 $20 得 $30；最低儲值 $20。按月預訂一部 Spark：1／3／6／12／24 個月分別為 $519.03／$490.20／$461.36／$432.53／$374.86（相對 730 小時按小時計 10%／15%／20%／25%／35%）；少於約 657 小時則按小時計較便宜。上述 x86 與 8 卡時薪與定價頁一致。</li>
+      <li>官網首頁今日仍列出 1 PFLOP FP4（sparse）與 273 GB/s。租戶環境頁更新於 2026-11-12。服務狀態頁 <a href="https://status.gpuwerk.com">status.gpuwerk.com</a> 今日回傳 HTTP 200。<code>docs.gpuwerk.com</code> 今日回傳 525，本頁不列入。<code>https://gpuwerk.com/docs/quickstart/</code> 今日為 404，改以 docs 首頁與 first-evaluation 為入口。GitHub 使用者頁 <code>github.com/gpuwerk</code> 今日可開啟，但沒有公開倉庫，本頁不引用。</li>
+      <li>這是商業預付雲端服務，不是開源專案，因此不標 OSI 授權。</li>
+    </ul>
+  </article>
+
+
+  <article class="skill" id="interactive-ppt">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="mark" src="assets/skills/microsoft-logo.png" alt="Microsoft 官方四色標誌">
+      </div>
+      <div class="name-block">
+        <h3>6. Microsoft PowerPoint 互動式投影片</h3>
+        <p class="sub">PowerPoint 內建的 Copilot 技能「建立互動式投影片」（Create interactive slide）：以提示建立可供講者與觀眾一同探索的視覺互動投影片。</p>
+      </div>
+      <div>
+        <span class="tag ok">Create interactive slide</span>
+        <span class="tag">Microsoft 365 Copilot</span>
+        <span class="tag">PowerPoint</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/skills/interactive-slides-example.png" alt="官方示例：互動式財務儀表板投影片，含可選的 Revenue、Profitability、Cash flow 索引標籤、季度營收圖表與營收組成明細（Adventure Works 示範內容）">
+        <figcaption>官方 Microsoft Support 示例圖（<a href="https://support.microsoft.com/en-us/powerpoint/media/interactive-slides-example.png">interactive-slides-example.png</a>，en-US 版；同尺寸的 zh-HK 版亦可開啟）：互動式財務儀表板，示範可點選的索引標籤與圖表。圖中 FY26、Adventure Works 等為官方說明用示範內容，不是即時數據。</figcaption>
+      </figure>
+      <figure class="light">
+        <img src="assets/skills/interactive-slides-ribbon.png" alt="官方介面：PowerPoint 網頁版插入功能區上的 Interactive Slide 按鈕，以及 Create with Copilot 圖庫中的 Summary、Timeline、Dashboard、Comparison、Custom 類別">
+        <figcaption>官方 Microsoft Support 介面說明圖（<a href="https://support.microsoft.com/en-us/powerpoint/media/interactive-slides-ribbon.png">interactive-slides-ribbon.png</a>）：PowerPoint 網頁版（圖中網址為 powerpoint.cloud.microsoft）插入功能區的 Interactive Slide，以及建議類別。示範檔名「Adventure Works - Next 100M」屬官方截圖。</figcaption>
+      </figure>
+    </div>
+    <div class="media-row">
+      <figure class="light">
+        <img src="assets/skills/interactive-slides-skill-picker.png" alt="官方介面：PowerPoint 網頁版右側 Copilot 窗格的技能選擇器中已選取 Create interactive slide">
+        <figcaption>官方 Microsoft Support 介面說明圖（<a href="https://support.microsoft.com/en-us/powerpoint/media/interactive-slides-skill-picker.png">interactive-slides-skill-picker.png</a>）：在 Copilot 技能選擇器中選取 Create interactive slide。圖中可見官方示範介面標示「M365 Copilot (Premium)」，屬該說明圖當時的畫面，不是授權條款本文。</figcaption>
+      </figure>
+      <figure class="light">
+        <img src="assets/skills/interactive-slides-work-iq.png" alt="官方介面：PowerPoint 中的 Copilot 提示從 Work IQ 檔案選擇器參考 Excel 活頁簿，以建立互動式儀表板投影片">
+        <figcaption>官方 Microsoft Support 的 Work IQ 說明圖（<a href="https://support.microsoft.com/en-us/powerpoint/media/interactive-slides-work-iq.png">interactive-slides-work-iq.png</a>）：從檔案選擇器參考工作檔案來建立互動式儀表板。圖中「Opened by you September 29th／28th」「2 days ago」是官方示範截圖上的日期，不是本頁擷取日時戳。</figcaption>
+      </figure>
+    </div>
+    <figure class="light" style="max-width:280px">
+      <img src="assets/skills/ai4all-copilot-pptx-cover.jpg" alt="AI4All 電子書封面：Copilot X Claude，挑戰 24 種互動 PPTX 效果">
+      <figcaption>4all.dev 電子書官方封面／Open Graph 圖像（<a href="https://4all.dev/_astro/cd86cc62-94ea-4e27-a329-743431c64df5_Z1zOvuJ.jpg">來源</a>）：AI4All 教學筆記《Copilot X Claude · 挑戰 24 種互動 PPTX 效果》，不是 Microsoft 官方截圖，亦不是此技能的產品廠商畫面。</figcaption>
+    </figure>
+
+    <h4>功能</h4>
+    <ul>
+      <li>這是 Microsoft 365 版 PowerPoint 內建的官方 Copilot 技能「建立互動式投影片」（英文產品用語 Interactive slides；技能名稱 Create interactive slide），不是 Gamma、Beautiful.ai、Plus AI、一般 VBA／HTML 增益集，也不是 html-ppt 或 HTML Deck 一類工具，更不是已列第 2 項的 HeyGen HyperFrames。教學網站 4all.dev 與下方影片是 AI4All 的操作筆記與示範，不是此功能的產品供應商。</li>
+      <li>官方定義：互動式投影片由 Copilot 建立，具有視覺互動性，講者與觀眾可以一起探索。描述想講述的故事後，Copilot 會做出可點擊瀏覽的投影片，在互動時顯示脈絡、步驟或資料點。</li>
+      <li>可從 PowerPoint 首頁或插入功能區選取 Interactive Slide（互動式投影片），在 Copilot 聊天窗格開始；亦可從 Copilot 技能選擇器找到「建立互動式投影片」。可從建議類別著手（官方說明圖顯示 Summary、Timeline、Dashboard、Comparison），或建立自訂（Custom）互動式投影片。</li>
+      <li>可用 Work IQ 以既有工作內容為依據，例如根據 Excel 活頁簿的資料快照建立儀表板，或根據專案文件中的時間表建立時間軸，由 Copilot 填入數字與日期。</li>
+      <li>精煉方式是繼續在 Copilot 窗格用提示更新，官方例子包括「將此改為橫條圖」「依地區新增篩選」「將色彩與我的主題相匹配」。<strong>重要：</strong>互動式投影片須透過 Copilot 建立與更新，不支援直接在畫布上編輯；應把變更作為提示送出，而不是改投影片物件。</li>
+      <li>針對整張投影片體驗優化。在 Mac 與 iPad 上，投影片上的其他內容會顯示在互動式內容後面。</li>
+      <li>授權：提供給已可在 PowerPoint 使用 Copilot 的合格消費者與商業使用者，包括 Microsoft 365 Copilot 基本版與進階版。互動式投影片沒有單獨授權。沒有系統管理員控制項：所有持有適當 Copilot 授權的使用者都可以用此技能建立或更新；分享簡報後，對方即使沒有 Copilot 授權也可以探索互動。</li>
+      <li>建立或更新：Copilot 應用程式，以及 Windows、Mac、網頁版 PowerPoint 中的 Copilot。互動：以上環境，加上 iPad，以及 Microsoft Teams 中的 PowerPoint Live。無互動性：iPhone、Android，以及列印或匯出為 PDF 等其他格式時，該投影片會顯示為非互動影像。</li>
+      <li>簡報：Windows、Mac、網頁與 iPad 版 PowerPoint 均可在放映時與互動式投影片互動（展開步驟、篩選圖表、沿時間軸移動等，視建立結果而定）。Windows、網頁與 iPad 同時支援簡報者檢視與投影片放映；Mac 可在投影片放映中互動，但不能在簡報者檢視中互動（官方寫明計劃作為未來改進）。</li>
+      <li>Microsoft Teams 的 PowerPoint Live（以官方 Support 為準）：每位會議出席者可以獨立與投影片互動；互動不會共用，出席者只見到自己的操作，見不到講者或其他人的操作。同步講者互動是計劃中的未來改進。不要把與此矛盾的非官方博客當成事實。</li>
+      <li>常見問題（官方）：互動式投影片會在投影片上建立沙盒化的 Web 檢視以顯示與提供互動，該檢視不會連線至其他內容或服務。直接在畫布編輯不受支援。重新開啟檔案時，會還原為上次用 Copilot 建立或更新時的起始版面；同一工作階段內的互動可能會保留，直到關閉檔案。此技能使用 Microsoft 365 Copilot 與 Microsoft 365 Copilot 代理程式來建立或更新；與 Purview、敏感度標籤的關係見官方文章（下方參考）。</li>
+      <li>協助工具（官方）：左右方向鍵一律用來換頁，即使互動式投影片在螢幕上，這些按鍵也不會被互動內容擷取。按 Tab 將焦點移入互動內容，再按 Tab 依序移動，各元素有可見焦點指示。按 Tab 越過最後一個元素，或按 Esc，焦點回到 PowerPoint；再按 Esc 離開投影片放映。焦點本身絕不會自動進入互動內容。進一步的鍵盤優化已列入計劃；在 Mac 與網頁版，將焦點移出或用鍵盤到達互動式工具列的行為可能不同。</li>
+      <li>官方提醒：Copilot 以 AI 模型產生版面、內容與行為，可能出現非預期或錯誤內容，簡報或分享前應自行檢閱核對。</li>
+      <li>官方博客（Derek Johnson，標示 2026 年 10 月 19 日；頁面另標 Updated Oct 16, 2026）舉出的用途：以資料快照（含 Work IQ）建立儀表板、互動時間軸與流程、以視覺探索摘要或解釋複雜概念，以及比較產品、情境或策略。</li>
+    </ul>
+
+    <h4>教學示範（AI4All，非 Microsoft 官方分類）</h4>
+    <p>以下內容來自 AI4All（<a href="https://www.youtube.com/@AI4All-edu">@AI4All-edu</a>）於 2026-11-13 19:30 Asia/Hong_Kong 發布的教學影片（約 11 分 38 秒；片名《【AI教學應用】Copilot X Claude | Agent 互動 PPT | 挑戰 24 種 效果》，影片 ID ZR2Bt9d-5tI），以及同系列電子書《Copilot X Claude · 挑戰 24 種互動 PPTX 效果》（4all.dev，系列「AI教學應用」，2 頁 PDF，發布 2026.11.12，作者 Dr. A）。這是教學示範，不是 Microsoft 官方文件或官方效果分類。</p>
+    <ul>
+      <li>影片作者說明：在 Microsoft 365 進階版（Premium）免費試用帳號中，PowerPoint 的 Copilot 可選用 Claude Opus 5.5；他們以一頁指令加上事先準備的考評局（HKEAA）公開資料，分五批讓 Copilot 做出 28 頁 PPTX，挑戰 24 種互動效果。示範 PPTX 與指令透過上述電子書提供。模型選擇以作者 2026 年 11 月試用帳號所見為準，可能變更，不以本頁當作官方模型清單。</li>
+      <li>影片聲稱的 24 種效果（五組，屬 AI4All 的示範集合，不是 Microsoft 官方分類）：
+        <ul>
+          <li>開場主視覺：封面、章節分頁、拉鏈、粒子、目錄</li>
+          <li>數據與統計：重點數字、儀表板、圖表變身、分佈比較、競賽圖表、泡泡圖、漏斗圖、滾動圖</li>
+          <li>結構與故事：分頁切換、時間軸、逐步展開、便當格、方塊圖</li>
+          <li>比較與媒體：圖像對比、開關比較、試場圖</li>
+          <li>觀眾參與：即場問答、幸運輪盤、倒數</li>
+        </ul>
+      </li>
+      <li>方案與價格：影片提到 Microsoft 365 進階版（Premium）月費 HK$158，並有一個月免費試用（未取消會自動續訂）。今日核實香港官方<a href="https://www.microsoft.com/zh-hk/microsoft-365/buy/compare-all-microsoft-365-products?market=hk">比較所有 Microsoft 365 產品</a>頁，Microsoft 365 進階版標示為 <strong>HK$158.00／月</strong>，另有 <strong>HK$1,580.00／年</strong>；該頁亦有「免費試用 Microsoft 365 進階版 1 個月」連結（<a href="https://www.microsoft.com/zh-hk/microsoft-365/try-premium">try-premium</a>）。自動續訂與試用是否須綁定信用卡，以官方結帳條款為準；影片作者亦聲明試用須信用卡、無贊助，且價格／功能／模型選擇以 2026 年 11 月 Microsoft 香港官方網站及其試用帳號為準、可能變更。此技能本身沒有單獨授權費用，見上方官方授權說明。</li>
+      <li>影片亦談及 Skills 與圖像生成（作者提到 GPT-Image-2.5、Anthropic theme-factory、4all.dev 品牌範本）。本頁不轉載其指令。影片結尾的模型測驗、社群連結或打賞不屬於本技能說明。作者另稱部分沒有 Copilot 的 PowerPoint 版本在他們自己的測試中仍可互動，並註明 Microsoft 對此沒有官方說明——本頁不把它當成官方支援範圍。</li>
+    </ul>
+
+    <h4>用法</h4>
+    <p>以下步驟以官方 Microsoft Support 為準。建立與更新都在 Copilot 中完成。</p>
+    <ul>
+      <li>在已具 PowerPoint Copilot 的環境，打開 Windows、Mac 或網頁版 PowerPoint（或 Copilot 應用程式）。若功能區尚未出現此按鈕，官方建議更新至最新的 Current Channel 或 Monthly Enterprise Channel（Windows／Mac）、最新 App Store 的 iPad 應用，以及用於 PowerPoint Live 的最新正式版 Microsoft Teams。官方 Support 寫明：Windows／Mac 與網頁版的技能與功能區按鈕於 2026 年 10 月中旬開始在 Current Channel 與 Monthly Enterprise Channel 推出，預計 10 月底完成；具 Frontier、Microsoft 365 測試人員 Beta 通道或 Current Channel（Preview）權限的使用者當時即可使用（網頁版同樣窗口，Frontier 可用）。本頁以今日仍刊出的官方說明為準，不另行宣稱全線是否已完成推出。</li>
+      <li>在首頁或插入功能區選取 Interactive Slide（互動式投影片），於 Copilot 聊天窗格說明要做的投影片；或在 Copilot 技能選擇器選取「建立互動式投影片」。可從建議類別開始，或選擇自訂。說明愈具體，愈能對應敘事。</li>
+      <li>若要以既有工作檔為依據，透過 Work IQ 參考 Excel 快照或專案文件中的時間表等內容。</li>
+      <li>若不滿意，保持 Copilot 窗格開啟並以提示要求修改（例如改圖表類型、加篩選、配合主題）。不要直接在畫布上改互動內容。</li>
+      <li>簡報時：Windows、網頁、iPad 可在簡報者檢視與投影片放映中互動；Mac 目前只在投影片放映中互動。在 Teams 的 PowerPoint Live，出席者各自獨立互動，互不可見，亦不會同步講者操作。分享出去的檔案，對方無需 Copilot 授權即可探索互動。</li>
+      <li>注意：iPhone、Android、列印與匯出 PDF 等格式只會看到靜態影像。開啟檔案會回到上次 Copilot 建立或更新的起始版面。簡報前請檢閱 AI 產生的內容。</li>
+      <li>使用 AI4All 筆記：到 <a href="https://4all.dev/zh-Hant/ebooks/copilot-pptx">4all.dev 電子書頁</a>（另有 <a href="https://4all.dev/en/ebooks/copilot-pptx">英文</a>與<a href="https://4all.dev/zh-Hans/ebooks/copilot-pptx">簡體</a>頁）。香港及部分地區需免費 Google 登入才能下載 PDF 與示範 PPTX。本頁不轉載筆記中的完整指令或檔案內容，請到原站下載。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>官方 Microsoft Support（建立互動式投影片）：<a href="https://support.microsoft.com/zh-hk/powerpoint/copilot/create-interactive-slides-with-copilot-in-powerpoint">繁中（zh-HK）</a> · <a href="https://support.microsoft.com/en-us/powerpoint/copilot/create-interactive-slides-with-copilot-in-powerpoint">English (en-US)</a></li>
+      <li>官方 Support：以 Copilot 編輯 PowerPoint · <a href="https://support.microsoft.com/en-us/powerpoint/edit-with-copilot-in-powerpoint">edit-with-copilot-in-powerpoint</a> · 相關技能一覽 <a href="https://support.microsoft.com/zh-hk/powerpoint/copilot/copilot-in-powerpoint-skills">copilot-in-powerpoint-skills（zh-HK）</a> · <a href="https://support.microsoft.com/en-us/powerpoint/copilot/copilot-in-powerpoint-skills">en-US</a></li>
+      <li>官方 Copilot 博客（Derek Johnson，2026-10-19）：<a href="https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/transform-your-storytelling-with-interactive-slides-in-powerpoint/4564287">Transform your storytelling with interactive slides in PowerPoint</a></li>
+      <li>官方 Microsoft 365 方案比較（香港）：<a href="https://www.microsoft.com/zh-hk/microsoft-365/buy/compare-all-microsoft-365-products?market=hk">compare-all-microsoft-365-products?market=hk</a> · 進階版試用 <a href="https://www.microsoft.com/zh-hk/microsoft-365/try-premium">try-premium</a></li>
+      <li>官方 Purview：<a href="https://learn.microsoft.com/zh-hk/purview/ai-microsoft-purview">適用於生成式 AI 應用程式的資料安全性和合規性保護（zh-HK）</a> · <a href="https://learn.microsoft.com/en-us/purview/ai-microsoft-purview">en-US</a> · <a href="https://learn.microsoft.com/zh-hk/purview/ai-agents">使用 Microsoft Purview 管理 AI 代理程式的資料安全性和合規性（zh-HK）</a> · <a href="https://learn.microsoft.com/en-us/purview/ai-agents">en-US</a></li>
+      <li>AI4All 教學電子書：<a href="https://4all.dev/zh-Hant/ebooks/copilot-pptx">https://4all.dev/zh-Hant/ebooks/copilot-pptx</a>（<a href="https://4all.dev/en/ebooks/copilot-pptx">en</a> · <a href="https://4all.dev/zh-Hans/ebooks/copilot-pptx">zh-Hans</a>）· 網站 <a href="https://4all.dev/">4all.dev</a></li>
+      <li>AI4All 教學影片：<a href="https://www.youtube.com/watch?v=ZR2Bt9d-5tI">https://www.youtube.com/watch?v=ZR2Bt9d-5tI</a> · 頻道 <a href="https://www.youtube.com/@AI4All-edu">@AI4All-edu</a></li>
+    </ul>
+    <div class="thumbs">
+      <a href="https://www.youtube.com/watch?v=ZR2Bt9d-5tI">
+        <img src="assets/skills/interactive-ppt-youtube-thumb.jpg" alt="AI4All 教學影片 ZR2Bt9d-5tI 縮圖：【AI教學應用】Copilot X Claude | Agent 互動 PPT | 挑戰 24 種 效果">
+        <p>教學影片 · YouTube ZR2Bt9d-5tI · AI4All，2026-11-13 19:30 Asia/Hong_Kong</p>
+      </a>
+    </div>
+
+    <h4>最新研究（2026-11-13 晚上）</h4>
+    <ul>
+      <li>首次收錄本清單第 6 項。今日重新抓取官方 Microsoft Support（zh-HK 與 en-US）、edit-with-copilot、Copilot 博客、香港 Microsoft 365 比較頁，以及 AI4All 電子書頁與 YouTube 影片頁，上述連結均回傳 HTTP 200。</li>
+      <li>官方 Support 今日內容與上述功能／授權／平台限制一致；推出時程說明仍寫 2026 年 10 月中旬開始、預計 10 月底完成。官方博客作者為 Derek Johnson，日期 2026 年 10 月 19 日（頁面另標 Updated Oct 16, 2026）。</li>
+      <li>教學電子書發布日期為 2026.11.12；教學影片發布於 2026-11-13 19:30:01 Asia/Hong_Kong（長度約 11 分 38 秒）。本頁只摘要與連結，沒有轉載 PDF、完整指令或示範檔內容。</li>
+      <li>香港官方比較頁今日標示 Microsoft 365 進階版 HK$158.00／月、HK$1,580.00／年，與影片所述月費相符；現行價格以該官方頁為準。</li>
+      <li>這是 Microsoft 365 訂閱內的官方產品功能，不是開源專案，因此不標 OSI 授權。Anthropic theme-factory 僅在影片中被提及；今日查 <code>github.com/anthropics/theme-factory</code> 為 404，本頁不列入參考連結。</li>
     </ul>
   </article>
 
@@ -225,6 +587,26 @@ npx hyperframes render       # 渲染成 MP4</code></pre>
   <table>
     <thead><tr><th>日期（Asia/Hong_Kong）</th><th>更新</th></tr></thead>
     <tbody>
+      <tr>
+        <td>2026-11-13 20:34</td>
+        <td>加入清單第 6 項 Microsoft PowerPoint 互動式投影片（官方 Copilot「建立互動式投影片／Create interactive slide」技能；Microsoft Support 今日核實仍有效）。官方 Support 示例與介面說明圖，以及 AI4All 電子書封面與教學影片縮圖已入頁。教學筆記與影片只作引用連結，未轉載指令或 PDF 本文。未推上 GitHub Pages（由後續一次 Push 處理）。</td>
+      </tr>
+      <tr>
+        <td>2026-11-13 20:10</td>
+        <td>加入清單第 5 項 GPUwerk（gpuwerk.com，捷克專用 DGX Spark／GPU 租用雲；定價頁印記 Updated 12 November 2026，1× Spark 由 $0.79／小時按分鐘計費）。官方標誌同定價／產品 Open Graph 圖像已入頁。未推上 GitHub Pages。</td>
+      </tr>
+      <tr>
+        <td>2026-11-13 10:20</td>
+        <td>每日研究：REA 由 <code>rea-agents</code> 6.8.0 更新至 <strong>6.9.0</strong>；HeyGen HyperFrames 由 v0.9.37 更新至 <strong>v0.9.40</strong>（中間包括 0.9.38、0.9.39）。Agent2API 穩定版仍為 v3.4.2（預發布仍為 v3.5.0-beta.1）；optimizerDuck 仍為 v2.29.0。官方圖像無較新替代，維持原圖。未推上 GitHub Pages。</td>
+      </tr>
+      <tr>
+        <td>2026-11-12 18:49</td>
+        <td>加入清單第 4 項 optimizerDuck（<code>itsfatduck/optimizerDuck</code>，最新穩定版 v2.29.0，授權 GPL-3.0）。官方標誌同功能圖像已入頁。未推上 GitHub Pages。</td>
+      </tr>
+      <tr>
+        <td>2026-11-12 18:45</td>
+        <td>加入清單第 3 項 Agent2API（<code>aimod-cc/Agent2API</code>，最新穩定版 v3.4.2，授權 AGPL-3.0；另有預發布 v3.5.0-beta.1）。官方應用圖示同功能畫面已入頁。未推上 GitHub Pages。</td>
+      </tr>
       <tr>
         <td>2026-11-12 13:17</td>
         <td>建立本頁。清單第 1 項 REA（<code>rea-agents</code> 6.8.0）、第 2 項 HeyGen HyperFrames（v0.9.37）。官方標誌同功能圖像已入頁。未推上 GitHub Pages。</td>
