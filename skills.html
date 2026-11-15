@@ -53,9 +53,15 @@
     .thumbs img { width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:8px; border:1px solid var(--border); display:block; }
     .thumbs p { margin:6px 0 0; font-size:0.82rem; color:var(--muted); }
     .note { color:var(--muted); font-size:0.9rem; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .back-to-top { display:flex; justify-content:flex-end; margin:20px 0 0; padding-top:14px; border-top:1px solid var(--border); }
+    .back-to-top a { color:var(--muted); text-decoration:none; font-size:0.86rem; border-radius:6px; padding:4px 2px; }
+    .back-to-top a:hover { color:var(--link); }
+    .back-to-top a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
   </style>
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="inner">
       <a class="brand" href="index.html">A.I.R.I.S. Research Hub</a>
@@ -70,7 +76,7 @@
   </header>
   <div class="wrap">
   <h1>AI Skills</h1>
-  <p class="meta">獨立於產品監察名單的 AI 技能優先清單：功能、用法、參考連結，以及每日研究更新。· 最近研究 2026-11-13 20:34 Asia/Hong_Kong</p>
+  <p class="meta">獨立於產品監察名單的 AI 技能優先清單：功能、用法、參考連結，以及每日研究更新。· 最近研究 2026-11-15 09:02 Asia/Hong_Kong</p>
 
   <h2>Skills priority list (ordered)</h2>
   <table>
@@ -82,9 +88,11 @@
       <tr><td>4</td><td><a href="#optimizerduck">optimizerDuck</a></td><td>Free, open-source Windows optimization tool · <a href="https://github.com/itsfatduck/optimizerDuck">itsfatduck/optimizerDuck</a> · <a href="https://optimizerduck.vercel.app/">optimizerduck.vercel.app</a> · <a href="https://optimizerduck.vercel.app/docs/guides/getting-started">docs</a> · v2.29.0 · NOT <a href="https://github.com/hellzerg/optimizer">hellzerg/optimizer</a></td></tr>
       <tr><td>5</td><td><a href="#gpuwerk">GPUwerk</a></td><td>Dedicated DGX Spark / GPU rental cloud · <a href="https://gpuwerk.com/">gpuwerk.com</a> · from $0.79/h billed per minute · <a href="https://gpuwerk.com/pricing/">pricing page</a> · NOT unrelated “GPU Work” / GPUWorks or other GPU marketplaces</td></tr>
       <tr><td>6</td><td><a href="#interactive-ppt">Microsoft PowerPoint 互動式投影片</a></td><td>Official Copilot interactive slides in PowerPoint · Microsoft Support <a href="https://support.microsoft.com/zh-hk/powerpoint/copilot/create-interactive-slides-with-copilot-in-powerpoint">zh-HK</a>／<a href="https://support.microsoft.com/en-us/powerpoint/copilot/create-interactive-slides-with-copilot-in-powerpoint">en-US</a> · teaching refs <a href="https://4all.dev/zh-Hant/ebooks/copilot-pptx">4all.dev ebook</a> + <a href="https://www.youtube.com/watch?v=ZR2Bt9d-5tI">YouTube ZR2Bt9d-5tI</a> · NOT Gamma、Beautiful.ai、Plus AI、generic VBA／HTML add-ins、html-ppt／HTML Deck，亦非已列第 2 項的 HeyGen HyperFrames</td></tr>
+      <tr><td>7</td><td><a href="#graphify">Graphify</a></td><td><code>/graphify</code> skill／CLI：把專案建成可查詢知識圖譜 · <a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify</a>（預設分支 v8）· <a href="https://graphify.com/">graphify.com</a> · <a href="https://docs.graphify.com">docs.graphify.com</a> · PyPI <code>graphifyy</code> 0.9.109 · NOT 把較舊的 v1.0.0 當成最新版，亦不要用已過時的 <code>main</code> 分支 README；不是其他同名 Graphify 產品</td></tr>
+      <tr><td>8</td><td><a href="#t3code">T3 Code</a></td><td>開源 coding agent 控制平面 · <a href="https://github.com/pingdotgg/t3code">pingdotgg/t3code</a> · <a href="https://t3.codes">t3.codes</a> · <a href="https://github.com/pingdotgg/t3code/blob/main/docs/README.md">docs</a> · npm <code>t3</code> 0.1.9／GitHub <a href="https://github.com/pingdotgg/t3code/releases/tag/v0.1.9">v0.1.9</a> · NOT Theo 的獨立 skills 倉 <a href="https://github.com/t3dotgg/tstack">t3dotgg/tstack</a>，亦不是 T3 Stack／create-t3-app；官方 npm 套件是 <code>t3</code></td></tr>
     </tbody>
   </table>
-  <p class="note">清單可以再加項目。本頁目前只收錄已交嘅六項。</p>
+  <p class="note">清單可以再加項目。本頁目前只收錄已交嘅八項。</p>
 
   <article class="skill" id="rea">
     <div class="skill-head">
@@ -157,6 +165,7 @@
       <li>官方 README 新增可選環境變數 <code>REA_MCP_OUTPUT_SCHEMA_PROFILE</code>（<code>compact</code> 或 <code>off</code>），用於限制或關閉 advertised output schemas；預設仍廣告完整 output schemas，伺服器端驗證同完整結構化結果不變。</li>
       <li>官方警告不變：名稱相近的 repo 或複製嘅 README 唔等於官方下載來源。</li>
     </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
   </article>
 
   <article class="skill" id="hyperframes">
@@ -230,6 +239,7 @@ npx hyperframes render       # 渲染成 MP4</code></pre>
       <li>0.9.39：Studio 把移動、縮放同旋轉讀數顯示在元件下方的 chip；桌面同其他 host 可由較輕量的 <code>@hyperframes/studio/keys</code> 路徑匯入按鍵解析同預設值。</li>
       <li>0.9.38：Studio 的 Volume 控制會改動整個 clip（包括 fades）；Mac 上暫停畫面與播放時顏色一致；編輯歷史記錄每項改動觸及的 layer；Publish 對雲端硬碟專案會排除 Library 檔；渲染伺服器只從專案內部載入素材。CLI 的 HeyGen generate 預設圖像模型改為 nano-banana-2.1。</li>
     </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
   </article>
 
   <article class="skill" id="agent2api">
@@ -309,6 +319,7 @@ curl http://127.0.0.1:3065/v1/models</code></pre>
       <li>最新預發布仍為 <strong>v3.5.0-beta.1</strong>（發布 2026-11-10 01:54 Asia/Hong_Kong），對應 Docker <code>beta</code> 標籤。未見更新的穩定或預發布版本。官方安裝文件寫明 beta 唔會移動 <code>latest</code>。本頁優先清單仍以穩定版 v3.4.2 為準。</li>
       <li>v3.4.2 相對 3.4.1 嘅重點不變：自訂路由組（可將不同供應商、模型組合成一個對外模型 ID）、壓縮路由（可為 ZCode 上下文壓縮指定模型）、客戶端識別，以及標準 Windows 服務與 systemd 部署嘅面板一鍵更新。</li>
     </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
   </article>
 
   <article class="skill" id="optimizerduck">
@@ -376,6 +387,7 @@ optimizerDuck-Windows-arm64-2.29.0.exe</code></pre>
       <li><code>master</code> 今日比 v2.29.0 標籤仍然超前 18 個提交（文件、修復同效能改動；最近一次推送 2026-11-10 22:10 Asia/Hong_Kong），但沒有更新嘅發行標籤，本頁以 v2.29.0 為準。</li>
       <li>官方英文 README 今日仍寫 42 項調整、分 7 類，同 44 項自訂設定、分 4 類；語言表仍列出 18 種語言（包括正體中文）。授權說明不變：LICENSE 本文同官網／TERMS 均寫 <strong>GNU GPL v3</strong>；GitHub API 將倉庫 license 欄標為 Other／NOASSERTION，本頁依 LICENSE 本文同官方說明標記為 GPL-3.0。</li>
     </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
   </article>
 
   <article class="skill" id="gpuwerk">
@@ -465,6 +477,7 @@ optimizerDuck-Windows-arm64-2.29.0.exe</code></pre>
       <li>官網首頁今日仍列出 1 PFLOP FP4（sparse）與 273 GB/s。租戶環境頁更新於 2026-11-12。服務狀態頁 <a href="https://status.gpuwerk.com">status.gpuwerk.com</a> 今日回傳 HTTP 200。<code>docs.gpuwerk.com</code> 今日回傳 525，本頁不列入。<code>https://gpuwerk.com/docs/quickstart/</code> 今日為 404，改以 docs 首頁與 first-evaluation 為入口。GitHub 使用者頁 <code>github.com/gpuwerk</code> 今日可開啟，但沒有公開倉庫，本頁不引用。</li>
       <li>這是商業預付雲端服務，不是開源專案，因此不標 OSI 授權。</li>
     </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
   </article>
 
 
@@ -581,12 +594,176 @@ optimizerDuck-Windows-arm64-2.29.0.exe</code></pre>
       <li>香港官方比較頁今日標示 Microsoft 365 進階版 HK$158.00／月、HK$1,580.00／年，與影片所述月費相符；現行價格以該官方頁為準。</li>
       <li>這是 Microsoft 365 訂閱內的官方產品功能，不是開源專案，因此不標 OSI 授權。Anthropic theme-factory 僅在影片中被提及；今日查 <code>github.com/anthropics/theme-factory</code> 為 404，本頁不列入參考連結。</li>
     </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
+  </article>
+
+  <article class="skill" id="graphify">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="wordmark" src="assets/skills/graphify-logo.png" alt="Graphify 官方標誌" style="height:auto;max-height:52px;max-width:200px;background:#fff;border-radius:6px;border:1px solid var(--border);padding:2px">
+      </div>
+      <div class="name-block">
+        <h3>7. Graphify</h3>
+        <p class="sub">用 <code>/graphify</code> 把專案（程式、文件、PDF、圖像、影片）建成可查詢的知識圖譜，用圖譜查詢代替逐檔搜尋。</p>
+      </div>
+      <div>
+        <span class="tag ok">graphifyy 0.9.109</span>
+        <span class="tag">Apache-2.0</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/skills/graphify-graph-hero.png" alt="Graphify 官方說明圖：FastAPI 程式庫建成的互動知識圖譜 graph.html，節點按偵測到的社群上色">
+        <figcaption>官方功能畫面：以 FastAPI 程式庫建成的互動 <code>graph.html</code>（力導向知識圖譜，顏色為偵測到的社群）。來源：Graphify-Labs/graphify（v8 分支）<code>docs/graph-hero.png</code></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/skills/graphify-demo-path.svg" alt="Graphify 官方路徑查詢示範：終端機查 FastAPI 到 ModelField 的最短路徑，並在知識圖譜上逐段標示">
+        <figcaption>官方路徑查詢示範。來源：Graphify-Labs/graphify（v8 分支）<code>docs/demo-path.svg</code></figcaption>
+      </figure>
+    </div>
+
+    <h4>功能</h4>
+    <ul>
+      <li>這是 Graphify Labs 的開源引擎與可選託管產品 Graphify（官網 <a href="https://graphify.com/">graphify.com</a>；<a href="https://www.graphify.com">www.graphify.com</a> 今日重定向到規範網址 <code>https://graphify.com/</code>）。官方原始碼在 <a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify</a>，預設分支為 <strong>v8</strong>（不是 <code>main</code>）。官方 v8 README 的 YC S26 徽章，以及 Y Combinator 公司頁（batch <code>S26</code>／Summer 2026）均確認 Graphify Labs 為 YC S26 公司。這不是其他同名「Graphify」產品；官方 <a href="https://docs.graphify.com/skill.md">skill.md</a> 寫明不要連結 graphify.net。</li>
+      <li>在 AI coding assistant 輸入 <code>/graphify</code>，即可把專案（程式、文件、PDF、圖像、影片）建成可查詢的知識圖譜，之後查圖譜，而不必逐檔搜尋。</li>
+      <li>程式碼以 tree-sitter AST 在本機解析：結果具確定性、不經 LLM，亦不會把程式碼送出本機。文件、PDF、圖像與影片則使用助手本身的模型，或已設定的 API 金鑰，做語意處理。</li>
+      <li>現行 v8 README 說明：每條邊會標為 <code>EXTRACTED</code>（來源中明示）或 <code>INFERRED</code>（由 Graphify 解析得出）。官方網站 FAQ（今日核實）對「Does it use embeddings at all?」的原文是：可以在節點上把 embeddings 存成一項訊號，但檢索是圖譜遍歷，而不是相似度搜尋；結果以相連、可解釋的路徑返回，而不是一組外觀相近的片段排名。</li>
+      <li>官方 README 寫明典型產出是 <code>graphify-out/</code> 內三個檔：<code>graph.html</code>（瀏覽器互動圖）、<code>GRAPH_REPORT.md</code>（重點與建議問題）、以及 <code>graph.json</code>（完整圖譜，可稍後再查而無需重讀檔案）。官方匯出文件今日仍列出 wiki、Obsidian（含 <code>graph.canvas</code>）、GraphML、SVG、Neo4j／FalkorDB 等匯出，以及本機 MCP 伺服器、<code>graphify watch</code> 與 <code>graphify hook install</code>（提交、切換分支、合併、pull、rebase 後在背景重建程式圖譜）。詳見下方參考，此處不轉錄整份 README。</li>
+      <li>開源引擎與 Cloud 要分開看。開源引擎以 Apache 2.0 授權，在你的機器上執行，無需 Graphify 帳號。Graphify Cloud（<a href="https://app.graphify.com">app.graphify.com</a>）是可選的託管產品：官方說明為常駐託管圖譜、PR 審查、形式驗證與連接器。官方網站寫 Free plan、無需信用卡；官方定價文件今日寫明 Free 計劃最多 3 個已索引倉庫，同樣無需信用卡。託管 MCP 為 <a href="https://api.graphify.com/mcp">https://api.graphify.com/mcp</a>（Streamable HTTP、OAuth、無需 API 金鑰），與本機開源引擎（<code>graphify-mcp</code>，stdio 或本機 HTTP）不是同一條路徑。</li>
+      <li>現行專案授權為 <strong>Apache-2.0</strong>（v8 的 LICENSE、GitHub license 欄、pyproject <code>license = "Apache-2.0"</code>，以及官網的 open core／Apache 2.0 說明一致）。NOTICE 寫「Copyright 2026 Safi Shamsi and the Graphify contributors」，並說明已改以 Apache 2.0 授權；先前以 MIT 貢獻的部分仍可依 LICENSE-MIT 取得。現行授權不要標成 MIT。</li>
+      <li>助手與語法數量：官方頁今日沒有單一數字。官網 FAQ 寫「17, including Claude Code, Cursor, Copilot, Codex, Gemini CLI and Aider」；v8 README 寫 Claude Code、Cursor、Codex、Gemini CLI、GitHub Copilot，「and 20+ more」；官網軟體中繼資料亦寫 20+ AI coding assistants。語法方面：官網 on-device 文案寫 33 tree-sitter grammars；v8 README 與官網軟體中繼資料寫約 40 種語言；官方 <a href="https://docs.graphify.com/skill.md">skill.md</a> 寫開源 CLI 支援 40 種語言，託管產品列出 63 grammars。本頁不自行合併成一個數字。</li>
+    </ul>
+
+    <h4>用法</h4>
+    <p>官方 v8 README 與安裝文件：需要 Python 3.10+，以及 uv（或 pipx）。v8 的 <code>pyproject.toml</code> 要求 <code>&gt;=3.10,&lt;3.15</code>。官方建議安裝：</p>
+    <pre><code>uv tool install graphifyy
+graphify install</code></pre>
+    <p>之後在助手裡輸入：</p>
+    <pre><code>/graphify .</code></pre>
+    <ul>
+      <li>官方亦列出 <code>pipx install graphifyy</code>。另有 <code>pip install graphifyy</code>（官方註明可能要設定 PATH）。不要用 <code>pip install graphify</code> 作為官方安裝途徑。現行 v8 README 的官方套件說明：PyPI 套件名是 <code>graphifyy</code>（兩個 y），其他 PyPI 上的 <code>graphify*</code> 套件並非官方；命令列與技能指令仍是 <code>graphify</code>。</li>
+      <li>官方 Quickstart：不加旗標的 <code>graphify install</code> 針對 Claude Code，會把技能寫到 <code>~/.claude/skills/graphify/SKILL.md</code>，並登記到 <code>~/.claude/CLAUDE.md</code>。其他助手用 <code>graphify install --platform …</code>（官方例子：<code>graphify install --platform codex</code>）。v8 README 的平台表另有部分專用命令，例如 <code>graphify cursor install</code>、<code>graphify vscode install</code>；完整名單以該表與<a href="https://docs.graphify.com/open-source/installation">安裝文件</a>為準。要以專案目錄而非使用者設定安裝時，加 <code>--project</code>。</li>
+      <li>建圖之後可用 <code>/graphify query "…"</code>、<code>/graphify path "A" "B"</code>、<code>/graphify explain "…"</code> 查圖譜；終端機亦可用 <code>graphify query</code>／<code>path</code>／<code>explain</code> 直接讀 <code>graph.json</code>。只想為程式建圖、略過需模型的文件／媒體時，官方文件寫 <code>graphify extract . --code-only</code>。</li>
+      <li>只應由官方來源取得：<a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify</a>（以 <strong>v8</strong> 分支與 GitHub Releases 為準）、<a href="https://graphify.com/">graphify.com</a>、<a href="https://docs.graphify.com">docs.graphify.com</a>，以及 PyPI 套件 <code>graphifyy</code>。不要引用已過時的 <code>main</code> 分支 README（今日仍提到 <code>safishamsi/graphify</code> 與較舊的安裝步驟）。<code>safishamsi/graphify</code> 今日會轉到 <code>Graphify-Labs/graphify</code>。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>GitHub：<a href="https://github.com/Graphify-Labs/graphify">https://github.com/Graphify-Labs/graphify</a>（預設分支 v8）· Releases <a href="https://github.com/Graphify-Labs/graphify/releases">/releases</a> · 最新版轉向 <a href="https://github.com/Graphify-Labs/graphify/releases/latest">/releases/latest</a> · 本頁所記版本 <a href="https://github.com/Graphify-Labs/graphify/releases/tag/v0.9.109">v0.9.109</a></li>
+      <li>官網：<a href="https://graphify.com/">https://graphify.com/</a> · 定價 <a href="https://graphify.com/pricing">/pricing</a> · 博客 <a href="https://graphify.com/blog">/blog</a></li>
+      <li>文件：<a href="https://docs.graphify.com">https://docs.graphify.com</a> · 開源 Quickstart <a href="https://docs.graphify.com/open-source/quickstart">open-source/quickstart</a> · 安裝 <a href="https://docs.graphify.com/open-source/installation">installation</a> · 匯出 <a href="https://docs.graphify.com/open-source/features/exports">exports</a> · 本機 MCP <a href="https://docs.graphify.com/open-source/mcp-server">mcp-server</a> · 保持更新 <a href="https://docs.graphify.com/open-source/keep-the-graph-fresh">keep-the-graph-fresh</a> · 託管 MCP <a href="https://docs.graphify.com/platform/graphify-mcp">platform/graphify-mcp</a> · 託管定價 <a href="https://docs.graphify.com/platform/support/pricing">platform/support/pricing</a> · 官方 skill.md <a href="https://docs.graphify.com/skill.md">/skill.md</a></li>
+      <li>PyPI：<a href="https://pypi.org/project/graphifyy/">graphifyy</a>（套件名；命令為 <code>graphify</code>）</li>
+      <li>Cloud 控制台：<a href="https://app.graphify.com">https://app.graphify.com</a> · 登記 <a href="https://app.graphify.com/signup">/signup</a> · 託管 MCP 端點 <a href="https://api.graphify.com/mcp">https://api.graphify.com/mcp</a></li>
+      <li>官方博客（2026-11-11）：<a href="https://graphify.com/blog/graphify-is-now-an-official-claude-connector">Graphify is now an official Claude connector</a></li>
+      <li>Y Combinator：<a href="https://www.ycombinator.com/companies/graphify-labs">Graphify Labs（S26）</a></li>
+      <li>授權：<a href="https://github.com/Graphify-Labs/graphify/blob/v8/LICENSE">LICENSE</a>（Apache 2.0）· <a href="https://github.com/Graphify-Labs/graphify/blob/v8/NOTICE">NOTICE</a></li>
+      <li>繁中 README 譯文：<a href="https://github.com/Graphify-Labs/graphify/blob/v8/docs/translations/README.zh-TW.md">docs/translations/README.zh-TW.md</a>（以 v8 英文 README 與官方文件為準）</li>
+      <li>參考頻道（僅作連結，未加入本站 YouTube 監察名單）：<a href="https://www.youtube.com/@graphifylabs">https://www.youtube.com/@graphifylabs</a> · Discord <a href="https://discord.gg/graphify">discord.gg/graphify</a></li>
+    </ul>
+
+    <h4>最新研究（2026-11-15）</h4>
+    <ul>
+      <li>首次收錄本清單第 7 項。今日從 GitHub <code>/releases/latest</code>、v8 分支 <code>pyproject.toml</code>，以及 PyPI 套件 <code>graphifyy</code> 核實，最新穩定版均為 <strong>0.9.109</strong>（GitHub 發布 2026-11-14T21:29:11Z＝2026-11-15 05:29:11 Asia/Hong_Kong；PyPI 上傳 2026-11-14T21:29:41Z＝2026-11-15 05:29:41 Asia/Hong_Kong）。不是預發布。倉庫預設分支為 <strong>v8</strong>。</li>
+      <li>不要把標籤／發行 <strong>v1.0.0</strong> 當成現行最新版。該發行頁仍在，發布於 2026-04-05T21:45:38Z（＝2026-04-06 05:45:38 Asia/Hong_Kong），屬於較早的 2026 年發行，早於目前的 0.9.109 軌道。</li>
+      <li><code>main</code> 分支 README 今日仍然過時（仍提到 <code>safishamsi/graphify</code> 與較舊的安裝步驟，包括「套件暫時名為 graphifyy、正回收 graphify 名稱」這句現已不再出現在 v8 README 的說明）。本頁不以 <code>main</code> 為據。舊地址 <code>safishamsi/graphify</code> 今日會轉到 <code>Graphify-Labs/graphify</code>。</li>
+      <li>官方博客《Graphify is now an official Claude connector》日期為 2026-11-11（datePublished 2026-11-11T00:00:00.000Z）。託管 MCP 端點 <code>https://api.graphify.com/mcp</code> 今日未登入時回傳 HTTP 401（空本文），與官方「OAuth、無需 API 金鑰」的說明相符；本頁把它列為官方託管端點，而不是匿名公開 API。</li>
+      <li><code>https://docs.graphify.com/open-source/install</code> 今日為 404，本頁改用會重定向到 <a href="https://docs.graphify.com/open-source/installation">/open-source/installation</a> 的安裝路徑。<code>https://docs.graphify.com/cloud</code> 今日亦為 404，不列入。</li>
+    </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
+  </article>
+
+  <article class="skill" id="t3code">
+    <div class="skill-head">
+      <div class="logos">
+        <img class="mark" src="assets/skills/t3code-logo.svg" alt="T3 Code 官方標誌" style="padding:0;background:#000">
+      </div>
+      <div class="name-block">
+        <h3>8. T3 Code</h3>
+        <p class="sub">開源的 coding agent 控制平面：在本機運行你已登入的 agent，用同一個介面在桌面、網頁同手機審批同繼續工作。</p>
+      </div>
+      <div>
+        <span class="tag ok">v0.1.9</span>
+        <span class="tag">MIT</span>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/skills/t3code-hero.webp" alt="T3 Code 桌面完成一個 Claude 對話串，旁邊手機應用正在請你批准 Codex 的一項指令（官方 GitHub README 說明圖）">
+        <figcaption>官方功能畫面：桌面完成一個 Claude 對話串，手機端請你批准下一個步驟。來源：pingdotgg/t3code <code>.github/readme/hero.webp</code></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/skills/t3code-social-card.jpg" alt="T3 Code 官方宣傳圖：The open-source control plane for coding agents，並顯示桌面介面摘錄">
+        <figcaption>官方網站 Open Graph 圖像（<a href="https://t3.codes/_astro/social-card.DMaenTWS_Z194KDS.jpg">t3.codes/_astro/social-card.DMaenTWS_Z194KDS.jpg</a>）：產品定位同介面摘錄。</figcaption>
+      </figure>
+    </div>
+
+    <h4>功能</h4>
+    <ul>
+      <li>這是 T3 Tools Inc. 的開源應用 <strong>T3 Code</strong>（官網 <a href="https://t3.codes">t3.codes</a>；網頁應用 <a href="https://app.t3.codes">app.t3.codes</a>；原始碼 <a href="https://github.com/pingdotgg/t3code">pingdotgg/t3code</a>）。官方 README 標語同官網標題均為 “The open-source control plane for coding agents.” 授權為 <strong>MIT</strong>（LICENSE 寫 “Copyright (c) 2026 T3 Tools Inc.”；GitHub license 欄亦為 MIT）。</li>
+      <li>這是控制平面應用本身，不是 Theo 的獨立 skills 倉 <a href="https://github.com/t3dotgg/tstack">t3dotgg/tstack</a>（該倉是另一套可在 Claude Code／Codex 使用的 agent skills；其 README 提到在有 T3 Code 時可使用其功能，但仍是獨立專案，本頁不把 tstack 的 skill 清單當成 T3 Code 的功能），亦不是 Next.js 起步專案 T3 Stack／create-t3-app。官方 npm 套件名是 <code>t3</code>，不要下載名稱相近但無關的套件。</li>
+      <li>T3 Code 在你的機器上運行 coding agents，並提供同一個介面。可在書桌開始一個對話串，再到手機批准下一個步驟。</li>
+      <li>官方 README 列出可配合 Claude Code、Codex、Cursor、OpenCode、Grok Build、Antigravity、Kiro、Pi、Muse Code、fx，以及任何 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/providers-acp.md">ACP</a> agent。官網較短的名單為 Claude Code、Codex、Antigravity、OpenCode、Cursor 同 Grok。本頁不自行合併成一個數字；完整名單以 README 同文件為準。</li>
+      <li>官方 README 的 “Your subscriptions”：T3 Code 不轉售 token，而是驅動你已經登入的 agent。需要先安裝並登入至少一個 agent，官方例子包括執行 <code>claude auth login</code> 或 <code>codex login</code>。官方 FAQ 寫明沒有付費使用 T3 Code 本身的途徑；你仍向自己的 agent 供應商付費。本頁不另外杜撰 T3 Code 的收費方案。</li>
+      <li>提供桌面、網頁同手機（iOS 與 Android）客戶端：一個 server，每個客戶端顯示同一批對話串。</li>
+      <li>遙距連接可經本機網絡、Tailscale，或 T3 Connect，詳見官方 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/remote-access.md">remote-access</a> 文件。</li>
+      <li>內建 Git：每個對話串可用獨立 worktree；可檢視 diff，然後 commit、push 並開 pull request。</li>
+    </ul>
+
+    <h4>用法</h4>
+    <p>以下安裝與啟動指令均出自官方 README／<a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md">install.md</a>，不要改用非官方鏡像。</p>
+    <p>桌面應用可到 <a href="https://t3.codes/download">t3.codes/download</a> 下載 macOS、Windows 或 Linux 版本，亦可用官方列出的套件管理器：</p>
+    <pre><code>brew install --cask t3-code
+winget install T3Tools.T3Code
+scoop install extras/t3code
+yay -S t3code-bin
+nix profile add github:NixOS/nixpkgs/nixos-unstable#t3code</code></pre>
+    <p>Debian／Ubuntu 則從 <a href="https://github.com/pingdotgg/t3code/releases">GitHub Releases</a> 安裝官方 <code>.deb</code>。命令列安裝會裝上 <code>t3</code> 指令；執行 <code>t3</code> 會啟動 server 並開啟網頁應用：</p>
+    <pre><code>curl -fsSL https://t3.codes/install.sh | sh</code></pre>
+    <p>Windows PowerShell：</p>
+    <pre><code>irm https://t3.codes/install.ps1 | iex</code></pre>
+    <p>只想試一次、不安裝時，官方指令為 <code>npx t3@latest</code>（會使用穩定版 <code>latest</code>）。</p>
+    <ul>
+      <li>手機請由 <a href="https://apps.apple.com/us/app/t3-code-remote-claude-more/id6787819824">App Store</a> 或 <a href="https://play.google.com/store/apps/details?id=com.t3tools.t3code">Google Play</a> 安裝，再按 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/remote-access.md">remote-access</a> 文件連回你的電腦。</li>
+      <li>裝好 T3 Code 之後，仍須有一個已安裝並已登入的 agent。各供應商步驟見官方 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md">install.md</a> 的 Providers 一節。</li>
+      <li>官方 install.md 亦說明 nightly 安裝（例如設定 <code>T3CODE_CHANNEL=nightly</code>，Arch 另有 <code>yay -S t3code-nightly-bin</code>），以及 AppImage、WSL、NixOS 等。nightly／preview 不是本頁所記的現行穩定版；現行穩定版以 GitHub <code>/releases/latest</code> 同 npm <code>t3</code> 的 <code>latest</code> 為準，今日均為 <strong>v0.1.9</strong>／<strong>0.1.9</strong>。</li>
+    </ul>
+
+    <h4>參考</h4>
+    <ul class="refs">
+      <li>GitHub：<a href="https://github.com/pingdotgg/t3code">https://github.com/pingdotgg/t3code</a> · Releases <a href="https://github.com/pingdotgg/t3code/releases">/releases</a> · 最新穩定版轉向 <a href="https://github.com/pingdotgg/t3code/releases/latest">/releases/latest</a> · 本頁所記版本 <a href="https://github.com/pingdotgg/t3code/releases/tag/v0.1.9">v0.1.9</a></li>
+      <li>官網：<a href="https://t3.codes">https://t3.codes</a> · 下載 <a href="https://t3.codes/download">/download</a> · 網頁應用 <a href="https://app.t3.codes">app.t3.codes</a></li>
+      <li>文件（倉庫內）：<a href="https://github.com/pingdotgg/t3code/blob/main/docs/README.md">docs/README.md</a> · 安裝 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md">docs/user/install.md</a> · 遙距存取 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/remote-access.md">remote-access.md</a> · 權限模式 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/permission-modes.md">permission-modes.md</a> · 版本控制 <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/source-control.md">source-control.md</a> · 外部 agent <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/outside-agents.md">outside-agents.md</a> · FAQ <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/faq.md">faq.md</a> · ACP agent <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/providers-acp.md">providers-acp.md</a></li>
+      <li>官方 CLI 安裝腳本：<a href="https://t3.codes/install.sh">t3.codes/install.sh</a> · Windows PowerShell <a href="https://t3.codes/install.ps1">t3.codes/install.ps1</a></li>
+      <li>手機：<a href="https://apps.apple.com/us/app/t3-code-remote-claude-more/id6787819824">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.t3tools.t3code">Google Play</a></li>
+      <li>授權：<a href="https://github.com/pingdotgg/t3code/blob/main/LICENSE">LICENSE</a>（MIT）</li>
+      <li>相關但獨立的專案（不是本項）：<a href="https://github.com/t3dotgg/tstack">t3dotgg/tstack</a></li>
+      <li>Discord（可選）：<a href="https://discord.gg/jn4EGJjrvv">discord.gg/jn4EGJjrvv</a></li>
+    </ul>
+
+    <h4>最新研究（2026-11-15）</h4>
+    <ul>
+      <li>首次收錄本清單第 8 項。今日從 GitHub <code>/releases/latest</code> 同 npm 套件 <code>t3</code> 的 <code>latest</code> dist-tag 核實，現行穩定版均為 <strong>v0.1.9</strong>／<strong>0.1.9</strong>。GitHub 發行頁標題為 “T3 Code v0.1.9”，<code>prerelease</code> 為 false，發布 2026-11-11T11:33:49Z＝2026-11-11 19:33:49 Asia/Hong_Kong；npm <code>t3@0.1.9</code> 發布 2026-11-11T11:35:24Z＝2026-11-11 19:35:24 Asia/Hong_Kong。倉庫根目錄 <code>package.json</code> 為 <code>@t3tools/monorepo</code>，沒有單一應用版本欄，本頁以 GitHub Releases 同 npm <code>t3</code> 為準。</li>
+      <li>同一 npm 套件今日另有預發布 dist-tag：<code>preview</code> 為 <code>0.1.10-preview.20261112.4593</code>，<code>nightly</code> 為 <code>0.1.10-nightly.20261114.4709</code>。這些不是現行穩定版，不要把它們當成 latest stable。官方 install.md 說明如何安裝 nightly 組建。</li>
+      <li>今日核實官方 README 沒有 “expect bugs” 或 “still early” 一類警告，本頁亦不作此陳述。官網行銷數字（例如網站上的使用者規模文案）屬易變宣傳，本頁不當作規格。</li>
+      <li>npmjs.com 上的 <code>t3</code> 套件頁今日以本環境抓取回傳 HTTP 403，因此本頁不放入該網頁連結；套件名稱、版本同發布時間改以 npm registry 的 <code>t3</code> 資料為準，並與 GitHub Releases 交叉核對。</li>
+    </ul>
+    <p class="back-to-top"><a href="#top">↑ 回到頂部</a></p>
   </article>
 
   <h2>Daily research log</h2>
   <table>
     <thead><tr><th>日期（Asia/Hong_Kong）</th><th>更新</th></tr></thead>
     <tbody>
+      <tr>
+        <td>2026-11-15 09:02</td>
+        <td>加入清單第 8 項 T3 Code（<code>pingdotgg/t3code</code>，最新穩定版 v0.1.9／npm 套件 <code>t3</code> 0.1.9，授權 MIT）。官方標誌同功能圖像已入頁。未推上 GitHub Pages。</td>
+      </tr>
+      <tr>
+        <td>2026-11-15 08:56</td>
+        <td>加入清單第 7 項 Graphify（<code>Graphify-Labs/graphify</code>，預設分支 v8；PyPI 套件 <code>graphifyy</code> 最新穩定版 0.9.109，授權 Apache-2.0）。官方標誌同功能圖像已入頁。未推上 GitHub Pages。</td>
+      </tr>
       <tr>
         <td>2026-11-13 20:34</td>
         <td>加入清單第 6 項 Microsoft PowerPoint 互動式投影片（官方 Copilot「建立互動式投影片／Create interactive slide」技能；Microsoft Support 今日核實仍有效）。官方 Support 示例與介面說明圖，以及 AI4All 電子書封面與教學影片縮圖已入頁。教學筆記與影片只作引用連結，未轉載指令或 PDF 本文。未推上 GitHub Pages（由後續一次 Push 處理）。</td>
