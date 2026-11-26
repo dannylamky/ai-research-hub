@@ -52,7 +52,191 @@
   <div class="wrap">
     <h1>Daily digests</h1>
     <p class="note">Weekdays ~08:00 Asia/Hong_Kong · on-demand deepened · high-signal only · newest first · 每主題 ≥3 連結。</p>
-    <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-25T08:36:00+08:00">2026-11-25 08:36 Asia/Hong_Kong</time></p>
+    <p class="meta" id="last-updated">最後更新：<time datetime="2026-11-26T08:36:00+08:00">2026-11-26 08:36 Asia/Hong_Kong</time></p>
+
+    <h2>2026-11-26 · 平日例行 AI 摘要</h2>
+    <p class="meta">例行跑 · CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行（2026-11-25 08:36 HKT）之後 · 最後更新：2026-11-26 08:36 Asia/Hong_Kong</p>
+
+    <h3>優先觀察清單</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>#</th><th>項目</th><th>狀態</th><th>要點</th><th>參考（≥3）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Grok Bot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>官方 changelog 而家顯示 <strong>Latest v1.3.0</strong>，條目標日期為 <strong>2026-11-24</strong>，標題「Smarter Slack Bots, restock alerts, org controls」。上次例行（11-25 08:36 HKT）查核時 Latest 仍為 v1.2.3（2026-11-18），故視為本窗口先見嘅出包，而唔係漏報昨日已見版本。產品向要點：Bot 交俾另一個 Bot 嘅結果會回到 Slack DM，並帶 Connect 掣處理未完成授權；thread 回覆可按要求分享到頻道；私人對話轉發保持私密；喺 Slack 群組 DM 講 Bot 名等同 @mention；一對一 DM 可以喺主聊天作答而不一定開 thread。組織可以限制成員只連接該組織網域嘅帳戶。Teams 方面，未連結個人 Grok Bot 帳戶嘅人仍可由團隊 Bot 回覆（一次性說明連結嘅好處）；team admin 可以要求邀請連結先經審批。另外有售罄商品 Notify me、Ashby 招聘查詢、電郵草稿 Bcc、Settings 裝置清單、以及銀行拒卡後 Vault 顯示 Needs an update。Improved 包括 Slack 回覆改為短段落、跟頻道禮儀、以及批准卡狀態對齊 Approved／Declined／Expired。</td>
+          <td>
+            <a href="https://x.ai/changelog/bot">x.ai/changelog/bot（Latest v1.3.0，標 11-24）</a><br>
+            <a href="https://x.ai/bot">x.ai/bot</a><br>
+            <a href="https://docs.x.ai/grok-bot/overview">Grok Bot docs</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Meta Muse</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>Chrome Web Store「Muse from Meta」本輪仍為 <strong>2.1.12</strong>，<strong>Updated November 21, 2026</strong>，評分仍為 4.5（評分數由上輪所見 269 增至 279，唔構成產品更新）。未見本窗口新嘅官方產品公告或擴充功能版本。英國上線官方文屬 11-23，早於本窗口，唔再當新發布重述。</td>
+          <td>
+            <a href="https://chromewebstore.google.com/detail/muse-from-meta/jnakhhjmpmoohbjgfccbccfoifnmbdjd">Chrome Web Store：Muse from Meta（仍為 2.1.12，11-21）</a><br>
+            <a href="https://www.meta.com/help/superintelligence/2124746764949121/">Meta 說明：How your Muse agent browses the web</a><br>
+            <a href="https://about.fb.com/news/2026/11/muse-is-now-available-in-australia/">Meta 官方：澳洲上線（11-17，窗口外，僅作背景）</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>M365 Copilot / Cowork</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>Microsoft 365 Developer Blog（<strong>2026-11-25</strong>，Vesa Juvonen）發出 <strong>Action required</strong>：用 app-only 認證直接寫入 SharePoint <strong>tenant App Catalog</strong> 指定表面嘅應用，由 <strong>2027-01-31</strong> 起必須具備 Office 365 SharePoint Online 資源上嘅 <code>SharePointTenantSettings.ReadWrite.All</code> 應用權限；到期之後，單靠 <code>Sites.ReadWrite.All</code> 將不再授權呢類 tenant App Catalog 寫入。受影響範圍包括 CI/CD、無人值守腳本同夥伴部署服務。呢點直接關係到上輪已報、用 SPFx 包裝 Copilot UX component／Cowork plugin 嘅自動化發布路徑。上輪 GPT-6.2 Sol／Astra 同 Cowork plugins 正文唔再重述。RM580889 仍為窗口外／進行中項目，本輪不以佢為新發布。</td>
+          <td>
+            <a href="https://devblogs.microsoft.com/microsoft365dev/action-required-update-app-only-permissions-for-sharepoint-tenant-app-catalog-writes/">Microsoft 365 Developer Blog：App Catalog app-only 權限（11-25）</a><br>
+            <a href="https://learn.microsoft.com/en-us/graph/api/sharepointsettings-update?view=graph-rest-1.0">Microsoft Learn：Update sharepointSettings</a><br>
+            <a href="https://learn.microsoft.com/en-us/graph/api/sharepointsettings-get?view=graph-rest-1.0">Microsoft Learn：Get sharepointSettings</a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HeyGen HyperFrames</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>公開已出包 latest 由上輪 <strong>v0.9.91</strong> 去到 <strong>v0.9.96</strong>（GitHub published 2026-11-25 18:50:54Z＝11-26 02:50 HKT）。npm <code>hyperframes@0.9.96</code> 已核實（Updated 2026-11-25 19:05:54Z），License 仍為 Apache-2.0。中間本窗口出包：v0.9.92（00:33:08Z＝08:33 HKT；官方 changelog 標 Released 11-24，發布時刻只早過上次例行 stamp 約 3 分鐘，而上次查核時 tag／npm 仍 404，故本輪一併確認）、v0.9.93（02:41:38Z＝10:41 HKT）、v0.9.94（08:24:19Z＝16:24 HKT）、v0.9.95（16:57:14Z＝11-26 00:57 HKT）。產品向要點：v0.9.92 修復 Studio 重新命名後舊路徑檔名、sealed preview 嘅移動／縮放，以及 Node 無法解析嘅 URL 令 render 中止；v0.9.93 統一 <code>DO_NOT_TRACK</code>／<code>HYPERFRAMES_NO_TELEMETRY</code>、cached whisper 只喺 checksum 相符時使用，媒體命令只讀本地 self-contained 輸入；v0.9.94 可單次渲染影片其中一段、支援任意格式／幀率同 HDR／shader transition，並把專案檔同媒體路徑留喺專案內；v0.9.95 Studio 開啟專案唔再等慢速磁碟寫入，編輯只寫入已掛載而且係 HTML 嘅檔，markup 不能再把寫入帶到其他路徑；v0.9.96 sealed player 喺 Safari 用 decoded buffer 播放影片音訊，lint 對無法解析嘅檔改報 finding 而唔係整次失敗，並阻止 render script／log 無限增長。非 hyperframe.ai。</td>
+          <td>
+            <a href="https://github.com/heygen-com/hyperframes/releases/tag/v0.9.96">GitHub Release v0.9.96</a><br>
+            <a href="https://github.com/heygen-com/hyperframes/compare/v0.9.91...v0.9.96">compare v0.9.91…v0.9.96</a><br>
+            <a href="https://www.npmjs.com/package/hyperframes">npm hyperframes@0.9.96</a><br>
+            <a href="https://hyperframes.heygen.com/changelog">官方 changelog</a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Strata</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>上游 <a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a> 公開 latest 由 <strong>v0.2.21</strong> 去到 <strong>v0.2.22</strong>（published 2026-11-25 18:52:49Z＝11-26 02:52 HKT）。App／Terminal 為 0.2.22；<code>strata-engine</code>、<code>strata-inkling</code>（CUDA／NVIDIA）同 Control 更新至 <strong>0.1.69</strong>。<code>strata-hy4</code> 同 Inkling 喺 AMD／Intel／Apple 仍為 <strong>0.1.67</strong>（官方寫呢啲後端無改動）。此版亦包含從未獨立出包嘅 0.2.21.2 Control 修補。關鍵修正：多卡 NVIDIA 無 NVLink 嘅 layer split 曾經讀錯卡嘅可用記憶體，把 expert 放到不能計算嘅 RAM 路徑，Inkling 2 Mini 會喺無錯誤提示下寫出垃圾輸出（報告於 2×RTX 3060）；而家 2×12 GB 嘅 SQ-20 會喺每卡放 1,536 個 expert、唔再放到第二卡 RAM，若仍會放錯就改為停止並提示（#7093）。新開關 <code>STRATA_SPLIT_LEND_RESERVE</code> 可改 2 卡 split 預留給 prompt 路徑嘅 RAM；預設不變。報告者 RTX 4090+3090、47/64 GiB：預設相對 <code>=0</code> 少約 9% decode（82.6 vs 90.1 tok/s）；<code>=0</code> 喺 2×RTX A6000 上 decode +5.5%（4/4 rounds），但冷啟動 18K prompt 慢 17%。答案不變（KL 0，A6000 上 token 相同）。安全性：內建頁同伺服器只回應來自 app 本身嘅請求，SVG／HTML 以 sandbox 顯示；自訂主機名要列入 <code>STRATA_ALLOWED_HOSTS</code>，<code>/v1</code> OpenAI-compatible API 仍可用（#7130）。更新後唔再需要重開先恢復 agent（#7099，「Agent work is paused」）。長自訂 tool call 而家每 10 秒 keep-alive，避免空閒代理切斷連線（#7132；官方寫尚未用 Codex 本身或經代理覆核）。Inkling 而家會尊重 <code>reasoning_effort</code>／Chat settings，並把 tool 名填回 tool result。非 strata.ai／mach10x fork。</td>
+          <td>
+            <a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.22">GitHub Release v0.2.22</a><br>
+            <a href="https://github.com/Niko1221/Strata">Niko1221/Strata</a><br>
+            <a href="https://github.com/Niko1221/Strata/blob/main/docs/DETAILS.md">docs/DETAILS.md</a>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ArtCraft</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>官方 GitHub latest 同 getartcraft.com 下載路徑仍為 <strong>artcraft-v0.41.1</strong>（published 2026-11-07 02:49:42Z）。本窗口無新嘅官方穩定版 tag。非其他「Artcraft」品牌。</td>
+          <td>
+            <a href="https://github.com/storytold/artcraft/releases/tag/artcraft-v0.41.1">GitHub：artcraft-v0.41.1（仍為 latest）</a><br>
+            <a href="https://getartcraft.com/">getartcraft.com</a><br>
+            <a href="https://getartcraft.com/download">Download 頁</a>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Instant AI</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>官方 changelog 最新一條仍為 <strong>2026-11-18：All Shopify layouts are now supported</strong>。本窗口無更新條目。非 Instant.one 電郵產品。</td>
+          <td>
+            <a href="https://instant.so/changelog">instant.so/changelog（最新仍為 11-18）</a><br>
+            <a href="https://instant.so/changelog/product-update-instant-ai">Product update: Instant AI</a><br>
+            <a href="https://docs.instant.so/">docs.instant.so</a>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>OpenBot</td>
+          <td><span class="tag ok">有料</span></td>
+          <td>官方 changelog 同 GitHub latest 由 <strong>v0.78.0</strong> 去到 <strong>v0.79.0</strong>（GitHub published 2026-11-25 22:36:06Z＝11-26 06:36 HKT；changelog 標 Latest release 0.79.0 · Nov 25, 2026）。官方標明升級後要處理兩件事：OpenBot 瀏覽器入面嘅頁而家可以要求位置，agent 聊天會先問 Block／Allow／Allow always（Allow 只喺同一站有效；加入嘅 server 上，Allow 送出嘅係你部裝置位置而唔係 server 位置；你自己開嘅分頁仍然一律 Block）；若 Linux 已經出現輸入停頓，要登出再登入一次。官方 What’s new 重點：<strong>Chrome 擴充功能</strong>（尚未上 Chrome Web Store）可喺側欄開 OpenBot，登入經 openbot.run，並可傾偈、開 thread、管理 agent／頻道／資料夾；安裝 Marketplace 嘅 X agent 之後，可喺 X 用 @OpenBot_ 回覆，帖文會送到你 server 上嘅 X agent（其他人回覆唔會送出；server 無回應可重試最多 7 日）。側欄可讀取你已開嘅 Chrome 分頁（Shared tabs；用新站、輸入密碼／付款、下載或登入前會先問），桌面 app 內嘅 agent 仍用自己嘅瀏覽器。另有側欄聽寫（server 需同版；首次下載約 650 MB 語音模型）、最多三組側欄分組、以及 5 個空 workflow 範本（Morning brief、Answer new issues、Weekly report、Price watch、Post with a picture）。GitHub 發行說明另外列出 Muse 喺 Windows 可經 PATH 上嘅 muse.cmd 啟動、Codex 容量滿時轉備用模型、以及多項 provider turn 結束／記憶體卸載修復。</td>
+          <td>
+            <a href="https://openbot.run/changelog">openbot.run/changelog（Latest 0.79.0，11-25）</a><br>
+            <a href="https://github.com/nightly-labs/openbot/releases/tag/v0.79.0">GitHub Release v0.79.0</a><br>
+            <a href="https://openbot.run/">openbot.run</a>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Switch AI / Switch Agents</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>官方 Switch Trust changelog 最新一條仍為 <strong>v1.0.3（2026-11-05）</strong>。本窗口無新嘅公開版本號。非其他「Switch」產品。</td>
+          <td>
+            <a href="https://www.switchagents.ai/">switchagents.ai</a><br>
+            <a href="https://docs.switchagents.ai/switch-trust/resources/changelog">Switch Trust changelog（仍為 v1.0.3）</a><br>
+            <a href="https://docs.switchagents.ai/changelog">docs.switchagents.ai/changelog</a>
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Rea</td>
+          <td><span class="tag">窗口安靜</span></td>
+          <td>公開 latest 仍為 <strong>rea-agents-6.10.1</strong>（published 2026-11-20 05:30:51Z）。本窗口無新 tag。main 喺窗口內有未出包提交，包括標咗 breaking 嘅 CLI／delivery 預算同可恢復結果相關改動，但尚未構成新發布，故不以 6.11 或新版本號陳述。非其他「rea」產品。</td>
+          <td>
+            <a href="https://github.com/morluto/rea/releases/tag/rea-agents-6.10.1">GitHub：rea-agents-6.10.1（仍為 latest）</a><br>
+            <a href="https://github.com/morluto/rea">morluto/rea</a><br>
+            <a href="https://rea.tools">rea.tools</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>產業新聞／博客</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要／證據</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Anthropic 把 Messages API 由 Python 遷到 Rust：約少 70% CPU、中位 TTFT 約低 20%</td>
+          <td>Anthropic 研究文（<strong>2026-11-25</strong>）描述把對外同內部（包括 Claude Code、Cowork）主要入口 Messages API，由 2023 年嘅 Python 服務遷到 Rust，而且全程唔停機、亦無凍結功能開發。官方寫 2024 初至 2026 秋流量大約升咗 <strong>1,800 倍</strong>。Claude 大約一週寫出核心 request path 初版，但難點係驗證同線上 Python 版本對等：生產 API 持續改動、Claude 輸出本身非確定、且不能讀顧客請求。佢哋把生產 Messages API 本身做成 verifier，喺生產流量上對照差異並自動派 agent 修。結果：每請求 CPU 大約少 <strong>70%</strong>，中位 time to first token 大約低 <strong>20%</strong>。The Next Web 同 Unite.AI 同期報道同一官方數字，Unite.AI 仲轉述記憶體減少超過 80%（以官方文同轉載交叉核對為準）。</td>
+          <td>呢篇嘅策略價值唔只係「改用 Rust 更快」，而係示範喺 generator–verifier gap 收窄、現場系統又缺乏完整「正確」定義時，點樣用生產流量做對等驗證。對任何要把 agent 放進不能凍結嘅核心 API 嘅團隊，驗證設計可能比生成程式碼更關鍵。</td>
+          <td>
+            <a href="https://www.anthropic.com/research/migrating-api-to-rust">Anthropic：Migrating our Messages API to Rust（11-25）</a><br>
+            <a href="https://thenextweb.com/news/anthropic-claude-messages-api-rust-migration">The Next Web 報道</a><br>
+            <a href="https://www.unite.ai/anthropic-details-claude-assisted-rust-migration-of-messages-api/">Unite.AI 報道</a>
+          </td>
+          <td>70%／20%／1,800× 均為官方自稱，文中無公開可覆核嘅基準套件或第三方審計。記憶體「超過 80%」出現喺轉載報道，引用時應回到官方正文核對。遷移對象係 Messages API 服務實作，唔等於模型權重或推理 runtime 本身改咗語言</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>GitHub／研究論文</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要／證據</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>DeepMind 推出 Mass Spec Skills for Google Antigravity：有 skill 時三個模型約 97% 精確分子辨識</td>
+          <td>DeepMind 官方博客（<strong>2026-11-25</strong>）發布 Mass Spec Skills，讓 Google Antigravity 代理跑既有質譜工具同公共化學資料庫，把串聯質譜（MS/MS）由譜圖推到候選結構，並列出化學證據畀化學家覆核。官方指出傳統譜庫比對平均只標註約 <strong>5%</strong> 測得譜圖（人體樣本約 <strong>10%</strong>），其餘常被稱為質譜「暗物質」。評估設定比較三種條件（無網絡無 skill、只開網絡、網絡加 Mass Spec Skills）同三個模型：輕量 <strong>Gemini 3.8 Flash</strong> 以及前沿 <strong>Gemini 4 Argon</strong>、<strong>Gemini 4 Carbon</strong>。無網絡無 skill 時，三個模型精確結構準確率都低於 <strong>4%</strong>。只開網絡時，前沿模型漏掉四分一至三分一譜圖，輕量模型漏掉超過四分三。加上 Mass Spec Skills 之後，三個模型都喺大約 <strong>97%</strong> 嘗試中識別並核實正確分子，輕量模型追平前沿模型（Figure 5a）。基準係 <strong>100</strong> 張已存在於公共譜庫嘅譜圖，每張 3 次嘗試；超過一小時牆鐘預算計失敗；短暫基礎設施／配額錯誤被排除。Token 用量亦下降：Flash 接近四倍、Argon 約一半、Carbon 約五分一（Figure 5b）。安裝路徑指向 Antigravity 嘅 Science plugin，以及 <code>npx skills add google-deepmind/science-skills/</code>。</td>
+          <td>呢個結果支持「工具化 skill + 輕量模型」可以喺檢索式鑑定上追上前沿模型，並且明顯減 token。對科學 agent 產品，價值在於把 SIRIUS／MAGMa／MetFrag／PubChem 一類既有工具編成可覆核工作流，而唔係指望模型單憑峰列表「空想」結構（官方自己用低於 4% 證明咗呢點）。</td>
+          <td>
+            <a href="https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/">DeepMind 官方博客（11-25）</a><br>
+            <a href="https://github.com/google-deepmind/science-skills">github.com/google-deepmind/science-skills</a><br>
+            <a href="https://antigravity.google/docs/skills/">Google Antigravity：Agent skills 文件</a>
+          </td>
+          <td>97% 係喺 100 張「已經喺公共譜庫」嘅譜圖上做 exact-match，唔等於對未入庫嘅「暗物質」譜圖都有 97% 結構解析率。官方亦把未知分子定位為縮小公式同片段支持範圍，而非自動完成 de novo 闡明。science-skills README 介紹嘅係 Science 技能包同安裝方法，開頭未逐項點名 Mass Spec；以博客為準。協作者引言中嘅「多數評估 &gt;90%」係獨立表述，唔好同官方 97% 基準混為同一實驗</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>X／Twitter 話語</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>主題</th><th>發生咗咩</th><th>點解重要／證據</th><th>參考（≥3）</th><th>限制</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>本窗口 X 話語主要延續窗口外發布，未形成需獨立當成新產品線嘅敘事</td>
+          <td>X News 喺 11-26 00:31Z 同 11-25 23:40–23:41Z 左右形成兩組高熱討論：開發者稱讚 <strong>Gemini 4 Neon</strong> 嘅編程／技術任務表現，以及「Google 推出 Gemini API CLI」。兩者都唔係本窗口先有嘅官方發布：Neon 官方推出屬 <strong>2026-11-18</strong>；<code>google-gemini/gemini-api-cli</code> 近期可見版本線包括 <strong>v0.5.0（2026-11-20）</strong>。同期時間線亦大量重炒已報嘅 GPT-6 蛋白質設計、HFE 同 Siren。本窗口真正有官方主文嘅，係上面嘅 DeepMind Mass Spec Skills 同 Anthropic Messages API Rust 遷移，而唔係 X 聚類標題本身。</td>
+          <td>閱讀上應把「而家仲有人喺讚 Neon／CLI」同「今日先發布」分開。建設性對照應回到官方 changelog／GitHub Release 日期，以及本摘要已核實嘅 11-25 官方文。</td>
+          <td>
+            <a href="https://x.com/i/trending/2125747826030461148">X News：Gemini 4 Neon vs Claude 編程討論（更新 11-26 00:31Z）</a><br>
+            <a href="https://x.com/i/trending/2125734003978440946">X News：Gemini API CLI 聚類（更新 11-25 23:40Z）</a><br>
+            <a href="https://github.com/google-gemini/gemini-api-cli/releases">對照：google-gemini/gemini-api-cli Releases（官方版本線，v0.5.0 屬 11-20）</a>
+          </td>
+          <td>X News 聚類係二手整理，可能把舊發布寫成「剛剛推出」。另有 Claude Opus 5.6 圖像對比、Axios 有關 Anthropic 決策權嘅轉述等，本輪未核到足夠一手官方來源，不採納其具體評分或歸屬。不把呢啲聚類當成新模型或新 CLI 嘅發布日</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
 
     <h2>2026-11-25 · 平日例行 AI 摘要</h2>
     <p class="meta">例行跑 · CTO／senior-ML 讀法 · 證據優先 · 窗口對齊上次例行（2026-11-24 08:33 HKT）之後 · 最後更新：2026-11-25 08:36 Asia/Hong_Kong</p>
